@@ -9,7 +9,20 @@ export const navigationMenu = [
     pathname: "Activities",
     path: "/activities",
     isDropdown: true,
-    dropdownMenu: ["item1", "item2", "item3"],
+    dropdownMenu: [
+      {
+        title: "Game Development",
+        url: "/activities/game-development",
+      },
+      {
+        title: "Coding",
+        url: "/activities/coding",
+      },
+      {
+        title: "Robotis",
+        url: "/activities/robotics",
+      },
+    ],
   },
   {
     pathname: "STEM Club",
@@ -21,7 +34,20 @@ export const navigationMenu = [
     pathname: "Outreach",
     path: "/outreach",
     isDropdown: true,
-    dropdownMenu: ["item", "item1", "item1"],
+    dropdownMenu: [
+      {
+        title: "Outreach",
+        url: "#",
+      },
+      {
+        title: "Outreach",
+        url: "#",
+      },
+      {
+        title: "Outreach",
+        url: "#",
+      },
+    ],
   },
 ];
 

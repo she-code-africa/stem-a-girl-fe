@@ -7,6 +7,7 @@ import MenuLinks from "./MenuLinks";
 
 const NavigationBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(null);
 
   return (
     <nav className="fixed top-0 right-0 left-0 bg-white py-5 drop-shadow-md text-sealBrown font-mulish">
@@ -33,7 +34,12 @@ const NavigationBar = () => {
         >
           <ul className="w-[90%] max-w-[1280px] gap-6 mx-auto lg:mx-0 lg:max-w-full flex flex-col lg:flex-row lg:gap-10 lg:w-full justify-center py-10 lg:py-0">
             {navigationMenu.map((menu, i) => (
-              <MenuLinks key={i} menuItem={menu} />
+              <MenuLinks
+                key={i}
+                menuItem={menu}
+                isOpen={showDropdown === i}
+                onToggle={() => setShowDropdown(showDropdown === i ? null : i)}
+              />
             ))}
           </ul>
         </div>

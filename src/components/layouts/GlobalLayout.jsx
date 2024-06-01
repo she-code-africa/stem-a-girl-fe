@@ -6,7 +6,7 @@ const GlobalLayout = ({ children }) => {
   return (
     <>
       <NavigationBar />
-      <section className="w-[90%] max-w-[1280px] mx-auto text-sealBrown overflow-hidden py-24 min-h-[90vh]">
+      <section className="text-sealBrown overflow-hidden pt-24 pb-11 min-h-[90vh]">
         {children}
       </section>
       <Footer />

@@ -2,59 +2,62 @@ import React from "react";
 import { GlobalLayout } from "../../components";
 import Header from "../../components/header";
 import Stats from "../../components/stats";
+import { InfoCardHeader } from "../../components/shared-components";
+import { skillsVector } from "../../assets/images";
+import ActivitiesSection from "../../components/shared-components/activities/activities-section";
+import FAQ from "../../components/faq";
+import { activities } from "../../utils/appData";
 
 const HomePage = () => {
   return (
     <GlobalLayout>
       <Header />
       <Stats />
-      <div className="max-w-4xl w-full mx-auto">
-        <h3 className="font-semibold text-2xl leading-9 lg:text-[48px] text-center lg:leading-[62.4px]">
-          Program Mission
-        </h3>
-        <p className="text-lg md:text-2xl md:leading-9 text-center tracking-tight">
-          Our mission is to create more awareness and inspire girls in secondary
+      <section className="max-sm:px-2">
+        <InfoCardHeader
+          infoCardHeading="Program Mission"
+          infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary
           schools aged 10 - 21 to pursue careers in Science, Technology,
-          Engineering, and Mathematics (STEM).
-        </p>
-      </div>
-
-      <div className="my-20">
-        <div>
-          <h4>
-            <span> Zero tech skills? </span>
+          Engineering, and Mathematics (STEM)."
+        />
+      </section>
+      <section className="my-3 md:my-20 bg-[#F8F8F8] pt-5 pb-2">
+        <div className="bg-white my-5 pt-5 md:pt-10 lg:pt-14 rounded-[32px] container mx-auto px-4">
+          <h4 className="font-medium text-2xl md:text-3xl lg:text-4xl leading-normal md:leading-normal lg:leading-normal text-center">
+            <span className="text-primaryPink font-bold ">
+              {" "}
+              Zero tech skills?{" "}
+            </span>
             <br />
             don’t worry, we’ve got you.
           </h4>
-          <p>
+          <p className="text-fiord text-base md:text-lg leading-normal md:leading-normal text-center mt-3 max-w-[800px] md:mx-auto w-full">
             These track hubs are linked to the She Code Africa STEM Club program
             and have been developed in partnership with club facilitators,
             schools and partner organizations.
           </p>
+          <div className="my-6 flex max-md:flex-col gap-7 md:gap-6 lg:gap-10 justify-center md:justify-start lg:justify-center lg:h-[329px] md:overflow-x-auto xl:overflow-hidden no-scrollbar">
+            {activities.map((activity) => (
+              <div className="text-fiord">
+                <img
+                  src={activity.image}
+                  alt=""
+                  className="w-fit md:max-w-xs"
+                />
+                <div>
+                  <p className="text-lg md:text-2xl my-3 font-semibold">
+                    {activity.title}
+                  </p>
+                  <p>{activity.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <img src={skillsVector} alt="" />
         </div>
-        <div>
-          <p>Image 1</p>
-          <p>Image 2</p>
-          <p>Image 3</p>
-        </div>
-      </div>
-      <div>
-        <p>Our Club Activities </p>
-        <p>
-          Since the inception of the STEM Club initiative, we have had the
-          privilege of visiting several schools, where we have:
-        </p>
-        <div></div>
-      </div>
-      <div className="flex">
-        <div>
-          <p>
-            Curious about our STEM Initiative? Get informed and empowered with
-            our FAQs
-          </p>
-        </div>
-        <div>faq</div>
-      </div>
+      </section>
+      <ActivitiesSection />
+      <FAQ />
     </GlobalLayout>
   );
 };

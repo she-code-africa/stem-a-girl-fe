@@ -13,6 +13,11 @@ import girlChild from "./activities/girlChild.png";
 import quotes from "./activities/Quotes.png";
 import roboticsHeroImage from "./activities/roboticHeroImage.png";
 import gameDevHeroImage from "./activities/gameDevHeroImage.png";
+import skillsVector from "./skills-vector.svg";
+import interactiveWorkshopImage from "./interactive-workshop.svg";
+import stemProjectsImage from "./stem-projects.svg";
+import codingBootcampImage from "./coding-bootcamp.svg";
+import homeHeroImage from "./home-page-hero-image.svg";
 
 export {
   scaLogo,
@@ -30,4 +35,9 @@ export {
   quotes,
   roboticsHeroImage,
   gameDevHeroImage,
+  skillsVector,
+  interactiveWorkshopImage,
+  stemProjectsImage,
+  codingBootcampImage,
+  homeHeroImage,
 };

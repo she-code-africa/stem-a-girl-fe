@@ -5,6 +5,13 @@ import {
   cardPhoto4,
   cardPhoto5,
   cardPhoto6,
+  codingBootcampImage,
+  codingHeroImage,
+  gameDevHeroImage,
+  girlChild,
+  interactiveWorkshopImage,
+  roboticsHeroImage,
+  stemProjectsImage,
   upcomingEventPhoto,
 } from "../assets/images";
 
@@ -212,3 +219,127 @@ export const testimonialSliderContent = [
     text: "“This guy is true professional and very experienced in migration and server configuration. He was able to complete my order in time and as per agreed scope. Highly recommend!”",
   },
 ];
+
+export const clubActivities = [
+  {
+    title: "Interactive workshops",
+    description:
+      "Etiam sed vulputate nisl, eu elementum arcu. Vivamus dignissim tortor in tellus dictum pellentesque. ",
+    img: interactiveWorkshopImage,
+  },
+  {
+    title: "Collaborative STEM projects",
+    description:
+      "Etiam sed vulputate nisl, eu elementum arcu. Vivamus dignissim tortor in tellus dictum pellentesque. ",
+    img: stemProjectsImage,
+  },
+  {
+    title: "Coding bootcamps",
+    description:
+      "Etiam sed vulputate nisl, eu elementum arcu. Vivamus dignissim tortor in tellus dictum pellentesque. ",
+    img: codingBootcampImage,
+  },
+];
+
+export const activities = [
+  {
+    title: "Coding workshops",
+    image: codingHeroImage,
+    description: "Coding workshops",
+  },
+  {
+    title: "Game Development",
+    image: gameDevHeroImage,
+    description: "Coding workshops",
+  },
+  {
+    title: "Robotics (Arduino, Raspberry Pi)",
+    image: roboticsHeroImage,
+    description: "Coding workshops",
+  },
+];
+
+export const faqs = [
+  {
+    title: "What is the She Code Africa STEM Club?",
+    content:
+      "The She Code Africa STEM Club is an initiative aimed at empowering girls to pursue careers in Science, Technology, Engineering, and Math (STEM).",
+  },
+  {
+    title: "Who can join the STEM Club?",
+    content:
+      " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam veritatis sint voluptate voluptatibus nesciunt voluptas cumque quod itaque inventore tempore. Reiciendis molestiae eligendi laboriosam? Quaerat, repudiandae possimus. Laborum, atque nam!",
+  },
+  {
+    title: "What kind of activities can I expect?",
+    content:
+      " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam veritatis sint voluptate voluptatibus nesciunt voluptas cumque quod itaque inventore tempore. Reiciendis molestiae eligendi laboriosam? Quaerat, repudiandae possimus. Laborum, atque nam!",
+  },
+  {
+    title: "Do I need prior experience in STEM?",
+    content:
+      " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam veritatis sint voluptate voluptatibus nesciunt voluptas cumque quod itaque inventore tempore. Reiciendis molestiae eligendi laboriosam? Quaerat, repudiandae possimus. Laborum, atque nam!",
+  },
+];
+
+export const stats = [
+  {
+    title: "Schools Visited",
+    stat: "25",
+  },
+  {
+    title: "States",
+    stat: "7",
+  },
+  {
+    title: "Students Impacted",
+    stat: "1700+",
+  },
+];
+
+export const impactStories = [
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+];
+
+export const schools = [];

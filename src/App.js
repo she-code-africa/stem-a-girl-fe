@@ -7,8 +7,11 @@ import {
   CodingPage,
   RoboticsPage,
   GameDevelopment,
+  ContactUsPage,
 } from "./pages";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +28,9 @@ function App() {
           element={<GameDevelopment />}
         />
         <Route path="/stem-clubs" element={<StemClubs />} />
+        <Route path="/contact-us" element={<ContactUsPage />} />
       </Routes>
+      <ToastContainer />
     </QueryClientProvider>
   );
 }

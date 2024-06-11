@@ -4,6 +4,7 @@ import StemClubs from "./stem-clubs/page";
 import CodingPage from "./activities/coding/page";
 import RoboticsPage from "./activities/robotics/page";
 import GameDevelopment from "./activities/game-development/page";
+import ContactUsPage from "./contact-us/page";
 
 export {
   HomePage,
@@ -12,4 +13,5 @@ export {
   CodingPage,
   RoboticsPage,
   GameDevelopment,
+  ContactUsPage,
 };

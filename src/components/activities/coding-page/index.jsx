@@ -4,10 +4,9 @@ import {
   InfoCardHeader,
   InfoCardSlider,
 } from "../../shared-components";
-import { codingHeroImage, girlChild } from "../../../assets/images";
+import { codingHeroImage } from "../../../assets/images";
 // import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
-import TestimonialsSlider from "./TestimonialsSlider";
 import { infoComponentsettings } from "../../../utils/sliderSettings";
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -83,23 +82,6 @@ const CodingPageComponent = () => {
             <UpcomingEvents activity="coding" />
           </div>
         </div>
-
-        <section className="w-full bg-primaryPink pt-20 pb-24 mt-32 text-white">
-          <div className=" w-[90%] max-w-[1280px] mx-auto md:flex md:flex-row md:items-center lg:justify-between md:gap-10">
-            <article className="w-full lg:max-w-[600px]">
-              <h3 className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-normal md:leading-normal lg:leading-normal  w-full md:max-w-[450px]">
-                What other STEM enthusiasts are saying
-              </h3>
-
-              <TestimonialsSlider />
-            </article>
-            <div className="w-full flex justify-end">
-              <div className="m-0 p-0 w-full max-w-[536px] hidden lg:block ">
-                <img src={girlChild} alt="girl-child-pic" className="w-full " />
-              </div>
-            </div>
-          </div>
-        </section>
       </section>
     </>
   );

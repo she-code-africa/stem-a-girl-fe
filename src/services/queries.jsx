@@ -25,3 +25,14 @@ export const getAllTestimonials = async () => {
   const testimonials = await axios.get(`${baseURL}testimonials`);
   return testimonials.data.data;
 };
+
+export const getAllSchools = async () => {
+  const schools = await axios.get(`${baseURL}school`);
+  return schools.data.data;
+};
+
+export const getAllImpactStories = async () => {
+  const impactStories = await axios.get(`${baseURL}impactStory`);
+
+  return impactStories.data.data;
+};

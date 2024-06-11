@@ -5,6 +5,8 @@ import GameDevelopmentPage from "./activities/game-development";
 import ApiLoading from "./loaders/ApiLoading";
 import ErrorComponent from "./error/ErrorComponent";
 import EmptyResponse from "./empty-repsonse";
+import ContactUsComponent from "./contact-us";
+import PrimaryInput from "./inputs/PrimaryInput";
 
 export {
   GlobalLayout,
@@ -14,4 +16,6 @@ export {
   ApiLoading,
   ErrorComponent,
   EmptyResponse,
+  ContactUsComponent,
+  PrimaryInput,
 };

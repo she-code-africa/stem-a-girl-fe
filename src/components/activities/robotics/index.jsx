@@ -1,12 +1,49 @@
-import React from "react";
-import { HeroComponent, InfoCardComponent } from "../../shared-components";
+import React, { useState, useEffect } from "react";
+import {
+  HeroComponent,
+  InfoCardSlider,
+  InfoCardHeader,
+} from "../../shared-components";
 import { roboticsHeroImage, girlChild } from "../../../assets/images";
-import { coursesSlider } from "../../../utils/appData";
+// import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
 import TestimonialsSlider from "../coding-page/TestimonialsSlider";
 import { infoComponentsettings } from "../../../utils/sliderSettings";
+import { useQuery } from "@tanstack/react-query";
+import {
+  getActivityCourses,
+  getAllActivities,
+} from "../../../services/queries";
+import { ApiLoading, EmptyResponse } from "../../index";
 
 const RoboticsPageComponent = () => {
+  const {
+    isLoading,
+    isError,
+    data: allActivities,
+  } = useQuery({
+    queryKey: ["activities"],
+    queryFn: getAllActivities,
+  });
+
+  const [activityId, setActivityId] = useState("");
+
+  useEffect(() => {
+    const activityExists =
+      !isLoading &&
+      allActivities.find(
+        (activity) => activity.title.toLowerCase() === "robotics"
+      );
+
+    if (activityExists) {
+      setActivityId(activityExists._id);
+    }
+  }, [isLoading, isError, allActivities]);
+  const { isLoading: isCoursesLoading, data: activityCourses } = useQuery({
+    queryKey: ["roboticsCourses", activityId],
+    queryFn: () => getActivityCourses(activityId),
+  });
+
   return (
     <section className=" text-sealBrown font-mulish w-full">
       <div className=" w-[90%] max-w-[1280px] mx-auto">
@@ -16,14 +53,27 @@ const RoboticsPageComponent = () => {
           heroImage={roboticsHeroImage}
         />
         <div className="my-16 lg:my-20">
-          <InfoCardComponent
-            infoCardHeading="start coding today!"
-            infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary
+          <section className="w-full">
+            <InfoCardHeader
+              infoCardHeading="start coding today!"
+              infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary
         schools aged 10 - 21 to pursue careers in Science, Technology,
         Engineering, and Mathematics (STEM)."
-            sliderData={coursesSlider}
-            settings={infoComponentsettings}
-          />
+            />
+
+            {isCoursesLoading ? (
+              <ApiLoading />
+            ) : activityCourses.length > 0 ? (
+              <InfoCardSlider
+                sliderData={activityCourses}
+                settings={infoComponentsettings}
+              />
+            ) : (
+              <>
+                <EmptyResponse text="course" />
+              </>
+            )}
+          </section>
         </div>
 
         <div className="mt-[100px] w-full">

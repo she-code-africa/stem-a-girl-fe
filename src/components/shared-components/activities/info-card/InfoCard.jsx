@@ -9,6 +9,7 @@ const InfoCard = ({
   paragraph,
   cardImage,
   imageH = "h-[298px]",
+  link,
 }) => {
   return (
     <div
@@ -30,7 +31,7 @@ const InfoCard = ({
 
         <div className="flex py-5">
           <Link
-            to="#"
+            to={link || "#"}
             className="flex items-center gap-1 text-primaryPink capitalize text-base font-medium"
           >
             learn more <FaAngleRight />

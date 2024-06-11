@@ -8,10 +8,13 @@ import {
   RoboticsPage,
   GameDevelopment,
 } from "./pages";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/outreach" element={<OutreachPage />} />
@@ -23,7 +26,7 @@ function App() {
         />
         <Route path="/stem-clubs" element={<StemClubs />} />
       </Routes>
-    </>
+    </QueryClientProvider>
   );
 }
 

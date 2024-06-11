@@ -8,6 +8,7 @@ import {
   codingBootcampImage,
   codingHeroImage,
   gameDevHeroImage,
+  girlChild,
   interactiveWorkshopImage,
   roboticsHeroImage,
   stemProjectsImage,
@@ -295,3 +296,50 @@ export const stats = [
     stat: "1700+",
   },
 ];
+
+export const impactStories = [
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+  {
+    image: girlChild,
+    name: "Mary Ademola",
+    school: "FGGC Abuja",
+    story:
+      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+];
+
+export const schools = [];

@@ -1,4 +1,4 @@
-import { stats } from "../../utils/appData";
+import { stats } from "../../../utils/appData";
 
 const Stats = () => {
   return (

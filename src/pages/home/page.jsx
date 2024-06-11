@@ -1,7 +1,7 @@
 import React from "react";
 import { GlobalLayout } from "../../components";
 import Header from "../../components/header";
-import Stats from "../../components/stats";
+import Stats from "../../components/shared-components/stats";
 import { InfoCardHeader } from "../../components/shared-components";
 import { skillsVector } from "../../assets/images";
 import ActivitiesSection from "../../components/shared-components/activities/activities-section";

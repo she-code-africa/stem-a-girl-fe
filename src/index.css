@@ -14,3 +14,7 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+
+.stem-club-header {
+  background: url("./assets/images/stem-club-bg.svg");
+}

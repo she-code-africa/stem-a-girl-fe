@@ -78,7 +78,7 @@ const CodingPageComponent = () => {
             </section>
           </div>
 
-          <div className="mt-[100px] w-full">
+          <div className="mt-[100px] w-full my-32">
             <UpcomingEvents activity="coding" />
           </div>
         </div>

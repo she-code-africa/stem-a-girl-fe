@@ -10,7 +10,7 @@ const CustomNextArrows = ({ onClick }) => {
   return (
     <>
       <div
-        className={`w-[41px] h-[41px] lg:w-[50px] lg:h-[50px] rounded-md bg-white text-primaryPink flex items-center justify-center absolute -bottom-32 left-16 cursor-pointer lg:text-xl`}
+        className={`w-[41px] h-[41px] lg:w-[50px] lg:h-[50px] rounded-md bg-white text-primaryPink flex items-center justify-center absolute -bottom-32 left-16 cursor-pointer lg:text-xl transition-all hover:text-white hover:border-white hover:border-2 hover:bg-transparent`}
         onClick={onClick}
       >
         <FaArrowRightLong />
@@ -23,7 +23,7 @@ const CustomPrevArrows = ({ onClick }) => {
   return (
     <>
       <div
-        className={`w-[41px] h-[41px] lg:w-[50px] lg:h-[50px] rounded-md bg-white text-primaryPink flex items-center justify-center -bottom-32 absolute left-0  cursor-pointer lg:text-xl`}
+        className={`w-[41px] h-[41px] lg:w-[50px] lg:h-[50px] rounded-md bg-white text-primaryPink flex items-center justify-center -bottom-32 absolute left-0  cursor-pointer lg:text-xl transition-all hover:text-white hover:border-white hover:border-2 hover:bg-transparent`}
         onClick={onClick}
       >
         <FaArrowLeftLong />

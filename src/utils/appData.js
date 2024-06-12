@@ -47,25 +47,25 @@ export const navigationMenu = [
     isDropdown: false,
     dropdownMenu: [],
   },
-  {
-    pathname: "Outreach",
-    path: "/outreach",
-    isDropdown: true,
-    dropdownMenu: [
-      {
-        title: "Outreach",
-        url: "#",
-      },
-      {
-        title: "Outreach",
-        url: "#",
-      },
-      {
-        title: "Outreach",
-        url: "#",
-      },
-    ],
-  },
+  // {
+  //   pathname: "Outreach",
+  //   path: "/outreach",
+  //   isDropdown: true,
+  //   dropdownMenu: [
+  //     {
+  //       title: "Outreach",
+  //       url: "#",
+  //     },
+  //     {
+  //       title: "Outreach",
+  //       url: "#",
+  //     },
+  //     {
+  //       title: "Outreach",
+  //       url: "#",
+  //     },
+  //   ],
+  // },
 ];
 
 export const aboutUsLinks = [
@@ -92,13 +92,13 @@ export const aboutUsLinks = [
 ];
 
 export const communityLinks = [
-  {
-    pathname: "Recent Outreach",
-    path: "#",
-  },
+  // {
+  //   pathname: "Recent Outreach",
+  //   path: "#",
+  // },
   {
     pathname: "Contact Us",
-    path: "#",
+    path: "/contact-us",
   },
   {
     pathname: "Join Our Slack Community",

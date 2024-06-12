@@ -13,7 +13,7 @@ const NavigationBar = () => {
     <nav className="fixed top-0 right-0 left-0 bg-white py-5 drop-shadow-md text-sealBrown font-mulish z-[2]">
       <section className="w-[90%] max-w-[1280px] mx-auto flex gap-8 items-center ">
         <div className="flex justify-between w-full lg:w-fit ">
-          <figure className="w-[37px] h-[37px]">
+          <figure className="w-[50px] h-[50px]">
             <Link to="/" className="w-full h-full logo block"></Link>
           </figure>
 
@@ -28,7 +28,7 @@ const NavigationBar = () => {
         </div>
 
         <div
-          className={`bg-white menu-items w-full min-h-[90vh] lg:min-h-[unset] ${
+          className={`bg-white menu-items w-full min-h-[90vh] lg:min-h-[unset] lg:flex lg:items-center lg:justify-between ${
             isNavOpen && "open-nav"
           }`}
         >
@@ -42,6 +42,14 @@ const NavigationBar = () => {
               />
             ))}
           </ul>
+          <div className="flex w-[90%] max-w-[1280px] mx-auto  lg:max-w-[200px]">
+            <Link
+              to="/contact-us"
+              className="text-white capitalize w-full max-w-[136px] h-[45px] rounded-[30px] text-sm flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-transparent hover:text-primaryPink transition-all"
+            >
+              contact us
+            </Link>
+          </div>
         </div>
       </section>
     </nav>

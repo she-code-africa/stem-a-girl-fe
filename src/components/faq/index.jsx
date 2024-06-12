@@ -23,8 +23,8 @@ const FAQ = () => {
               />
             </div>
             <div className="space-y-3 lg:space-y-6">
-              {faqs.map(({ title, content }) => (
-                <Accordion title={title} content={content} />
+              {faqs.map(({ title, content }, i) => (
+                <Accordion title={title} content={content} key={i} />
               ))}
             </div>
           </div>

@@ -3,10 +3,10 @@ import { GlobalLayout } from "../../components";
 import Header from "../../components/header";
 import Stats from "../../components/shared-components/stats";
 import { InfoCardHeader } from "../../components/shared-components";
-import { skillsVector } from "../../assets/images";
-import ActivitiesSection from "../../components/shared-components/activities/activities-section";
+import { skillsVector, girlChild } from "../../assets/images";
 import FAQ from "../../components/faq";
 import { activities } from "../../utils/appData";
+import TestimonialsSlider from "../../components/activities/coding-page/TestimonialsSlider";
 
 const HomePage = () => {
   return (
@@ -37,8 +37,8 @@ const HomePage = () => {
             schools and partner organizations.
           </p>
           <div className="my-6 flex max-md:flex-col gap-7 md:gap-6 lg:gap-10 justify-center md:justify-start lg:justify-center lg:h-[329px] md:overflow-x-auto xl:overflow-hidden no-scrollbar">
-            {activities.map((activity) => (
-              <div className="text-fiord">
+            {activities.map((activity, i) => (
+              <div className="text-fiord" key={i}>
                 <img
                   src={activity.image}
                   alt=""
@@ -56,7 +56,23 @@ const HomePage = () => {
           <img src={skillsVector} alt="" />
         </div>
       </section>
-      <ActivitiesSection />
+      <section className="w-full bg-primaryPink pt-20 pb-24 mt-32 text-white">
+        <div className=" w-[90%] max-w-[1280px] mx-auto md:flex md:flex-row md:items-center lg:justify-between md:gap-10">
+          <article className="w-full lg:max-w-[600px]">
+            <h3 className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-normal md:leading-normal lg:leading-normal  w-full md:max-w-[450px]">
+              What other STEM enthusiasts are saying
+            </h3>
+
+            <TestimonialsSlider />
+          </article>
+          <div className="w-full flex justify-end">
+            <div className="m-0 p-0 w-full max-w-[536px] hidden lg:block ">
+              <img src={girlChild} alt="girl-child-pic" className="w-full " />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <FAQ />
     </GlobalLayout>
   );

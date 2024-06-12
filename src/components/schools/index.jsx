@@ -5,6 +5,10 @@ import {
   InfoCustomPrevArrows,
 } from "../shared-components/activities/custom-arrows";
 import SchoolCard from "../cards/schools";
+import { useQuery } from "@tanstack/react-query";
+import { getAllSchools } from "../../services/queries";
+import ApiLoading from "../loaders/ApiLoading";
+import { EmptyResponse } from "..";
 
 const Schools = () => {
   const settings = {
@@ -42,6 +46,11 @@ const Schools = () => {
     ],
   };
 
+  const { isLoading, data } = useQuery({
+    queryKey: ["schools"],
+    queryFn: getAllSchools,
+  });
+
   return (
     <section className="mx-auto container px-4 my-10 md:my-20">
       <InfoCardHeader
@@ -49,11 +58,17 @@ const Schools = () => {
         infoCardParagraph="Since the inception of the STEM Club initiative, we have had the privilege of visiting several schools."
       />
       <div className="w-full mt-10 md:mt-14 ">
-        <Slider {...settings}>
-          {[...Array(6)].map((_, index) => (
-            <SchoolCard key={index} />
-          ))}
-        </Slider>
+        {isLoading ? (
+          <ApiLoading />
+        ) : data.length > 0 ? (
+          <Slider {...settings}>
+            {data.map((school, index) => (
+              <SchoolCard key={index} image={school.image} name={school.name} />
+            ))}
+          </Slider>
+        ) : (
+          <EmptyResponse text="school" />
+        )}
       </div>
     </section>
   );

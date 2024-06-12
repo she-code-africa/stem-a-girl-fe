@@ -1,14 +1,21 @@
 import React from "react";
-import { GlobalLayout } from "../../components";
+import { ApiLoading, EmptyResponse, GlobalLayout } from "../../components";
 import Stats from "../../components/shared-components/stats";
 import ActivitiesSection from "../../components/shared-components/activities/activities-section";
 import Schools from "../../components/schools";
 import { InfoCardHeader } from "../../components/shared-components";
 import ImpactStoryCard from "../../components/cards/impact-stories-card";
-import { impactStories } from "../../utils/appData";
+// import { impactStories } from "../../utils/appData";
 import { clubStudentsImage, floralWhiteImage } from "../../assets/images";
+import { useQuery } from "@tanstack/react-query";
+import { getAllImpactStories } from "../../services/queries";
 
 const StemClubs = () => {
+  const { isLoading, data } = useQuery({
+    queryKey: ["impactstories"],
+    queryFn: getAllImpactStories,
+  });
+
   return (
     <GlobalLayout>
       <section className="stem-club-header pt-14 text-white relative -mt-8">
@@ -46,9 +53,17 @@ const StemClubs = () => {
           infoCardParagraph="Read about the inspiring journeys of some of our STEM Club members:"
         />
         <div className="flex gap-6 items-center overflow-x-auto no-scrollbar w-full mt-10 md:mt-16">
-          {impactStories.map((story, index) => (
-            <ImpactStoryCard key={index} {...story} />
-          ))}
+          {isLoading ? (
+            <ApiLoading />
+          ) : data.length > 0 ? (
+            <>
+              {data.map((story, index) => (
+                <ImpactStoryCard key={index} stories={story} />
+              ))}
+            </>
+          ) : (
+            <EmptyResponse text="story" />
+          )}
         </div>
       </section>
     </GlobalLayout>

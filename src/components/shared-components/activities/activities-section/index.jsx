@@ -24,8 +24,8 @@ const ActivitiesSection = () => {
       />
 
       <div className="flex max-md:flex-col w-full justify-center gap-3 my-10">
-        {clubActivities.map((activity) => (
-          <ClubActivity {...activity} />
+        {clubActivities.map((activity, i) => (
+          <ClubActivity {...activity} key={i} />
         ))}
       </div>
     </div>

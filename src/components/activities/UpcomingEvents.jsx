@@ -1,9 +1,38 @@
-import React from "react";
-import { InfoCardHeader, InfoCardSlider } from "../shared-components";
-import { upcomingEventsSlider } from "../../utils/appData";
+import React, { useState, useEffect } from "react";
+import { InfoCardHeader, EventsSlider } from "../shared-components";
+// import { upcomingEventsSlider } from "../../utils/appData";
 import { upcomingEventSettings } from "../../utils/sliderSettings";
+import { useQuery } from "@tanstack/react-query";
+import { getActivityEvents, getAllActivities } from "../../services/queries";
+import { ApiLoading, EmptyResponse } from "..";
 
-const UpcomingEvents = () => {
+const UpcomingEvents = ({ activityTitle }) => {
+  const {
+    isLoading,
+
+    data: allActivities,
+  } = useQuery({
+    queryKey: ["activities"],
+    queryFn: getAllActivities,
+  });
+  const [activityId, setActivityId] = useState("");
+
+  useEffect(() => {
+    const activityExists =
+      !isLoading &&
+      allActivities.find(
+        (activity) => activity.title.toLowerCase() === activityTitle
+      );
+
+    if (activityExists) {
+      setActivityId(activityExists._id);
+    }
+  }, [isLoading, activityTitle, allActivities]);
+
+  const { isLoading: isEventLoading, data: activityData } = useQuery({
+    queryKey: ["activityEvent", activityId],
+    queryFn: () => getActivityEvents(activityId),
+  });
   return (
     <>
       <InfoCardHeader
@@ -11,11 +40,19 @@ const UpcomingEvents = () => {
         infoCardParagraph="Stay tuned for our upcoming events and workshops:"
       />
 
-      <InfoCardSlider
-        settings={upcomingEventSettings}
-        sliderData={upcomingEventsSlider}
-        imageH="h-[403px]"
-      />
+      {isEventLoading ? (
+        <ApiLoading />
+      ) : activityData.length > 0 ? (
+        <EventsSlider
+          settings={upcomingEventSettings}
+          sliderData={activityData}
+          imageH="h-[403px]"
+        />
+      ) : (
+        <>
+          <EmptyResponse text="event" />
+        </>
+      )}
     </>
   );
 };

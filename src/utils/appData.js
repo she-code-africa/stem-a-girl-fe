@@ -47,25 +47,25 @@ export const navigationMenu = [
     isDropdown: false,
     dropdownMenu: [],
   },
-  {
-    pathname: "Outreach",
-    path: "/outreach",
-    isDropdown: true,
-    dropdownMenu: [
-      {
-        title: "Outreach",
-        url: "#",
-      },
-      {
-        title: "Outreach",
-        url: "#",
-      },
-      {
-        title: "Outreach",
-        url: "#",
-      },
-    ],
-  },
+  // {
+  //   pathname: "Outreach",
+  //   path: "/outreach",
+  //   isDropdown: true,
+  //   dropdownMenu: [
+  //     {
+  //       title: "Outreach",
+  //       url: "#",
+  //     },
+  //     {
+  //       title: "Outreach",
+  //       url: "#",
+  //     },
+  //     {
+  //       title: "Outreach",
+  //       url: "#",
+  //     },
+  //   ],
+  // },
 ];
 
 export const aboutUsLinks = [
@@ -92,21 +92,25 @@ export const aboutUsLinks = [
 ];
 
 export const communityLinks = [
-  {
-    pathname: "Recent Outreach",
-    path: "#",
-  },
+  // {
+  //   pathname: "Recent Outreach",
+  //   path: "#",
+  // isNewsLetter:false
+  // },
   {
     pathname: "Contact Us",
     path: "/contact-us",
+    isNewsLetter: false,
   },
   {
     pathname: "Join Our Slack Community",
     path: "https://bit.ly/joinshecodeafrica",
+    isNewsLetter: false,
   },
   {
     pathname: "Sign Up For Our Newsletter",
     path: "#",
+    isNewsLetter: true,
   },
 ];
 

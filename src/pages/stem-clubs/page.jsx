@@ -15,6 +15,7 @@ const StemClubs = () => {
     queryKey: ["impactstories"],
     queryFn: getAllImpactStories,
   });
+
   return (
     <GlobalLayout>
       <section className="stem-club-header pt-14 text-white relative -mt-8">
@@ -57,7 +58,7 @@ const StemClubs = () => {
           ) : data.length > 0 ? (
             <>
               {data.map((story, index) => (
-                <ImpactStoryCard key={index} {...story} />
+                <ImpactStoryCard key={index} stories={story} />
               ))}
             </>
           ) : (

@@ -136,29 +136,29 @@ export const coursesSlider = [
       "Watch our collection of step-by-step video tutorials, designed to help you master Scratch coding concepts at your own pace.",
     index: 3,
   },
-  {
-    picture: cardPhoto5,
-    cardHeading: "Coding Academy",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 4,
-  },
+  // {
+  //   picture: cardPhoto5,
+  //   cardHeading: "Coding Academy",
+  //   cardParagraph:
+  //     "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
+  //   index: 4,
+  // },
 
-  {
-    picture: cardPhoto3,
-    cardHeading: "Coding for Kids",
-    cardParagraph:
-      "Stuck for ideas? Browse through our library of project ideas and get inspired to create your own unique Scratch projects",
-    index: 5,
-  },
+  // {
+  //   picture: cardPhoto3,
+  //   cardHeading: "Coding for Kids",
+  //   cardParagraph:
+  //     "Stuck for ideas? Browse through our library of project ideas and get inspired to create your own unique Scratch projects",
+  //   index: 5,
+  // },
 
-  {
-    picture: cardPhoto6,
-    cardHeading: "Coding Academy",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 6,
-  },
+  // {
+  //   picture: cardPhoto6,
+  //   cardHeading: "Coding Academy",
+  //   cardParagraph:
+  //     "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
+  //   index: 6,
+  // },
 ];
 
 export const upcomingEventsSlider = [

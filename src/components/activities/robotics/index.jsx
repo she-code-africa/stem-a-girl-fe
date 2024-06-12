@@ -5,9 +5,12 @@ import {
   InfoCardHeader,
 } from "../../shared-components";
 import { roboticsHeroImage } from "../../../assets/images";
-// import { coursesSlider } from "../../../utils/appData";
+import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
-import { infoComponentsettings } from "../../../utils/sliderSettings";
+import {
+  infoComponentSettings,
+  infoComponentsettings,
+} from "../../../utils/sliderSettings";
 import { useQuery } from "@tanstack/react-query";
 import {
   getActivityCourses,
@@ -65,7 +68,11 @@ const RoboticsPageComponent = () => {
             ) : activityCourses.length > 0 ? (
               <InfoCardSlider
                 sliderData={activityCourses}
-                settings={infoComponentsettings}
+                settings={
+                  activityCourses.length < 3
+                    ? infoComponentSettings
+                    : infoComponentsettings
+                }
               />
             ) : (
               <>
@@ -75,7 +82,7 @@ const RoboticsPageComponent = () => {
           </section>
         </div>
 
-        <div className="mt-[100px] w-full my-32">
+        <div className="mt-[100px] w-full mb-32">
           <UpcomingEvents />
         </div>
       </div>

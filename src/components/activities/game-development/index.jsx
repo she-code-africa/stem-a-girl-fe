@@ -7,7 +7,10 @@ import {
 import { gameDevHeroImage } from "../../../assets/images";
 // import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
-import { infoComponentsettings } from "../../../utils/sliderSettings";
+import {
+  infoComponentsettings,
+  infoComponentSettings,
+} from "../../../utils/sliderSettings";
 import { useQuery } from "@tanstack/react-query";
 import {
   getActivityCourses,
@@ -63,7 +66,11 @@ const GameDevelopmentPage = () => {
             ) : activityCourses.length > 0 ? (
               <InfoCardSlider
                 sliderData={activityCourses}
-                settings={infoComponentsettings}
+                settings={
+                  activityCourses.length < 3
+                    ? infoComponentSettings
+                    : infoComponentsettings
+                }
               />
             ) : (
               <>
@@ -73,7 +80,7 @@ const GameDevelopmentPage = () => {
           </section>
         </div>
 
-        <div className="mt-[100px] w-full my-32">
+        <div className="mt-[100px] w-full mb-32">
           <UpcomingEvents />
         </div>
       </div>

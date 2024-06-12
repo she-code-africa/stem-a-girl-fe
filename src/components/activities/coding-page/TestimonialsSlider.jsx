@@ -59,7 +59,7 @@ const TestimonialsSlider = () => {
               {data.map((item, i) => (
                 <div className=" w-full" key={i}>
                   <p className="leading-normal text-base sm:text-lg sm:leading-normal md:text-xl md:leading-normal font-light text-[rgba(255,247,252,1)]">
-                    {item.testimony}
+                    “{item.testimony}”
                   </p>
 
                   <p className="text-right w-full my-1 text-sm italic capitalize">

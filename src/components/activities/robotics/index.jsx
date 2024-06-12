@@ -5,7 +5,7 @@ import {
   InfoCardHeader,
 } from "../../shared-components";
 import { roboticsHeroImage } from "../../../assets/images";
-import { coursesSlider } from "../../../utils/appData";
+// import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
 import {
   infoComponentSettings,

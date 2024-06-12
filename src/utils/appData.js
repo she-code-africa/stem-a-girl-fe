@@ -79,15 +79,15 @@ export const aboutUsLinks = [
   },
   {
     pathname: "Code of Conduct",
-    path: "#",
+    path: "https://shecodeafrica.org/code-of-conduct",
   },
   {
     pathname: "Privacy Policy",
-    path: "#",
+    path: "https://shecodeafrica.org/privacy",
   },
   {
     pathname: "Terms and Conditions",
-    path: "#",
+    path: "https://shecodeafrica.org/terms",
   },
 ];
 
@@ -98,18 +98,14 @@ export const communityLinks = [
   },
   {
     pathname: "Contact Us",
-    path: "#",
+    path: "/contact-us",
   },
   {
     pathname: "Join Our Slack Community",
-    path: "#",
+    path: "https://bit.ly/joinshecodeafrica",
   },
   {
     pathname: "Sign Up For Our Newsletter",
-    path: "#",
-  },
-  {
-    pathname: "Follow Us On Social Media",
     path: "#",
   },
 ];

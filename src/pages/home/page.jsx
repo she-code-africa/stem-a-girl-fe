@@ -13,7 +13,7 @@ const HomePage = () => {
     <GlobalLayout>
       <Header />
       <Stats />
-      <section className="max-sm:px-2">
+      <section className="w-[90%] max-w-[1280px] mx-auto">
         <InfoCardHeader
           infoCardHeading="Program Mission"
           infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary
@@ -22,7 +22,7 @@ const HomePage = () => {
         />
       </section>
       <section className="my-3 md:my-20 bg-[#F8F8F8] pt-5 pb-2">
-        <div className="bg-white my-5 pt-5 md:pt-10 lg:pt-14 rounded-[32px] container mx-auto px-4">
+        <div className="bg-white my-5 pt-5 md:pt-10 lg:pt-14 rounded-[32px] w-[90%] max-w-[1280px] mx-auto px-5">
           <h4 className="font-medium text-2xl md:text-3xl lg:text-4xl leading-normal md:leading-normal lg:leading-normal text-center">
             <span className="text-primaryPink font-bold ">
               {" "}

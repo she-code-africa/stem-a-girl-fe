@@ -5,7 +5,7 @@ import { homeHeroImage } from "../../assets/images";
 const Header = () => {
   return (
     <div className="bg-[#FFF7FC]">
-      <div className="flex py-6 md:py-4 container mx-auto max-md:flex-col justify-between max-xl:px-4">
+      <div className=" w-[90%] max-w-[1280px] flex py-6 md:py-4 container mx-auto max-md:flex-col justify-between max-xl:px-4">
         <div className="max-w-[578px] space-y-2">
           <div className="flex">
             <h1 className="text-[40px] leading-[50px] lg:text-[56px] max-w-[530px] lg:leading-[72.8px] font-semibold">

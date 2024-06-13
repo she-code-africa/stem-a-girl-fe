@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import FloraImg from "../../assets/images/floral.svg";
 import { homeHeroImage } from "../../assets/images";
 
@@ -17,12 +16,12 @@ const Header = () => {
             Clubs and workshops for secondary school girls across Africa to
             explore STEM subjects in a fun and supportive environment.
           </p>
-          <Link
-            to="/"
+          <a
+            href="#zero-tech-skills"
             className="bg-[#B70569] w-[240px] max-sm:text-sm rounded-[30px] text-white py-[18px] mt-2 inline-block text-center"
           >
             Learn More{" "}
-          </Link>
+          </a>
         </div>
         <div className="max-md:hidden">
           <img src={homeHeroImage} alt="" className="md:w-[850px] lg:w-fit" />

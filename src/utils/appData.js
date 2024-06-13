@@ -261,7 +261,7 @@ export const activities = [
 
 export const faqs = [
   {
-    title: "What is the She Code Africa STEM Club?",
+    title: "What is the SheCodeAfrica STEM-A-GIRL program about?",
     content:
       "The She Code Africa STEM Club is an initiative aimed at empowering girls to pursue careers in Science, Technology, Engineering, and Math (STEM).",
   },

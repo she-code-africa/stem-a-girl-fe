@@ -29,10 +29,10 @@ const InfoCard = ({
         </h4>
         <p className="text-sm  leading-normal  mt-2">{paragraph}</p>
 
-        <div className="flex py-5">
+        <div className="flex mt-4">
           <Link
             to={link || "#"}
-            className="flex items-center gap-1 text-primaryPink capitalize text-base font-medium"
+            className="flex items-center gap-1 py-2 text-primaryPink capitalize text-base font-medium border-2 border-white hover:border-primaryPink hover:px-3 transition-all rounded-sm"
           >
             learn more <FaAngleRight />
           </Link>

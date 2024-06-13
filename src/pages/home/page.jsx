@@ -36,7 +36,7 @@ const HomePage = () => {
             and have been developed in partnership with club facilitators,
             schools and partner organizations.
           </p>
-          <div className="my-6 flex max-md:flex-col gap-7 md:gap-6 lg:gap-10 justify-center md:justify-start lg:justify-center lg:h-[329px] md:overflow-x-auto xl:overflow-hidden no-scrollbar">
+          <div className="my-6 flex max-md:flex-col gap-7 md:gap-6 lg:gap-10 justify-center md:justify-start lg:justify-center  md:overflow-x-auto xl:overflow-hidden no-scrollbar">
             {activities.map((activity, i) => (
               <div className="text-fiord" key={i}>
                 <img

@@ -21,7 +21,10 @@ const HomePage = () => {
           Engineering, and Mathematics (STEM)."
         />
       </section>
-      <section className="my-3 md:my-20 bg-[#F8F8F8] pt-5 pb-2">
+      <section
+        className="my-3 md:my-20 bg-[#F8F8F8] pt-5 pb-2"
+        id="zero-tech-skills"
+      >
         <div className="bg-white my-5 pt-5 md:pt-10 lg:pt-14 rounded-[32px] w-[90%] max-w-[1280px] mx-auto px-5">
           <h4 className="font-medium text-2xl md:text-3xl lg:text-4xl leading-normal md:leading-normal lg:leading-normal text-center">
             <span className="text-primaryPink font-bold ">

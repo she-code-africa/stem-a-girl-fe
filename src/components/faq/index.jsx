@@ -31,7 +31,7 @@ const FAQ = () => {
 
               <div className="flex justify-end">
                 <Link
-                  to="/contact-us"
+                  to="https://shecodeafrica.org/faq"
                   className="text-white capitalize w-full max-w-[176px] h-[43px] rounded-[30px] text-sm flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-transparent hover:text-primaryPink transition-all gap-2"
                 >
                   see more{" "}

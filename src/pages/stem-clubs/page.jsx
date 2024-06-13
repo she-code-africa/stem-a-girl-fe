@@ -2,14 +2,13 @@ import React from "react";
 import { ApiLoading, EmptyResponse, GlobalLayout } from "../../components";
 import Stats from "../../components/shared-components/stats";
 import ActivitiesSection from "../../components/shared-components/activities/activities-section";
-import Schools from "../../components/schools";
+// import Schools from "../../components/schools";
 import { InfoCardHeader } from "../../components/shared-components";
 import ImpactStoryCard from "../../components/cards/impact-stories-card";
 // import { impactStories } from "../../utils/appData";
 import { clubStudentsImage, floralWhiteImage } from "../../assets/images";
 import { useQuery } from "@tanstack/react-query";
 import { getAllImpactStories } from "../../services/queries";
-
 const StemClubs = () => {
   const { isLoading, data } = useQuery({
     queryKey: ["impactstories"],

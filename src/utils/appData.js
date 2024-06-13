@@ -75,7 +75,7 @@ export const aboutUsLinks = [
   },
   {
     pathname: "F.A.Q",
-    path: "#",
+    path: "https://shecodeafrica.org/faq",
   },
   {
     pathname: "Code of Conduct",

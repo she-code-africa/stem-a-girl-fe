@@ -48,7 +48,7 @@ const Footer = () => {
                     className="text-base font-normal hover:text-primaryPink"
                     key={i}
                   >
-                    <Link to={menu.path}>{menu.pathname}</Link>
+                    <a href={menu.path}>{menu.pathname}</a>
                   </li>
                 ) : (
                   <li

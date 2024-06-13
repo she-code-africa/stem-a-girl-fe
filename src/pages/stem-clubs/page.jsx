@@ -46,7 +46,7 @@ const StemClubs = () => {
       </section>
       <Stats />
       <ActivitiesSection />
-      <Schools />
+      {/* <Schools /> */}
       <section className="w-full mt-24 mb-5">
         <InfoCardHeader
           infoCardHeading="Impact Stories"

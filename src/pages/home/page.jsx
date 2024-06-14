@@ -51,7 +51,6 @@ const HomePage = () => {
                   <p className="text-lg md:text-2xl my-3 font-semibold">
                     {activity.title}
                   </p>
-                  <p>{activity.description}</p>
                 </div>
               </div>
             ))}

@@ -25,6 +25,7 @@ const ContactUsComponent = () => {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
+    mode: "onBlur",
   });
   const { mutate: handleContactUs } = useMutation({
     mutationFn: makeEnquiry,

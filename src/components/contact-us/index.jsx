@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -25,6 +25,7 @@ const ContactUsComponent = () => {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
+    mode: "onBlur",
   });
   const { mutate: handleContactUs } = useMutation({
     mutationFn: makeEnquiry,
@@ -40,6 +41,16 @@ const ContactUsComponent = () => {
     },
   });
   const onsubmit = (data) => handleContactUs(data);
+
+  const textareaRef = useRef();
+
+  const handleTextAreaFocus = () => {
+    textareaRef.current.classList.add("border-[rgb(233,152,203)]");
+  };
+
+  const handleTextAreaBlur = () => {
+    textareaRef.current.classList.remove("border-[rgb(233,152,203)]");
+  };
   return (
     <>
       <section className=" text-sealBrown font-mulish w-full -mt-8 bg-whiteSmoke">
@@ -105,12 +116,15 @@ const ContactUsComponent = () => {
                   className={`w-full md:max-w-[549px] h-[290px] mt-2 rounded-md border border-gains overflow-hidden ${
                     errors.description?.message && "border-primaryPink"
                   }`}
+                  ref={textareaRef}
                 >
                   <textarea
                     {...register("description")}
                     name="description"
                     placeholder="Write your message"
                     className="text-base w-full h-full border-0 outline-none p-3 bg-white placeholder:text-[rgba(130,130,130,1)] resize-none"
+                    onFocus={handleTextAreaFocus}
+                    onBlur={handleTextAreaBlur}
                   ></textarea>
                 </div>
                 <p className="text-primaryPink text-sm">

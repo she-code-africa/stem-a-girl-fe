@@ -107,11 +107,11 @@ export const communityLinks = [
     path: "https://bit.ly/joinshecodeafrica",
     isNewsLetter: false,
   },
-  {
-    pathname: "Sign Up For Our Newsletter",
-    path: "#",
-    isNewsLetter: true,
-  },
+  // {
+  //   pathname: "Sign Up For Our Newsletter",
+  //   path: "#",
+  //   isNewsLetter: true,
+  // },
 ];
 
 export const coursesSlider = [
@@ -243,27 +243,24 @@ export const clubActivities = [
 
 export const activities = [
   {
-    title: "Coding workshops",
+    title: "Coding",
     image: codingHeroImage,
-    description: "Coding workshops",
   },
   {
     title: "Game Development",
     image: gameDevHeroImage,
-    description: "Coding workshops",
   },
   {
     title: "Robotics (Arduino, Raspberry Pi)",
     image: roboticsHeroImage,
-    description: "Coding workshops",
   },
 ];
 
 export const faqs = [
   {
-    title: "What is the SheCodeAfrica STEM-A-GIRL program about?",
+    title: "What is the SheCodeAfrica STEM-A-GIRL Program about?",
     content:
-      "The She Code Africa STEM Club is an initiative aimed at empowering girls to pursue careers in Science, Technology, Engineering, and Math (STEM).",
+      "The She Code Africa STEM-A-Girl Program is an initiative aimed at empowering girls to pursue careers in Science, Technology, Engineering, and Math (STEM).",
   },
   {
     title: "Who can join the STEM Club?",

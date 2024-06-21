@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     // Check if the current protocol is HTTP
-    if (process.env.NODE_ENV === "production") {
+    if (process.env.REACT_APP_NODE_ENV === "production") {
       if (window.location.protocol === "http:") {
         // Redirect to the equivalent URL with HTTPS
         window.location.href = `https://${window.location.hostname}${window.location.pathname}`;

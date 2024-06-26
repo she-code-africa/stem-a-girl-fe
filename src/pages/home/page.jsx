@@ -7,6 +7,7 @@ import { skillsVector, girlChild } from "../../assets/images";
 import FAQ from "../../components/faq";
 import { activities } from "../../utils/appData";
 import TestimonialsSlider from "../../components/activities/coding-page/TestimonialsSlider";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -16,9 +17,7 @@ const HomePage = () => {
       <section className="w-[90%] max-w-[1280px] mx-auto">
         <InfoCardHeader
           infoCardHeading="Program Mission"
-          infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary
-          schools aged 10 - 21 to pursue careers in Science, Technology,
-          Engineering, and Mathematics (STEM)."
+          infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary schools, across Africa, aged 10 - 21 to pursue careers in Science, Technology, Engineering, and Mathematics (STEM)."
         />
       </section>
       <section
@@ -42,16 +41,18 @@ const HomePage = () => {
           <div className="my-6 flex max-md:flex-col gap-7 md:gap-6 lg:gap-10 justify-center md:justify-start lg:justify-center  md:overflow-x-auto xl:overflow-hidden no-scrollbar">
             {activities.map((activity, i) => (
               <div className="text-fiord" key={i}>
-                <img
-                  src={activity.image}
-                  alt=""
-                  className="w-fit md:max-w-xs"
-                />
-                <div>
-                  <p className="text-lg md:text-2xl my-3 font-semibold">
-                    {activity.title}
-                  </p>
-                </div>
+                <Link to={activity.link}>
+                  <img
+                    src={activity.image}
+                    alt=""
+                    className="w-fit md:max-w-xs"
+                  />
+                  <div>
+                    <p className="text-lg md:text-2xl my-3 font-semibold">
+                      {activity.title}
+                    </p>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>

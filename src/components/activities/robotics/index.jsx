@@ -17,6 +17,7 @@ import {
   getAllActivities,
 } from "../../../services/queries";
 import { ApiLoading, EmptyResponse } from "../../index";
+import { roboticsHeroSubContent } from "../../../utils/appData";
 
 const RoboticsPageComponent = () => {
   const {
@@ -53,15 +54,11 @@ const RoboticsPageComponent = () => {
           heroHeading="Unlock Your Robotics Potential"
           heroParagraph="Dive into the fascinating world of robotics. Whether you're a novice or looking to advance your knowledge, we provide the resources you need to start building and programming robots."
           heroImage={roboticsHeroImage}
+          subContent={roboticsHeroSubContent}
         />
         <div className="my-16 lg:my-20">
           <section className="w-full">
-            <InfoCardHeader
-              infoCardHeading="start coding today!"
-              infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary
-        schools aged 10 - 21 to pursue careers in Science, Technology,
-        Engineering, and Mathematics (STEM)."
-            />
+            <InfoCardHeader infoCardHeading="Resources" infoCardParagraph="" />
 
             {isCoursesLoading ? (
               <ApiLoading />

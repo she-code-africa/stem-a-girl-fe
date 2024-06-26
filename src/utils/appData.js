@@ -224,19 +224,19 @@ export const clubActivities = [
   {
     title: "Interactive workshops",
     description:
-      "Etiam sed vulputate nisl, eu elementum arcu. Vivamus dignissim tortor in tellus dictum pellentesque. ",
+      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
     img: interactiveWorkshopImage,
   },
   {
     title: "Collaborative STEM projects",
     description:
-      "Etiam sed vulputate nisl, eu elementum arcu. Vivamus dignissim tortor in tellus dictum pellentesque. ",
+      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
     img: stemProjectsImage,
   },
   {
     title: "Coding bootcamps",
     description:
-      "Etiam sed vulputate nisl, eu elementum arcu. Vivamus dignissim tortor in tellus dictum pellentesque. ",
+      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
     img: codingBootcampImage,
   },
 ];
@@ -245,15 +245,36 @@ export const activities = [
   {
     title: "Coding",
     image: codingHeroImage,
+    link: "/activities/coding",
   },
   {
     title: "Game Development",
     image: gameDevHeroImage,
+    link: "/activities/game-development",
   },
   {
     title: "Robotics (Arduino, Raspberry Pi)",
     image: roboticsHeroImage,
+    link: "/activities/robotics",
   },
+];
+
+export const codingHeroSubContent = [
+  "New to coding? Our beginner's guide will help you get started",
+  "Need inspiration? Browse our STEM club creations",
+  "Stuck on a project? Ask our experts and mentors for support (Add form for enquiries)",
+];
+
+export const gameDevelopmentHeroSubContent = [
+  "New to game development? Our beginner's guide will help you get started",
+  "Need inspiration? Browse our STEM club creations",
+  "Stuck on a project? Ask our experts and mentors for support",
+];
+
+export const roboticsHeroSubContent = [
+  "New to robotics? Our beginner's guide will help you get started",
+  "Need inspiration? Browse our STEM club creations",
+  "Stuck on a project? Ask our experts and mentors for support",
 ];
 
 export const faqs = [
@@ -261,21 +282,29 @@ export const faqs = [
     title: "What is the SheCodeAfrica STEM-A-GIRL Program about?",
     content:
       "The She Code Africa STEM-A-Girl Program is an initiative aimed at empowering girls to pursue careers in Science, Technology, Engineering, and Math (STEM).",
+    list: false,
   },
   {
     title: "Who can join the STEM Club?",
     content:
-      " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam veritatis sint voluptate voluptatibus nesciunt voluptas cumque quod itaque inventore tempore. Reiciendis molestiae eligendi laboriosam? Quaerat, repudiandae possimus. Laborum, atque nam!",
+      "The STEM Club is open to African girls aged 10 - 21, regardless of grade level. The club is designed to be inclusive and welcoming to female secondary students of all backgrounds and interests.",
+    list: false,
   },
   {
     title: "What kind of activities can I expect?",
-    content:
-      " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam veritatis sint voluptate voluptatibus nesciunt voluptas cumque quod itaque inventore tempore. Reiciendis molestiae eligendi laboriosam? Quaerat, repudiandae possimus. Laborum, atque nam!",
+    content: [
+      "Hands-on STEM activities, such as building robots, creating coding projects, and conducting science experiments.",
+      "Workshops led by industry professionals and educators.",
+      "Opportunities to participate in STEM competitions and events.",
+      "Collaborative projects and team-building activities.",
+    ],
+    list: true,
   },
   {
     title: "Do I need prior experience in STEM?",
     content:
-      " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam veritatis sint voluptate voluptatibus nesciunt voluptas cumque quod itaque inventore tempore. Reiciendis molestiae eligendi laboriosam? Quaerat, repudiandae possimus. Laborum, atque nam!",
+      "No prior experience in STEM is necessary to join the club. She Code Africa’s STEM club is designed to be accessible and engaging for female students of all skill levels aged 10 - 21. Club members will have the opportunity to learn and develop STEM skills in a supportive and encouraging environment.",
+    list: false,
   },
 ];
 

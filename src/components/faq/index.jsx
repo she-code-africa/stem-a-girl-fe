@@ -21,12 +21,17 @@ const FAQ = () => {
               <img
                 src={faqImage}
                 alt="girl-child"
-                className="rounded-2xl h-60 w-full md:w-[420px] object-cover cursor-pointer"
+                className="rounded-2xl h-60 w-full md:w-[420px] object-cover"
               />
             </div>
             <div className="space-y-3 lg:space-y-6">
-              {faqs.map(({ title, content }, i) => (
-                <Accordion title={title} content={content} key={i} />
+              {faqs.map(({ title, content, list }, i) => (
+                <Accordion
+                  title={title}
+                  content={content}
+                  key={i}
+                  list={list}
+                />
               ))}
 
               <div className="flex justify-end">

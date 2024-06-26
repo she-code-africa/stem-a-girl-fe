@@ -17,6 +17,7 @@ import {
   getAllActivities,
 } from "../../../services/queries";
 import { ApiLoading, EmptyResponse } from "../../index";
+import { gameDevelopmentHeroSubContent } from "../../../utils/appData";
 
 const GameDevelopmentPage = () => {
   const {
@@ -52,15 +53,11 @@ const GameDevelopmentPage = () => {
           heroHeading="The Game Development Hub!"
           heroParagraph="Unleash your creativity and start building your own games. Whether you're a beginner or looking to advance your skills, we have the resources you need to become a game developer."
           heroImage={gameDevHeroImage}
+          subContent={gameDevelopmentHeroSubContent}
         />
         <div className="my-16 lg:my-20">
           <section className="w-full">
-            <InfoCardHeader
-              infoCardHeading="start coding today!"
-              infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary
-        schools aged 10 - 21 to pursue careers in Science, Technology,
-        Engineering, and Mathematics (STEM)."
-            />
+            <InfoCardHeader infoCardHeading="Resources" infoCardParagraph="" />
             {isCoursesLoading ? (
               <ApiLoading />
             ) : activityCourses.length > 0 ? (

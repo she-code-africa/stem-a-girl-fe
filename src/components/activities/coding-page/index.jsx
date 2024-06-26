@@ -17,6 +17,7 @@ import {
   getAllActivities,
 } from "../../../services/queries";
 import { ApiLoading, EmptyResponse } from "../../index";
+import { codingHeroSubContent } from "../../../utils/appData";
 
 const CodingPageComponent = () => {
   const {
@@ -57,14 +58,13 @@ const CodingPageComponent = () => {
           complete beginner or looking to sharpen your skills, our workshops
           offer something for everyone."
             heroImage={codingHeroImage}
+            subContent={codingHeroSubContent}
           />
           <div className="my-16 lg:my-20 ">
             <section className="w-full">
               <InfoCardHeader
-                infoCardHeading="start coding today!"
-                infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary
-        schools aged 10 - 21 to pursue careers in Science, Technology,
-        Engineering, and Mathematics (STEM)."
+                infoCardHeading="Resources"
+                infoCardParagraph=""
               />
               {isCoursesLoading ? (
                 <ApiLoading />

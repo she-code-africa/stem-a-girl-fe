@@ -1,7 +1,12 @@
 import React from "react";
 import { cpu, flower } from "../../../assets/images";
 
-const HeroComponent = ({ heroHeading, heroParagraph, heroImage }) => {
+const HeroComponent = ({
+  heroHeading,
+  heroParagraph,
+  heroImage,
+  subContent,
+}) => {
   return (
     <div className="w-full flex flex-col md:flex-row mt-12 gap-10 lg:gap-20 md:items-center md:justify-between">
       <article className="w-full md:max-w-[619px]">
@@ -12,19 +17,23 @@ const HeroComponent = ({ heroHeading, heroParagraph, heroImage }) => {
           {heroParagraph}
         </p>
 
-        <div className="flex items-center w-full max-w-[536px] mx-auto md:mx-0 bg-lavender p-4 lg:p-6 gap-5 rounded-lg md:rounded-2xl mt-7 lg:mt-14">
+        <div className="flex w-full max-w-[536px] mx-auto md:mx-0 bg-lavender p-4 lg:p-6 gap-5 rounded-lg md:rounded-2xl mt-7 lg:mt-14">
           <figure className="h-[25px] w-[25px] md:h-[40px] md:w-[40px]">
             <img src={cpu} alt="cpu-logo" className="w-full h-full" />
           </figure>
 
           <article className="w-fit">
             <h4 className="text-base md:text-lg font-semibold capitalize">
-              comprehensive curriculum
+              Get Started Today!
             </h4>
 
-            <p className="mt-1 text-astronaut text-sm">
-              From the basics to advanced topics.
-            </p>
+            <ul className="mt-1 text-astronaut text-sm mx-6">
+              {subContent.map((item, i) => (
+                <li className="list-disc leading-normal" key={i}>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </article>
         </div>
       </article>

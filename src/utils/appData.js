@@ -222,24 +222,44 @@ export const testimonialSliderContent = [
 
 export const clubActivities = [
   {
-    title: "Interactive workshops",
-    description:
-      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
+    title: "Interactive Workshops",
+    description: "Learn basic programming languages and build your own robots!",
     img: interactiveWorkshopImage,
   },
   {
-    title: "Collaborative STEM projects",
+    title: "Routine Club Meetups",
     description:
-      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
+      "Our STEM Club meet-ups are designed to be engaging, educational, and fun. Each meeting offers a variety of activities to spark your curiosity and deepen your understanding of STEM.",
     img: stemProjectsImage,
   },
   {
-    title: "Coding bootcamps",
+    title: "Group Discussions and Brainstorming",
     description:
-      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
+      "Plan projects, brainstorm ideas, and solve problems with your peers.",
     img: codingBootcampImage,
   },
 ];
+
+// export const clubActivities = [
+//   {
+//     title: "Interactive workshops",
+//     description:
+//       "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
+//     img: interactiveWorkshopImage,
+//   },
+//   {
+//     title: "Collaborative STEM projects",
+//     description:
+//       "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
+//     img: stemProjectsImage,
+//   },
+//   {
+//     title: "Coding bootcamps",
+//     description:
+//       "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
+//     img: codingBootcampImage,
+//   },
+// ];
 
 export const activities = [
   {

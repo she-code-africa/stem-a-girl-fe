@@ -19,8 +19,7 @@ const ActivitiesSection = () => {
     <div className="container mx-auto mb-10 max-xl:px-4">
       <InfoCardHeader
         infoCardHeading="Our Club Activities"
-        infoCardParagraph="Since the inception of the STEM Club initiative, we have had the
-        privilege of visiting several schools, where we have:"
+        infoCardParagraph="Learn, explore and innovate! "
       />
 
       <div className="flex max-md:flex-col w-full justify-center gap-3 my-10">

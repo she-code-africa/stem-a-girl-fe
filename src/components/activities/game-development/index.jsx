@@ -35,16 +35,17 @@ const GameDevelopmentPage = () => {
     const activityExists =
       !isLoading &&
       allActivities.find(
-        (activity) => activity.title.toLowerCase() === "game-development"
+        (activity) => activity.title.toLowerCase() === "game development"
       );
-
     if (activityExists) {
       setActivityId(activityExists._id);
     }
   }, [isLoading, isError, allActivities]);
+
   const { isLoading: isCoursesLoading, data: activityCourses } = useQuery({
     queryKey: ["gamedevCourses", activityId],
     queryFn: () => getActivityCourses(activityId),
+    enabled: !!activityId && !isLoading,
   });
   return (
     <section className=" text-sealBrown font-mulish w-full">
@@ -60,7 +61,7 @@ const GameDevelopmentPage = () => {
             <InfoCardHeader infoCardHeading="Resources" infoCardParagraph="" />
             {isCoursesLoading ? (
               <ApiLoading />
-            ) : activityCourses.length > 0 ? (
+            ) : !!activityCourses && activityCourses.length > 0 ? (
               <InfoCardSlider
                 sliderData={activityCourses}
                 settings={
@@ -78,7 +79,7 @@ const GameDevelopmentPage = () => {
         </div>
 
         <div className="mt-[100px] w-full mb-32">
-          <UpcomingEvents />
+          <UpcomingEvents activityTitle="game development" />
         </div>
       </div>
     </section>

@@ -7,11 +7,7 @@ import { getActivityEvents, getAllActivities } from "../../services/queries";
 import { ApiLoading, EmptyResponse } from "..";
 
 const UpcomingEvents = ({ activityTitle }) => {
-  const {
-    isLoading,
-
-    data: allActivities,
-  } = useQuery({
+  const { isLoading, data: allActivities } = useQuery({
     queryKey: ["activities"],
     queryFn: getAllActivities,
   });
@@ -32,6 +28,7 @@ const UpcomingEvents = ({ activityTitle }) => {
   const { isLoading: isEventLoading, data: activityData } = useQuery({
     queryKey: ["activityEvent", activityId],
     queryFn: () => getActivityEvents(activityId),
+    enabled: !!activityId && !isLoading,
   });
   return (
     <>
@@ -42,7 +39,7 @@ const UpcomingEvents = ({ activityTitle }) => {
 
       {isEventLoading ? (
         <ApiLoading />
-      ) : activityData.length > 0 ? (
+      ) : !!activityData && activityData.length > 0 ? (
         <EventsSlider
           settings={upcomingEventSettings}
           sliderData={activityData}

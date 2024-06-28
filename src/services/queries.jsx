@@ -8,15 +8,17 @@ export const getAllActivities = async () => {
 };
 
 export const getActivityCourses = async (activityID) => {
+  console.log(activityID);
   const activityCourses = await axios.get(
-    `${baseURL}course?activityId=${activityID}`
+    `${baseURL}course?activity=${activityID}`
   );
   return activityCourses.data.data;
 };
 
 export const getActivityEvents = async (activityID) => {
+  console.log(activityID);
   const activityEvents = await axios.get(
-    `${baseURL}event?activityId=${activityID}`
+    `${baseURL}event?activity=${activityID}`
   );
   return activityEvents.data.data;
 };

@@ -46,6 +46,7 @@ const CodingPageComponent = () => {
   const { isLoading: isCoursesLoading, data: activityCourses } = useQuery({
     queryKey: ["codingCourses", activityId],
     queryFn: () => getActivityCourses(activityId),
+    enabled: !!activityId && !isLoading,
   });
 
   return (
@@ -68,7 +69,7 @@ const CodingPageComponent = () => {
               />
               {isCoursesLoading ? (
                 <ApiLoading />
-              ) : activityCourses.length > 0 ? (
+              ) : !!activityCourses && activityCourses.length > 0 ? (
                 <InfoCardSlider
                   sliderData={activityCourses}
                   settings={
@@ -86,7 +87,7 @@ const CodingPageComponent = () => {
           </div>
 
           <div className="mt-[100px] w-full mb-32">
-            <UpcomingEvents activity="coding" />
+            <UpcomingEvents activityTitle="coding" />
           </div>
         </div>
       </section>

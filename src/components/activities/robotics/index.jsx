@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 import {
   HeroComponent,
-  InfoCardSlider,
   InfoCardHeader,
+  InfoCard,
 } from "../../shared-components";
+import InfiniteScroll from "react-infinite-scroll-component";
 import { roboticsHeroImage } from "../../../assets/images";
 // import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
-import {
-  infoComponentSettings,
-  infoComponentsettings,
-} from "../../../utils/sliderSettings";
+
 import { useQuery } from "@tanstack/react-query";
 import {
   getActivityCourses,
@@ -45,8 +43,39 @@ const RoboticsPageComponent = () => {
   const { isLoading: isCoursesLoading, data: activityCourses } = useQuery({
     queryKey: ["roboticsCourses", activityId],
     queryFn: () => getActivityCourses(activityId),
-    enabled: !!activityId,
+    enabled: !!activityId && !isLoading,
   });
+
+  console.log({ activityCourses });
+
+  // inifinite scrolling
+  const filteredCourses =
+    activityCourses &&
+    activityCourses.length > 0 &&
+    activityCourses.filter((courses) => courses.state === "published");
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [items, setItems] = useState(
+    filteredCourses ? filteredCourses.slice(0, 12) : []
+  );
+  const [hasMore, setHasMore] = useState(true);
+
+  const fetchMore = () => {
+    const nextIndex = currentIndex + 1;
+    const nextLastIndex = nextIndex * 12;
+    const nextFirstIndex = nextLastIndex - 12;
+
+    if (nextFirstIndex > filteredCourses.length) {
+      setHasMore(false);
+    } else {
+      setTimeout(() => {
+        setItems((prev) => [
+          ...prev,
+          ...filteredCourses.slice(nextFirstIndex, nextLastIndex),
+        ]);
+        setCurrentIndex(nextIndex);
+      }, 500);
+    }
+  };
 
   return (
     <section className=" text-sealBrown font-mulish w-full">
@@ -57,31 +86,43 @@ const RoboticsPageComponent = () => {
           heroImage={roboticsHeroImage}
           subContent={roboticsHeroSubContent}
         />
+
+        <div className="mt-[100px] w-full mb-32">
+          <UpcomingEvents activityTitle="robotics" />
+        </div>
         <div className="my-16 lg:my-20">
           <section className="w-full">
             <InfoCardHeader infoCardHeading="Resources" infoCardParagraph="" />
 
             {isCoursesLoading ? (
               <ApiLoading />
-            ) : !!activityCourses && activityCourses.length > 0 ? (
-              <InfoCardSlider
-                sliderData={activityCourses}
-                settings={
-                  activityCourses.length < 3
-                    ? infoComponentSettings
-                    : infoComponentsettings
-                }
-              />
+            ) : filteredCourses && filteredCourses.length > 0 ? (
+              <InfiniteScroll
+                dataLength={items.length}
+                next={fetchMore}
+                loader={<ApiLoading />}
+                hasMore={hasMore}
+              >
+                <section className="w-full grid grid-cols-3 gap-5 ">
+                  {filteredCourses.map((item, i) => (
+                    <InfoCard
+                      key={i}
+                      title={item.title}
+                      cardImage={item.image}
+                      paragraph={item.description}
+                      index={item.index}
+                      // imageH={imageH}
+                      link={item.link}
+                    />
+                  ))}
+                </section>
+              </InfiniteScroll>
             ) : (
               <>
                 <EmptyResponse text="course" />
               </>
             )}
           </section>
-        </div>
-
-        <div className="mt-[100px] w-full mb-32">
-          <UpcomingEvents activityTitle="robotics" />
         </div>
       </div>
     </section>

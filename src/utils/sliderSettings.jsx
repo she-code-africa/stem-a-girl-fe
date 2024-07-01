@@ -36,7 +36,7 @@ export const infoComponentSettings = {
 };
 export const infoComponentsettings = {
   dots: false,
-  infinite: true,
+  infinite: false,
   speed: 500,
   arrows: true,
   swipeToSlide: true,

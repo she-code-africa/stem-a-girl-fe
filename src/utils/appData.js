@@ -240,26 +240,120 @@ export const clubActivities = [
   },
 ];
 
-// export const clubActivities = [
-//   {
-//     title: "Interactive workshops",
-//     description:
-//       "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
-//     img: interactiveWorkshopImage,
-//   },
-//   {
-//     title: "Collaborative STEM projects",
-//     description:
-//       "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
-//     img: stemProjectsImage,
-//   },
-//   {
-//     title: "Coding bootcamps",
-//     description:
-//       "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
-//     img: codingBootcampImage,
-//   },
-// ];
+export const testData = [
+  {
+    title: "Interactive workshops",
+    description:
+      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
+    image: interactiveWorkshopImage,
+    link: "#",
+  },
+  {
+    title: "Collaborative STEM projects",
+    description:
+      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
+    image: stemProjectsImage,
+    link: "#",
+  },
+  {
+    title: "Coding bootcamps",
+    description:
+      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
+    image: codingBootcampImage,
+    link: "#",
+  },
+  {
+    title: "Collaborative STEM projects",
+    description:
+      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
+    image: stemProjectsImage,
+    link: "#",
+  },
+  {
+    title: "Collaborative STEM projects",
+    description:
+      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
+    image: stemProjectsImage,
+    link: "#",
+  },
+  {
+    title: "Coding bootcamps",
+    description:
+      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
+    image: codingBootcampImage,
+    link: "#",
+  },
+  {
+    title: "Interactive workshops",
+    description:
+      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
+    image: interactiveWorkshopImage,
+    link: "#",
+  },
+  {
+    title: "Coding bootcamps",
+    description:
+      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
+    image: codingBootcampImage,
+    link: "#",
+  },
+  {
+    title: "Interactive workshops",
+    description:
+      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
+    image: interactiveWorkshopImage,
+    link: "#",
+  },
+  {
+    title: "Collaborative STEM projects",
+    description:
+      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
+    image: stemProjectsImage,
+    link: "#",
+  },
+  {
+    title: "Coding bootcamps",
+    description:
+      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
+    image: codingBootcampImage,
+    link: "#",
+  },
+  {
+    title: "Collaborative STEM projects",
+    description:
+      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
+    image: stemProjectsImage,
+    link: "#",
+  },
+  {
+    title: "Collaborative STEM projects",
+    description:
+      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
+    image: stemProjectsImage,
+    link: "#",
+  },
+  {
+    title: "Coding bootcamps",
+    description:
+      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
+    image: codingBootcampImage,
+    link: "#",
+  },
+  {
+    title: "Interactive workshops",
+    description:
+      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
+    image: interactiveWorkshopImage,
+    link: "#",
+  },
+  {
+    title: "Coding bootcamps",
+    description:
+      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
+    image: codingBootcampImage,
+    link: "#",
+  },
+];
 
 export const activities = [
   {

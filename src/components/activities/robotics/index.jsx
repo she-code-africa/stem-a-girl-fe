@@ -103,7 +103,7 @@ const RoboticsPageComponent = () => {
                 loader={<ApiLoading />}
                 hasMore={hasMore}
               >
-                <section className="w-full grid grid-cols-3 gap-5 ">
+                <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
                   {filteredCourses.map((item, i) => (
                     <InfoCard
                       key={i}

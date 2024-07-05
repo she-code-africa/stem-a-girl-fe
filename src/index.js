@@ -4,8 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize(process.env.REACT_APP_G_TAG_ID);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// Send pageview with a custom path
+ReactGA.send({
+  hitType: "pageview",
+  page: window.location.pathname,
+  title: "App-views",
+});
+
 root.render(
   <React.StrictMode>
     <Router>

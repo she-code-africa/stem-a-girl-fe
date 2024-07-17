@@ -92,11 +92,11 @@ export const aboutUsLinks = [
 ];
 
 export const communityLinks = [
-  // {
-  //   pathname: "Recent Outreach",
-  //   path: "#",
-  // isNewsLetter:false
-  // },
+  {
+    pathname: "Recent Outreach",
+    path: "#",
+  isNewsLetter:false
+  },
   {
     pathname: "Contact Us",
     path: "/contact-us",
@@ -107,11 +107,11 @@ export const communityLinks = [
     path: "https://bit.ly/joinshecodeafrica",
     isNewsLetter: false,
   },
-  // {
-  //   pathname: "Sign Up For Our Newsletter",
-  //   path: "#",
-  //   isNewsLetter: true,
-  // },
+  {
+    pathname: "Sign Up For Our Newsletter",
+    path: "#",
+    isNewsLetter: true,
+  },
 ];
 
 export const coursesSlider = [

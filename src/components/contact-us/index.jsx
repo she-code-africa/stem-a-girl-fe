@@ -6,10 +6,11 @@ import { toast } from "react-toastify";
 import { makeEnquiry } from "../../services/mutations";
 import { useMutation } from "@tanstack/react-query";
 import { PrimaryInput } from "../index";
-import Captcha from "../Captcha";
 import { floralWhiteImage, starImage } from "../../assets/images";
+import Recaptcha from "../Recaptcha";
 
 const ContactUsComponent = () => {
+  const [recaptchaToken, setRecaptchaToken] = useState("");
   const schema = yup
     .object({
       fullName: yup.string().required("Please enter your name"),
@@ -43,23 +44,25 @@ const ContactUsComponent = () => {
     },
   });
 
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
-  const handleRecaptchaChange = (token) => {
-    setRecaptchaToken(token);
-  };
+ 
 
   const onsubmit = (data) => {
-    if (!recaptchaToken) {
-      toast.error("Please complete the reCAPTCHA", {
-        position: toast.POSITION.TOP_RIGHT,
-      });
-      return;
-    }
-
-    handleContactUs({ ...data, recaptchaToken });
+    window.grecaptcha.ready(() => {
+      window.grecaptcha
+        .execute("6LdgNhIqAAAAAHaQlxrKbWOSCh79HjlWz8JfCEOE")
+        .then((token) => {
+          data.recaptcha = token;
+          handleContactUs(data);
+        })
+        .catch((error) => {
+          toast.error("reCAPTCHA verification failed. Please try again.", {
+            position: toast.POSITION.TOP_RIGHT,
+          });
+        });
+    });
   };
-
+  
   const textareaRef = useRef();
 
   const handleTextAreaFocus = () => {
@@ -157,7 +160,6 @@ const ContactUsComponent = () => {
               </div>
             </div>
 
-            <Captcha onChange={handleRecaptchaChange} />
             <img src={starImage} alt="" className="max-md:hidden mt-16" />
 
             <div className="flex md:justify-end w-full">
@@ -167,7 +169,8 @@ const ContactUsComponent = () => {
                 </button>
               </div>
             </div>
-          </form>{" "}
+          </form>
+          <Recaptcha onToken={(token) => setRecaptchaToken(token)} /> 
           <img
             src={starImage}
             alt=""

@@ -5,11 +5,11 @@ function Recaptcha({ onToken }) {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js?render=6LdgNhIqAAAAAHaQlxrKbWOSCh79HjlWz8JfCEOE";
+    script.src = "https://www.google.com/recaptcha/api.js?render=6LeMShEqAAAAANL4rT2yerYM70w-yM_HPi4TvrEP";
     script.addEventListener("load", () => {
       window.grecaptcha.ready(() => {
         window.grecaptcha
-          .execute("6LdgNhIqAAAAAHaQlxrKbWOSCh79HjlWz8JfCEOE", { action: "submit" })
+          .execute("6LeMShEqAAAAANL4rT2yerYM70w-yM_HPi4TvrEP", { action: "submit" })
           .then((token) => {
             onToken(token);
           });
@@ -22,7 +22,7 @@ function Recaptcha({ onToken }) {
     };
   }, [onToken]);
 
-  return <div ref={recaptchaRef} className="g-recaptcha" data-sitekey="6LdgNhIqAAAAAHaQlxrKbWOSCh79HjlWz8JfCEOE" data-size="invisible"></div>;
+  return <div ref={recaptchaRef} className="g-recaptcha" data-sitekey="6LeMShEqAAAAANL4rT2yerYM70w-yM_HPi4TvrEP" data-size="invisible"></div>;
 }
 
 export default Recaptcha;

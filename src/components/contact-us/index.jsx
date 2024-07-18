@@ -50,7 +50,7 @@ const ContactUsComponent = () => {
   const onsubmit = (data) => {
     window.grecaptcha.ready(() => {
       window.grecaptcha
-        .execute("6LdgNhIqAAAAAHaQlxrKbWOSCh79HjlWz8JfCEOE")
+        .execute("6LeMShEqAAAAANL4rT2yerYM70w-yM_HPi4TvrEP")
         .then((token) => {
           data.recaptcha = token;
           handleContactUs(data);

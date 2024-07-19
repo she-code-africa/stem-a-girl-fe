@@ -44,24 +44,19 @@ const ContactUsComponent = () => {
     },
   });
 
+  const onSubmit = (data) => {
+    if (recaptchaToken) {
+      data.recaptcha = recaptchaToken;
+      handleContactUs(data);
+    } else {
+      toast.error("Please complete the reCAPTCHA.", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
+  };
 
  
 
-  const onsubmit = (data) => {
-    window.grecaptcha.ready(() => {
-      window.grecaptcha
-        .execute("6LeMShEqAAAAANL4rT2yerYM70w-yM_HPi4TvrEP")
-        .then((token) => {
-          data.recaptcha = token;
-          handleContactUs(data);
-        })
-        .catch((error) => {
-          toast.error("reCAPTCHA verification failed. Please try again.", {
-            position: toast.POSITION.TOP_RIGHT,
-          });
-        });
-    });
-  };
   
   const textareaRef = useRef();
 
@@ -103,7 +98,7 @@ const ContactUsComponent = () => {
 
         <section className="w-[90%]  max-w-[900px] mx-auto mt-10 md:mt-12 pb-10 relative">
           <img src={starImage} alt="" className="max-md:hidden mb-16" />
-          <form className="w-full" onSubmit={handleSubmit(onsubmit)}>
+          <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col md:flex-row gap-5 md:gap-20">
               <div className="w-full md:w-[50%]">
                 <PrimaryInput

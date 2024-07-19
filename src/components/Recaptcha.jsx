@@ -1,15 +1,18 @@
 import React, { useEffect, useRef } from "react";
 
-function Recaptcha({ onToken }) {
+function GoogleRecaptcha({ onToken }) {
   const recaptchaRef = useRef(null);
-
+  const siteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js?render=6LeMShEqAAAAANL4rT2yerYM70w-yM_HPi4TvrEP";
+    script.src =
+      `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
     script.addEventListener("load", () => {
       window.grecaptcha.ready(() => {
         window.grecaptcha
-          .execute("6LeMShEqAAAAANL4rT2yerYM70w-yM_HPi4TvrEP", { action: "submit" })
+          .execute(siteKey, {
+            action: "submit",
+          })
           .then((token) => {
             onToken(token);
           });
@@ -22,7 +25,14 @@ function Recaptcha({ onToken }) {
     };
   }, [onToken]);
 
-  return <div ref={recaptchaRef} className="g-recaptcha" data-sitekey="6LeMShEqAAAAANL4rT2yerYM70w-yM_HPi4TvrEP" data-size="invisible"></div>;
+  return (
+    <div
+      ref={recaptchaRef}
+      className="g-recaptcha"
+      data-sitekey={siteKey}
+      data-size="invisible"
+    ></div>
+  );
 }
 
-export default Recaptcha;
+export default GoogleRecaptcha;

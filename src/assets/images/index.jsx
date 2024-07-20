@@ -21,6 +21,7 @@ import homeHeroImage from "./home-page-hero-image.svg";
 import studentsImage from "./students.png";
 import clubStudentsImage from "./club-students.png";
 import floralWhiteImage from "./floral-white.svg";
+import starImage from "./star-image.svg";
 import faqImage from "./homepage/faq.png";
 
 export {
@@ -47,5 +48,6 @@ export {
   studentsImage,
   clubStudentsImage,
   floralWhiteImage,
+  starImage,
   faqImage,
 };

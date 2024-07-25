@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
 import { FaAngleRight, FaCheck, FaExternalLinkAlt } from "react-icons/fa";
-
+import { starImage } from "../../assets/images";
 const CodePlayground = ({ isOpen, onClose }) => {
   return (
     <Modal
@@ -10,19 +10,28 @@ const CodePlayground = ({ isOpen, onClose }) => {
       onRequestClose={onClose}
       contentLabel="Code Playground"
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center overflow-y-auto"
-
       overlayClassName=" fixed inset-0 bg-black bg-opacity-50"
     >
       <div className="bg-white py-7 lg:px-16 px-5 rounded-lg max-w-[90%] w-full     lg:top-64 top-[400px] md:top-[200px] z-50 relative ">
         <div className="flex justify-between">
-          <button className="  hover:text-primaryPink transition-all" onClick={onClose}>
+          <button
+            className="  hover:text-primaryPink transition-all"
+            onClick={onClose}
+          >
             Back
           </button>
-          <a href="https://codeplayground.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-primaryPink transition-all">
-    <FaExternalLinkAlt />
-  </a>
+          <a
+            href="https://codeplayground.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primaryPink transition-all"
+          >
+            <FaExternalLinkAlt />
+          </a>
         </div>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl mb-4 text-center ">Explore Code Playground</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl mb-4 text-center ">
+          Explore Code Playground
+        </h2>
         <div className="flex mb-5 lg:justify-center flex-wrap gap-2 w-full">
           <div className="flex items-center gap-2  ">
             <span className="text-primaryPink">
@@ -60,7 +69,6 @@ const CodePlayground = ({ isOpen, onClose }) => {
             title="Code Playground"
           ></iframe>
         </div>
-      
       </div>
     </Modal>
   );
@@ -79,9 +87,10 @@ const ReadyToCode = () => {
 
   return (
     <section
-      className="my-3 md:my-20 bg-lavender pt-5 pb-2"
+      className="my-3 md:my-20 bg-lavender pt-5 pb-2 relative"
       id="zero-tech-skills"
     >
+      <img src={starImage} alt="" className="max-md:hidden left-28 top-16 absolute" />
       <div className="w-[90%] max-w-[1280px] mx-auto">
         <h4 className="font-medium text-2xl md:text-3xl lg:text-4xl leading-normal md:leading-normal lg:leading-normal text-center">
           <span className="text-primaryPink font-bold ">Ready to Code?</span>
@@ -106,10 +115,11 @@ const ReadyToCode = () => {
           </Link>
         </div>
       </div>
+      <img src={starImage} alt="" className="max-md:hidden right-64 bottom-16 absolute" />
       <CodePlayground isOpen={isLightboxOpen} onClose={closeLightbox} />
+
     </section>
   );
 };
 
 export default ReadyToCode;
-

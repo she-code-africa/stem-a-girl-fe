@@ -44,7 +44,6 @@ const ContactUsComponent = () => {
       reset();
     },
     onError: (error, variables) => {
-      console.error("Error:", error);
       toast.error("An error occurred.", {
         position: toast.POSITION.TOP_RIGHT,
       });

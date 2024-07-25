@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Modal from "react-modal";
 import { FaAngleRight, FaCheck, FaExternalLinkAlt } from "react-icons/fa";
 import { starImage } from "../../assets/images";
+
 const CodePlayground = ({ isOpen, onClose }) => {
   return (
     <Modal

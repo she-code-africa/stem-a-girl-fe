@@ -55,9 +55,6 @@ const ContactUsComponent = () => {
     }
   };
 
- 
-
-  
   const textareaRef = useRef();
 
   const handleTextAreaFocus = () => {
@@ -165,7 +162,7 @@ const ContactUsComponent = () => {
               </div>
             </div>
           </form>
-          <Recaptcha onToken={(token) => setRecaptchaToken(token)} /> 
+          <Recaptcha onToken={(token) => setRecaptchaToken(token)} />
           <img
             src={starImage}
             alt=""

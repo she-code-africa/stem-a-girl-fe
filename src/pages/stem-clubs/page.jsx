@@ -5,7 +5,6 @@ import ActivitiesSection from "../../components/shared-components/activities/act
 // import Schools from "../../components/schools";
 import { InfoCardHeader } from "../../components/shared-components";
 import ImpactStoryCard from "../../components/cards/impact-stories-card";
-// import { impactStories } from "../../utils/appData";
 import { clubStudentsImage, floralWhiteImage } from "../../assets/images";
 import { useQuery } from "@tanstack/react-query";
 import { getAllImpactStories } from "../../services/queries";

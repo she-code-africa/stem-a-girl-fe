@@ -24,7 +24,7 @@ const NewsLetter = ({ setShowNewsLetterModal }) => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onsubmit = (data) => console.log(data);
+  const onsubmit = (data) => console.log("submitted form");
   return (
     <section className="fixed bg-[rgba(0,0,0,0.5)] top-0 bottom-0 left-0 right-0 z-[3] flex items-center justify-center py-5">
       <div className="bg-white max-w-[500px] w-[90%] mx-auto py-4 px-4">

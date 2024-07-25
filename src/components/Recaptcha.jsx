@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef } from "react";
 
 function GoogleRecaptcha({ onToken }) {
@@ -5,8 +6,7 @@ function GoogleRecaptcha({ onToken }) {
   const siteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
   useEffect(() => {
     const script = document.createElement("script");
-    script.src =
-      `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
     script.addEventListener("load", () => {
       window.grecaptcha.ready(() => {
         window.grecaptcha

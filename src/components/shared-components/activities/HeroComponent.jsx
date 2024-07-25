@@ -38,7 +38,7 @@ const HeroComponent = ({
         </div>
       </article>
 
-      <div className="lg:max-w-[530px] w-full ">
+      <div className="lg:max-w-[530px] w-full z-0 ">
         <figure className="m-0 p-0 max-w-[514px] w-full rounded-3xl mx-auto lg:mx-0 relative z-[1]">
           <img
             src={heroImage}

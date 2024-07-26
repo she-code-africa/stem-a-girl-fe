@@ -36,12 +36,12 @@ const ContactUsComponent = () => {
 
   const { mutate: handleContactUs } = useMutation({
     mutationFn: makeEnquiry,
-    onSuccess: (data) => {
+    onSuccess: () => {
       toast.success("Message sent Successfully!", {
         position: "top-right", 
       });
-      // 
       reset();
+      setRecaptchaToken(""); 
     },
     onError: (error, variables) => {
       toast.error("An error occurred.", {
@@ -51,6 +51,10 @@ const ContactUsComponent = () => {
   });
 
   const onSubmit = (data) => {
+    if (!recaptchaToken) {
+      toast.error("Please complete the reCAPTCHA.", { position: toast.POSITION.TOP_RIGHT });
+      return;
+    }
     handleContactUs(data);
   };
 

@@ -39,6 +39,7 @@ export const navigationMenu = [
         title: "Robotics",
         url: "/activities/robotics",
       },
+     
     ],
   },
   {

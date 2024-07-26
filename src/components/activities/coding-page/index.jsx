@@ -7,6 +7,7 @@ import {
 import { codingHeroImage } from "../../../assets/images";
 // import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
+import ReadyToCode from "../ReadyToCode";
 
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -80,22 +81,33 @@ const CodingPageComponent = () => {
 
   return (
     <>
-      <section className=" text-sealBrown font-mulish w-full">
-        <div className=" w-[90%] max-w-[1280px] mx-auto">
+      <div className=" text-sealBrown font-mulish w-full ">
+        <section className=" w-[90%] max-w-[1280px] mx-auto ">
           <HeroComponent
-            heroHeading="Unlock Your Coding Potential"
-            heroParagraph="Are you ready to dive into the world of coding? Whether you're a
-          complete beginner or looking to sharpen your skills, our workshops
-          offer something for everyone."
+            heroHeading="The Coding Hub"
+            heroParagraph="Are you ready to dive into the exciting world of coding? Explore beginner friendly coding concepts from scratch! Our free resources will help you to learn what coding is all about and how to begin. Start learning today!"
             heroImage={codingHeroImage}
             subContent={codingHeroSubContent}
           />
+
+          {/* <div className="mt-[100px] w-full mb-32">
+            <UpcomingEvents activityTitle="coding" />
+          </div> */}
+        </section>
+        <section>
+        </section>
+        <section>
+          <div className=" w-[100%] ">
+            <ReadyToCode  />
+          </div>
+        </section>
+        <section className="w-[90%] max-w-[1280px] mx-auto ">
           <div className="mt-[100px] w-full mb-32">
             <UpcomingEvents activityTitle="coding" />
           </div>
 
           <div className="my-16 lg:my-20 ">
-            <section className="w-full">
+            <section className="w-full ">
               <InfoCardHeader
                 infoCardHeading="Resources"
                 infoCardParagraph=""
@@ -131,12 +143,8 @@ const CodingPageComponent = () => {
               )}
             </section>
           </div>
-
-          {/* <div className="mt-[100px] w-full mb-32">
-            <UpcomingEvents activityTitle="coding" />
-          </div> */}
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };

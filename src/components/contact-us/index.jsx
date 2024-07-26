@@ -2,11 +2,13 @@ import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { makeEnquiry } from "../../services/mutations";
 import { useMutation } from "@tanstack/react-query";
 import { PrimaryInput } from "../index";
 import { floralWhiteImage, starImage } from "../../assets/images";
+import "react-toastify/dist/ReactToastify.css";
+
 import Recaptcha from "../Recaptcha";
 
 const ContactUsComponent = () => {
@@ -26,16 +28,20 @@ const ContactUsComponent = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
     mode: "onBlur",
   });
+
   const { mutate: handleContactUs } = useMutation({
     mutationFn: makeEnquiry,
-    onSuccess: (data) => {
+    onSuccess: () => {
       toast.success("Message sent Successfully!", {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right", 
       });
+      reset();
+      setRecaptchaToken(""); 
     },
     onError: (error, variables) => {
       toast.error("An error occurred.", {
@@ -45,14 +51,11 @@ const ContactUsComponent = () => {
   });
 
   const onSubmit = (data) => {
-    if (recaptchaToken) {
-      data.recaptcha = recaptchaToken;
-      handleContactUs(data);
-    } else {
-      toast.error("Please complete the reCAPTCHA.", {
-        position: toast.POSITION.TOP_RIGHT,
-      });
+    if (!recaptchaToken) {
+      toast.error("Please complete the reCAPTCHA.", { position: toast.POSITION.TOP_RIGHT });
+      return;
     }
+    handleContactUs(data);
   };
 
   const textareaRef = useRef();
@@ -64,8 +67,10 @@ const ContactUsComponent = () => {
   const handleTextAreaBlur = () => {
     textareaRef.current.classList.remove("border-[rgb(233,152,203)]");
   };
+
   return (
     <>
+      <ToastContainer />
       <section className=" text-sealBrown font-mulish w-full -mt-8 bg-whiteSmoke ">
         <div className="stem-club-header relative bg-primaryPink pt-16 ">
           <div className="w-[90%] max-w-[1280px] mx-auto min-h-[40px] flex flex-col justify-center 2md:justify-between 2md:flex-row md:items-center event-hero gap-8 py-12 2md:py-0 px-3 sm:px-0 ">
@@ -175,3 +180,5 @@ const ContactUsComponent = () => {
 };
 
 export default ContactUsComponent;
+
+

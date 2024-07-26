@@ -30,6 +30,11 @@ const UpcomingEvents = ({ activityTitle }) => {
     queryFn: () => getActivityEvents(activityId),
     enabled: !!activityId && !isLoading,
   });
+
+  const filteredEvents =
+    activityData &&
+    activityData.length > 0 &&
+    activityData.filter((event) => event.state === "published");
   return (
     <>
       <InfoCardHeader
@@ -39,10 +44,10 @@ const UpcomingEvents = ({ activityTitle }) => {
 
       {isEventLoading ? (
         <ApiLoading />
-      ) : !!activityData && activityData.length > 0 ? (
+      ) : filteredEvents && filteredEvents.length > 0 ? (
         <EventsSlider
           settings={upcomingEventSettings}
-          sliderData={activityData}
+          sliderData={filteredEvents}
           imageH="h-[403px]"
         />
       ) : (

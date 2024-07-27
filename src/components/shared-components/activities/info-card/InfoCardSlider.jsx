@@ -14,7 +14,6 @@ const InfoCardSlider = ({ sliderData, imageH, settings }) => {
                   title={item.title}
                   cardImage={item.image}
                   paragraph={item.description}
-                  index={item.index}
                   imageH={imageH}
                   link={item.link}
                 />

@@ -1,7 +1,6 @@
 import React from "react";
 import { quotes } from "../../../assets/images";
 import Slider from "react-slick";
-// import { testimonialSliderContent } from "../../../utils/appData";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { useQuery } from "@tanstack/react-query";
 import { getAllTestimonials } from "../../../services/queries";

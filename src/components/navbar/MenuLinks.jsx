@@ -10,7 +10,7 @@ const MenuLinks = ({ menuItem, isOpen, onToggle }) => {
       {menuItem.isDropdown ? (
         <li className={`text-base font-medium cursor-pointer relative `}>
           <span
-            className={`flex gap-1 items-center ${
+            className={`flex gap-1 items-center hover:text-primaryPink ${
               pathname.includes(menuItem.pathname.toLowerCase()) &&
               "text-primaryPink font-bold"
             }`}
@@ -47,7 +47,7 @@ const MenuLinks = ({ menuItem, isOpen, onToggle }) => {
         </li>
       ) : (
         <li
-          className={`text-base font-medium ${
+          className={`text-base font-medium hover:text-primaryPink ${
             pathname === menuItem.path && "text-primaryPink font-bold"
           }`}
         >

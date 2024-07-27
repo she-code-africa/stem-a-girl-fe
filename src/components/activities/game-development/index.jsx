@@ -6,7 +6,6 @@ import {
 } from "../../shared-components";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { gameDevHeroImage } from "../../../assets/images";
-// import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -104,8 +103,6 @@ const GameDevelopmentPage = () => {
                       title={item.title}
                       cardImage={item.image}
                       paragraph={item.description}
-                      index={item.index}
-                      // imageH={imageH}
                       link={item.link}
                     />
                   ))}

@@ -5,10 +5,8 @@ import {
   InfoCard,
 } from "../../shared-components";
 import { codingHeroImage } from "../../../assets/images";
-// import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
 import ReadyToCode from "../ReadyToCode";
-
 import { useQuery } from "@tanstack/react-query";
 import {
   getActivityCourses,
@@ -16,9 +14,7 @@ import {
 } from "../../../services/queries";
 import { ApiLoading, EmptyResponse } from "../../index";
 import { codingHeroSubContent } from "../../../utils/appData";
-// import useInfiniteScroll from "react-easy-infinite-scroll-hook";
 import InfiniteScroll from "react-infinite-scroll-component";
-// import InfoCard from "../../shared-components/activities/info-card/InfoCard";
 
 const CodingPageComponent = () => {
   const {
@@ -94,11 +90,10 @@ const CodingPageComponent = () => {
             <UpcomingEvents activityTitle="coding" />
           </div> */}
         </section>
-        <section>
-        </section>
+        <section></section>
         <section>
           <div className=" w-[100%] ">
-            <ReadyToCode  />
+            <ReadyToCode />
           </div>
         </section>
         <section className="w-[90%] max-w-[1280px] mx-auto ">
@@ -129,8 +124,6 @@ const CodingPageComponent = () => {
                         title={item.title}
                         cardImage={item.image}
                         paragraph={item.description}
-                        index={item.index}
-                        // imageH={imageH}
                         link={item.link}
                       />
                     ))}

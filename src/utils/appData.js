@@ -1,10 +1,4 @@
 import {
-  cardPhoto,
-  cardPhoto2,
-  cardPhoto3,
-  cardPhoto4,
-  cardPhoto5,
-  cardPhoto6,
   codingBootcampImage,
   codingHeroImage,
   gameDevHeroImage,
@@ -47,25 +41,12 @@ export const navigationMenu = [
     isDropdown: false,
     dropdownMenu: [],
   },
-  // {
-  //   pathname: "Outreach",
-  //   path: "/outreach",
-  //   isDropdown: true,
-  //   dropdownMenu: [
-  //     {
-  //       title: "Outreach",
-  //       url: "#",
-  //     },
-  //     {
-  //       title: "Outreach",
-  //       url: "#",
-  //     },
-  //     {
-  //       title: "Outreach",
-  //       url: "#",
-  //     },
-  //   ],
-  // },
+  {
+    pathname: "Outreach",
+    path: "https://drive.google.com/drive/folders/10YrxGw17PeiTtYPAy-qMlko4C0cCtS48",
+    isDropdown: false,
+    dropdownMenu: [],
+  },
 ];
 
 export const aboutUsLinks = [
@@ -94,8 +75,8 @@ export const aboutUsLinks = [
 export const communityLinks = [
   {
     pathname: "Recent Outreach",
-    path: "#",
-  isNewsLetter:false
+    path: "https://drive.google.com/drive/folders/10YrxGw17PeiTtYPAy-qMlko4C0cCtS48",
+    isNewsLetter: false,
   },
   {
     pathname: "Contact Us",
@@ -111,53 +92,6 @@ export const communityLinks = [
     pathname: "Sign Up For Our Newsletter",
     path: "#",
     isNewsLetter: true,
-  },
-];
-
-export const coursesSlider = [
-  {
-    picture: cardPhoto,
-    cardHeading: "Getting Started with Scratch",
-    cardParagraph:
-      "Kickstart your coding journey with this beginner’s guide. Learn how to navigate the Scratch interface and create simple projects.",
-    index: 1,
-  },
-  {
-    picture: cardPhoto4,
-    cardHeading: "Coding Academy",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 2,
-  },
-  {
-    picture: cardPhoto2,
-    cardHeading: "Scratch Tutorial Videos",
-    cardParagraph:
-      "Watch our collection of step-by-step video tutorials, designed to help you master Scratch coding concepts at your own pace.",
-    index: 3,
-  },
-  {
-    picture: cardPhoto5,
-    cardHeading: "Coding Academy",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 4,
-  },
-
-  {
-    picture: cardPhoto3,
-    cardHeading: "Coding for Kids",
-    cardParagraph:
-      "Stuck for ideas? Browse through our library of project ideas and get inspired to create your own unique Scratch projects",
-    index: 5,
-  },
-
-  {
-    picture: cardPhoto6,
-    cardHeading: "Coding Academy",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 6,
   },
 ];
 
@@ -208,18 +142,6 @@ export const upcomingEventsSlider = [
   },
 ];
 
-export const testimonialSliderContent = [
-  {
-    text: "“This guy is true professional and very experienced in migration and server configuration. He was able to complete my order in time and as per agreed scope. Highly recommend!”",
-  },
-  {
-    text: "“This guy is true professional and very experienced in migration and server configuration. He was able to complete my order in time and as per agreed scope. Highly recommend!”",
-  },
-  {
-    text: "“This guy is true professional and very experienced in migration and server configuration. He was able to complete my order in time and as per agreed scope. Highly recommend!”",
-  },
-];
-
 export const clubActivities = [
   {
     title: "Interactive Workshops",
@@ -237,121 +159,6 @@ export const clubActivities = [
     description:
       "Plan projects, brainstorm ideas, and solve problems with your peers.",
     img: codingBootcampImage,
-  },
-];
-
-export const testData = [
-  {
-    title: "Interactive workshops",
-    description:
-      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
-    image: interactiveWorkshopImage,
-    link: "#",
-  },
-  {
-    title: "Collaborative STEM projects",
-    description:
-      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
-    image: stemProjectsImage,
-    link: "#",
-  },
-  {
-    title: "Coding bootcamps",
-    description:
-      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
-    image: codingBootcampImage,
-    link: "#",
-  },
-  {
-    title: "Collaborative STEM projects",
-    description:
-      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
-    image: stemProjectsImage,
-    link: "#",
-  },
-  {
-    title: "Collaborative STEM projects",
-    description:
-      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
-    image: stemProjectsImage,
-    link: "#",
-  },
-  {
-    title: "Coding bootcamps",
-    description:
-      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
-    image: codingBootcampImage,
-    link: "#",
-  },
-  {
-    title: "Interactive workshops",
-    description:
-      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
-    image: interactiveWorkshopImage,
-    link: "#",
-  },
-  {
-    title: "Coding bootcamps",
-    description:
-      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
-    image: codingBootcampImage,
-    link: "#",
-  },
-  {
-    title: "Interactive workshops",
-    description:
-      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
-    image: interactiveWorkshopImage,
-    link: "#",
-  },
-  {
-    title: "Collaborative STEM projects",
-    description:
-      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
-    image: stemProjectsImage,
-    link: "#",
-  },
-  {
-    title: "Coding bootcamps",
-    description:
-      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
-    image: codingBootcampImage,
-    link: "#",
-  },
-  {
-    title: "Collaborative STEM projects",
-    description:
-      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
-    image: stemProjectsImage,
-    link: "#",
-  },
-  {
-    title: "Collaborative STEM projects",
-    description:
-      "Our projects invite girls aged 10 to 21 to participate in collaborative STEM activities, offering hands-on learning experiences.",
-    image: stemProjectsImage,
-    link: "#",
-  },
-  {
-    title: "Coding bootcamps",
-    description:
-      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
-    image: codingBootcampImage,
-    link: "#",
-  },
-  {
-    title: "Interactive workshops",
-    description:
-      "We offer interactive workshops and guided learning sessions for girls aged 10 to 21 in a supportive environment.",
-    image: interactiveWorkshopImage,
-    link: "#",
-  },
-  {
-    title: "Coding bootcamps",
-    description:
-      "Dive into our coding bootcamps, where girls aged 10 to 21 can engage in interactive and hands-on learning experiences.",
-    image: codingBootcampImage,
-    link: "#",
   },
 ];
 
@@ -481,5 +288,3 @@ export const impactStories = [
       " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
   },
 ];
-
-export const schools = [];

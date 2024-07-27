@@ -6,7 +6,6 @@ import {
 } from "../../shared-components";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { roboticsHeroImage } from "../../../assets/images";
-// import { coursesSlider } from "../../../utils/appData";
 import UpcomingEvents from "../UpcomingEvents";
 
 import { useQuery } from "@tanstack/react-query";
@@ -45,8 +44,6 @@ const RoboticsPageComponent = () => {
     queryFn: () => getActivityCourses(activityId),
     enabled: !!activityId && !isLoading,
   });
-
-  console.log({ activityCourses });
 
   // inifinite scrolling
   const filteredCourses =
@@ -110,8 +107,6 @@ const RoboticsPageComponent = () => {
                       title={item.title}
                       cardImage={item.image}
                       paragraph={item.description}
-                      index={item.index}
-                      // imageH={imageH}
                       link={item.link}
                     />
                   ))}

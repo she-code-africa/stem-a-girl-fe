@@ -8,6 +8,7 @@ import {
   RoboticsPage,
   GameDevelopment,
   ContactUsPage,
+  CodePlaygroundPage, 
 } from "./pages";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
@@ -32,6 +33,7 @@ function App() {
       }
     }
   }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <Routes>
@@ -39,12 +41,10 @@ function App() {
         <Route path="/outreach" element={<OutreachPage />} />
         <Route path="/activities/coding" element={<CodingPage />} />
         <Route path="/activities/robotics" element={<RoboticsPage />} />
-        <Route
-          path="/activities/game-development"
-          element={<GameDevelopment />}
-        />
+        <Route path="/activities/game-development" element={<GameDevelopment />} />
         <Route path="/stem-clubs" element={<StemClubs />} />
         <Route path="/contact-us" element={<ContactUsPage />} />
+        <Route path="/code-playground" element={<CodePlaygroundPage />} />
       </Routes>
       <ToastContainer />
     </QueryClientProvider>

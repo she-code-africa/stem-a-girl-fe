@@ -5,13 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import ReactGA from "react-ga4";
-import Modal from "react-modal";
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_G_TAG_ID);
 
-// Set the app element for react-modal
-Modal.setAppElement('#root');
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

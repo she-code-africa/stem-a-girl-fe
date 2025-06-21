@@ -13,7 +13,7 @@ const NavigationBar = () => {
     <nav className="fixed top-0 right-0 left-0 bg-white py-5 drop-shadow-md text-sealBrown font-mulish z-[2]">
       <section className="w-[90%] max-w-[1280px] mx-auto flex gap-8 items-center ">
         <div className="flex justify-between w-full lg:w-fit ">
-          <figure className="w-[50px] h-[50px]">
+          <figure className="w-[70px] h-[70px]">
             <Link to="/" className="w-full h-full logo block"></Link>
           </figure>
 

@@ -26,7 +26,7 @@ body {
 }
 
 .logo {
-  background-image: url("./assets/images/SCA-LOGO.png");
+  background-image: url("./assets/images/new-logo/new-logo-header.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -62,8 +62,6 @@ body {
   }
 }
 
-
-
 @media (max-width: 1023px) {
   .menu-items {
     top: 78px;
@@ -80,4 +78,3 @@ body {
     transform: translateX(0);
   }
 }
-

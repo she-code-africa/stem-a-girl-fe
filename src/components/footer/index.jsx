@@ -16,8 +16,12 @@ const Footer = () => {
   return (
     <section className="bg-whiteSmoke w-full font-libreFranklin">
       <div className="w-[90%] mx-auto max-w-[1280px] md:flex md:items-center md:justify-between pt-10 pb-8 md:pt-20">
-        <figure className="hidden md:block w-[58px] h-[90px]">
-          <img src={scaLogo} alt="SCA-LOGO" className="w-full h-full" />
+        <figure className="hidden md:block w-[150px] h-[100px]">
+          <img
+            src={scaLogo}
+            alt="SCA-LOGO"
+            className="w-full h-full object-contain"
+          />
         </figure>
 
         <div className="flex flex-col md:flex-row md:items-start md:justify-end gap-10 md:gap-40">

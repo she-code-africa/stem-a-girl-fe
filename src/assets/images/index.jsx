@@ -1,4 +1,5 @@
-import scaLogo from "./SCA-LOGO.png";
+// import scaLogo from "./SCA-LOGO.png";
+import scaLogo from "./new-logo/new-logo-footer.png";
 import cpu from "./activities/Cpu.png";
 import codingHeroImage from "./activities/codingHeroImage.png";
 import flower from "./activities/Group.png";

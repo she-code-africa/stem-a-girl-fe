@@ -66,7 +66,7 @@ const HomePage = () => {
               What other STEM enthusiasts are saying
             </h3>
 
-            <TestimonialsSlider />
+            {/* <TestimonialsSlider /> */}
           </article>
           <div className="w-full flex justify-end">
             <div className="m-0 p-0 w-full max-w-[536px] hidden lg:block ">

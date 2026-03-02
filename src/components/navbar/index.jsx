@@ -45,7 +45,7 @@ const NavigationBar = () => {
           <div className="flex w-[90%] max-w-[1280px] mx-auto  lg:max-w-[200px]">
             <Link
               to=""
-              className="text-white capitalize w-full max-w-[150px] h-[45px] rounded-[30px] text-sm flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-transparent hover:text-primaryPink transition-all"
+              className="text-white capitalize w-full max-w-[150px] h-[45px] rounded-[8px] text-sm flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-transparent hover:text-primaryPink transition-all"
             >
               Start Learning
             </Link>

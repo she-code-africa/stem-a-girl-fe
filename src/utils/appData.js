@@ -8,6 +8,7 @@ import {
   stemProjectsImage,
   upcomingEventPhoto,
 } from "../assets/images";
+import { FaCode, FaGamepad, FaRobot } from "react-icons/fa6";
 
 export const navigationMenu = [
   {
@@ -16,18 +17,20 @@ export const navigationMenu = [
     isDropdown: true,
     dropdownMenu: [
       {
-        title: "Game Development",
-        url: "/activities/game-development",
+        title: "Coding from Scratch",
+        url: "/activities/coding",
+        icon: FaCode,
       },
       {
-        title: "Coding",
-        url: "/activities/coding",
+        title: "Game Development",
+        url: "/activities/game-development",
+        icon: FaGamepad,
       },
       {
         title: "Robotics",
         url: "/activities/robotics",
+        icon: FaRobot,
       },
-
     ],
   },
   {

@@ -13,6 +13,7 @@ import interactiveWorkshopImage from "./interactive-workshop.svg";
 import stemProjectsImage from "./stem-projects.svg";
 import codingBootcampImage from "./coding-bootcamp.svg";
 import homeHeroImage from "./home-page-hero-image.svg";
+import homePageHeroImage from "./homepage-hero-image.svg"
 import studentsImage from "./students.png";
 import clubStudentsImage from "./club-students.png";
 import floralWhiteImage from "./floral-white.svg";
@@ -34,6 +35,7 @@ export {
   stemProjectsImage,
   codingBootcampImage,
   homeHeroImage,
+  homePageHeroImage,
   studentsImage,
   clubStudentsImage,
   floralWhiteImage,

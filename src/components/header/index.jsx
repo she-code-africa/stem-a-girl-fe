@@ -1,9 +1,10 @@
 import FloraImg from "../../assets/images/floral.svg";
-import { homeHeroImage } from "../../assets/images";
+// import { homeHeroImage } from "../../assets/images";
+import { homePageHeroImage } from "../../assets/images";
 
 const Header = () => {
   return (
-    <div className="bg-[#FFF7FC]">
+    <div className="bg-[#FFB8E0]">
       <div className=" w-[90%] max-w-[1280px] flex py-6 md:py-4 container mx-auto max-md:flex-col justify-between max-xl:px-4">
         <div className="max-w-[578px] space-y-2">
           <div className="flex">
@@ -24,7 +25,9 @@ const Header = () => {
           </a>
         </div>
         <div className="max-md:hidden">
-          <img src={homeHeroImage} alt="" className="md:w-[850px] lg:w-fit" />
+          
+          {/* <img src={homeHeroImage} alt="" className="md:w-[850px] lg:w-fit" /> */}
+          <img src={homePageHeroImage} alt="" className="md:w-[850px] lg:w-fit" />
         </div>
       </div>
     </div>

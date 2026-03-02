@@ -11,13 +11,7 @@ import {
 
 export const navigationMenu = [
   {
-    pathname: "Home",
-    path: "/",
-    isDropdown: false,
-    dropdownMenu: [],
-  },
-  {
-    pathname: "Activities",
+    pathname: "Courses",
     path: "#",
     isDropdown: true,
     dropdownMenu: [
@@ -33,7 +27,7 @@ export const navigationMenu = [
         title: "Robotics",
         url: "/activities/robotics",
       },
-     
+
     ],
   },
   {
@@ -43,8 +37,14 @@ export const navigationMenu = [
     dropdownMenu: [],
   },
   {
-    pathname: "Outreach",
+    pathname: "Outreaches",
     path: "https://drive.google.com/drive/folders/10YrxGw17PeiTtYPAy-qMlko4C0cCtS48",
+    isDropdown: false,
+    dropdownMenu: [],
+  },
+  {
+    pathname: "Contact us",
+    path: "/contact-us",
     isDropdown: false,
     dropdownMenu: [],
   },

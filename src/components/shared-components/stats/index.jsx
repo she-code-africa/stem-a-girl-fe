@@ -16,13 +16,13 @@ const Stats = () => {
           Our Impact in Numbers
         </h2>
 
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-center gap-10 md:gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-center gap-10 md:gap-4">
           {stats.map(({ title, stat }, i) => (
             <div className="flex items-center gap-4" key={i}>
               <span className="text-[#7D355D] font-bold text-4xl lg:text-7xl shrink-0 leading-none">
                 {stat}
               </span>
-              <p className="text-sm md:text-base lg:text-lg text-[#000000] max-w-[160px] leading-snug">
+              <p className="text-sm md:text-base lg:text-lg text-[#000000] max-w-[232px] leading-snug font-medium">
                 {title}
               </p>
             </div>

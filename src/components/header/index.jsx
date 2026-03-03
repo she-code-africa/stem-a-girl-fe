@@ -7,7 +7,7 @@ const Header = () => {
         <div className="max-w-[578px] space-y-2">
           <img src={pixelatedStarIcon} alt="" className="w-[8vw] max-w-[77px] min-w-[40px]" />
           <div className="flex">
-            <h1 className="text-[#B70569] text-[40px] leading-[50px] max-w-[600px] lg:text-[56px] lg:leading-[72.8px] font-semibold">
+            <h1 className="text-[#B70569] text-[40px] leading-[50px] max-w-[600px] lg:text-[60px] lg:leading-[72.8px] font-semibold">
               Empowering Girls to Shape Tomorrow’s STEM Innovations
             </h1>
           </div>
@@ -21,7 +21,7 @@ const Header = () => {
             alt=""
             className="absolute -top-[3.2rem] right-[4.2rem] w-[8vw] max-w-[120px] min-w-[60px]"
           />
-          <img src={homePageHeroImage} alt="" className="w-full h-[80vh]" />
+          <img src={homePageHeroImage} alt="" className="w-full" />
         </div>
       </div>
       <img src={pixelatedPlayGameIcon} alt="" className="absolute bottom-0 left-[38%] -translate-x-1/2 w-[10vw] max-w-[130px] min-w-[60px]" />

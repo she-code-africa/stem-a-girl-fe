@@ -1,4 +1,3 @@
-import React from "react";
 import { GlobalLayout } from "../../components";
 import Header from "../../components/header";
 import Stats from "../../components/shared-components/stats";
@@ -6,7 +5,6 @@ import { InfoCardHeader } from "../../components/shared-components";
 import { skillsVector, girlChild } from "../../assets/images";
 import FAQ from "../../components/faq";
 import { activities } from "../../utils/appData";
-import TestimonialsSlider from "../../components/activities/coding-page/TestimonialsSlider";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {

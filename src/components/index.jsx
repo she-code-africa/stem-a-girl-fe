@@ -5,7 +5,7 @@ import GameDevelopmentPage from "./activities/game-development";
 import ApiLoading from "./loaders/ApiLoading";
 import EmptyResponse from "./empty-repsonse";
 import ContactUsComponent from "./contact-us";
-import PrimaryInput from "./inputs/PrimaryInput";
+import PrimaryInput from "./shared-components/inputs/PrimaryInput";
 
 export {
   GlobalLayout,

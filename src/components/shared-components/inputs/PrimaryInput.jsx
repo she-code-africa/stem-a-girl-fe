@@ -19,10 +19,10 @@ const PrimaryInput = ({
     inputRef.current.classList.remove("border-[rgb(233,152,203)]");
   };
   return (
-    <div className="w-full md:max-w-[455px] mb-6">
+    <div className="w-full md:max-w-[613px] mb-6">
       <label
         htmlFor={name}
-        className="text-base capitalize font-medium text-[rgba(46,52,79,1)] "
+        className="text-base capitalize font-medium text-[#000000] "
       >
         {label}
       </label>

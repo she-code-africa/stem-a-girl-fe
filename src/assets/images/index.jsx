@@ -23,6 +23,10 @@ import pixelatedVideoGameIcon from "./pixelated-video-game-icon.svg";
 import pixelatedStarIcon from "./pixelated-star-icon.svg";
 import pixelatedPlayGameIcon from "./pixelated-play-game-icon.svg";
 import ourImpactBg from "./our-impact-bg.jpg";
+import programMissionPinkBg from "./homepage/program-mission-pink-bg.svg";
+import programMissionYellowBg from "./homepage/program-mission-yellow-bg.svg";
+import programMissionGirl from "./homepage/program-mission-girl.png";
+
 
 export {
   scaLogo,
@@ -49,4 +53,7 @@ export {
   pixelatedStarIcon,
   pixelatedPlayGameIcon,
   ourImpactBg,
+  programMissionPinkBg,
+  programMissionYellowBg,
+  programMissionGirl,
 };

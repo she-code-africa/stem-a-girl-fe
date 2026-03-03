@@ -4,6 +4,7 @@ import InfoCardHeader from "./activities/info-card/InfoCardHeader";
 import InfoCardSlider from "./activities/info-card/InfoCardSlider";
 import EventsSlider from "./activities/events";
 import InfoCard from "./activities/info-card/InfoCard";
+import ProgramMission from "./program-mission";
 
 export {
   HeroComponent,
@@ -12,4 +13,5 @@ export {
   InfoCardSlider,
   EventsSlider,
   InfoCard,
+  ProgramMission,
 };

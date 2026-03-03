@@ -10,7 +10,7 @@ const NavigationBar = () => {
   const [showDropdown, setShowDropdown] = useState(null);
 
   return (
-    <nav className="fixed top-0 right-0 left-0 bg-white py-5 text-sealBrown font-mulish z-[2]">
+    <nav className="fixed top-0 right-0 left-0 bg-white py-5 text-sealBrown font-mulish z-[20]">
       <section className="w-[90%] max-w-[1280px] mx-auto flex gap-8 items-center ">
         <div className="flex justify-between w-full lg:w-fit ">
           <figure className="w-[210px] h-[70px]">

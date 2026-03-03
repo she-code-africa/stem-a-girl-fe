@@ -2,7 +2,7 @@ import React from "react";
 import { GlobalLayout } from "../../components";
 import Header from "../../components/header";
 import Stats from "../../components/shared-components/stats";
-import { InfoCardHeader } from "../../components/shared-components";
+import { InfoCardHeader, ProgramMission } from "../../components/shared-components";
 import { skillsVector, girlChild } from "../../assets/images";
 import FAQ from "../../components/faq";
 import { activities } from "../../utils/appData";
@@ -14,12 +14,7 @@ const HomePage = () => {
     <GlobalLayout>
       <Header />
       <Stats />
-      <section className="w-[90%] max-w-[1280px] mx-auto">
-        <InfoCardHeader
-          infoCardHeading="Program Mission"
-          infoCardParagraph="Our mission is to create more awareness and inspire girls in secondary schools, across Africa, aged 10 - 21 to pursue careers in Science, Technology, Engineering, and Mathematics (STEM)."
-        />
-      </section>
+      <ProgramMission />
       <section
         className="my-3 md:my-20 bg-[#F8F8F8] pt-5 pb-2"
         id="zero-tech-skills"

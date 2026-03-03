@@ -1,10 +1,10 @@
 import {
   codingBootcampImage,
-  codingHeroImage,
-  gameDevHeroImage,
+  codingFromScratchCardImg,
+  gameDevCardImg,
   girlChild,
   interactiveWorkshopImage,
-  roboticsHeroImage,
+  roboticsCardImg,
   stemProjectsImage,
   upcomingEventPhoto,
 } from "../assets/images";
@@ -168,18 +168,24 @@ export const clubActivities = [
 
 export const activities = [
   {
-    title: "Coding",
-    image: codingHeroImage,
+    title: "Coding from Scratch",
+    image: codingFromScratchCardImg,
+    description:
+      "Start your programming journey using Scratch, a fun and visual coding language that helps you build animations, games, and stories, with no prior experience needed.",
     link: "/activities/coding",
   },
   {
     title: "Game Development",
-    image: gameDevHeroImage,
+    image: gameDevCardImg,
+    description:
+      "Turn your creativity into action! Learn how games are built from the ground up and create your own playable projects using simple, beginner-friendly scratch tools.",
     link: "/activities/game-development",
   },
   {
     title: "Robotics (Arduino, Raspberry Pi)",
-    image: roboticsHeroImage,
+    image: roboticsCardImg,
+    description:
+      "Step into the future by building and programming simple robots. Discover how software and hardware come together to solve real-world problems.",
     link: "/activities/robotics",
   },
 ];

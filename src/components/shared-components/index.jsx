@@ -6,6 +6,8 @@ import EventsSlider from "./activities/events";
 import InfoCard from "./activities/info-card/InfoCard";
 import ProgramMission from "./program-mission";
 import SuccessStories from "./success-stories";
+import GetInvolved from "./get-involved";
+import ShareModal from "./share-modal";
 
 export {
   HeroComponent,
@@ -16,4 +18,6 @@ export {
   InfoCard,
   ProgramMission,
   SuccessStories,
+  GetInvolved,
+  ShareModal,
 };

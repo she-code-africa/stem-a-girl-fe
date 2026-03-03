@@ -31,7 +31,8 @@ import gameDevCardImg from "./homepage/game-dev-card-img.png";
 import roboticsCardImg from "./homepage/robotics-card-img.jpg";
 import successStoryImg1 from "./homepage/success-story-img-1.png";
 import successStoryImg2 from "./homepage/success-story-img-2.png";
-
+import getInvolvedHeroImg from "./homepage/get-involved-hero-img.jpg";
+import getInvolvedBg from "./homepage/get-involved-bg.jpg";
 
 export {
   scaLogo,
@@ -66,4 +67,6 @@ export {
   roboticsCardImg,
   successStoryImg1,
   successStoryImg2,
+  getInvolvedHeroImg,
+  getInvolvedBg,
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { GlobalLayout } from "../../components";
 import Header from "../../components/header";
 import Stats from "../../components/shared-components/stats";
-import { ProgramMission, SuccessStories } from "../../components/shared-components";
+import { ProgramMission, SuccessStories, GetInvolved } from "../../components/shared-components";
 import FAQ from "../../components/faq";
 import { activities } from "../../utils/appData";
 import { Link } from "react-router-dom";
@@ -61,6 +61,7 @@ const HomePage = () => {
         </div>
       </section>
       <SuccessStories />
+      <GetInvolved />
 
       <FAQ />
     </GlobalLayout>

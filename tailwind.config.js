@@ -10,10 +10,14 @@ module.exports = {
         astronaut: "rgba(66,82,107,1)",
         lavender: "rgba(255,247,252,1)",
         fiord: "rgba(75,85,99,1)",
+        primaryBtnHover: "#5C0335",
+        scaGrape: "#7D355D",
+        scaBloom: "#FF8FCE",
+        
       },
       fontFamily: {
-        libreFranklin: ["Libre Franklin", "sans-serif"],
-        mulish: ["Mulish", "sans-serif"],
+        figtree: ["Figtree", "sans-serif"],
+        thunder: ["Thunder", "sans-serif"],
       },
     },
   },

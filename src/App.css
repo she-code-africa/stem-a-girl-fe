@@ -10,8 +10,22 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: Thunder;
+  src: url("./assets/fonts/Thunder-SemiBoldLC.ttf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Thunder, sans-serif;
+}
+
 body {
-  font-family: "Mulish", sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 
 ::-webkit-scrollbar {

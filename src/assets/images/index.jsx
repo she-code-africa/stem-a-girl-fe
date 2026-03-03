@@ -29,6 +29,8 @@ import programMissionGirl from "./homepage/program-mission-girl.png";
 import codingFromScratchCardImg from "./homepage/coding-from-scratch-card-img.jpg";
 import gameDevCardImg from "./homepage/game-dev-card-img.png";
 import roboticsCardImg from "./homepage/robotics-card-img.jpg";
+import successStoryImg1 from "./homepage/success-story-img-1.png";
+import successStoryImg2 from "./homepage/success-story-img-2.png";
 
 
 export {
@@ -61,5 +63,7 @@ export {
   programMissionGirl,
   codingFromScratchCardImg,
   gameDevCardImg,
-  roboticsCardImg
+  roboticsCardImg,
+  successStoryImg1,
+  successStoryImg2,
 };

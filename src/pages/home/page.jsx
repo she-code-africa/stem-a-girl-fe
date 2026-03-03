@@ -2,11 +2,9 @@ import React from "react";
 import { GlobalLayout } from "../../components";
 import Header from "../../components/header";
 import Stats from "../../components/shared-components/stats";
-import { ProgramMission } from "../../components/shared-components";
-import { girlChild } from "../../assets/images";
+import { ProgramMission, SuccessStories } from "../../components/shared-components";
 import FAQ from "../../components/faq";
 import { activities } from "../../utils/appData";
-import TestimonialsSlider from "../../components/activities/coding-page/TestimonialsSlider";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -62,22 +60,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="w-full bg-primaryPink pt-20 pb-24 mt-32 text-white">
-        <div className=" w-[90%] max-w-[1280px] mx-auto md:flex md:flex-row md:items-center lg:justify-between md:gap-10">
-          <article className="w-full lg:max-w-[600px]">
-            <h3 className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-normal md:leading-normal lg:leading-normal  w-full md:max-w-[450px]">
-              What other STEM enthusiasts are saying
-            </h3>
-
-            {/* <TestimonialsSlider /> */}
-          </article>
-          <div className="w-full flex justify-end">
-            <div className="m-0 p-0 w-full max-w-[536px] hidden lg:block ">
-              <img src={girlChild} alt="girl-child-pic" className="w-full " />
-            </div>
-          </div>
-        </div>
-      </section>
+      <SuccessStories />
 
       <FAQ />
     </GlobalLayout>

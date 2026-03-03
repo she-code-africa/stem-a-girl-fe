@@ -5,6 +5,7 @@ import InfoCardSlider from "./activities/info-card/InfoCardSlider";
 import EventsSlider from "./activities/events";
 import InfoCard from "./activities/info-card/InfoCard";
 import ProgramMission from "./program-mission";
+import SuccessStories from "./success-stories";
 
 export {
   HeroComponent,
@@ -14,4 +15,5 @@ export {
   EventsSlider,
   InfoCard,
   ProgramMission,
+  SuccessStories,
 };

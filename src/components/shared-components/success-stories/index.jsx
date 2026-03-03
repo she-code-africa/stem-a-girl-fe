@@ -52,8 +52,8 @@ const SuccessStories = () => {
 
   return (
     <section className="bg-[#FEFEFE] mt-16 pt-16 w-full text-white overflow-hidden">
-      <div className="w-[90%] max-w-[1280px] mx-auto flex flex-col lg:flex-row lg:items-center lg:gap-12">
-        <div className="w-full lg:w-[45%] flex-shrink-0 rounded-2xl overflow-hidden mb-8 lg:mb-0">
+      <div className="w-[90%] max-w-[1280px] mx-auto flex flex-col lg:flex-row lg:items-stretch lg:gap-12">
+        <div className="w-full lg:w-[45%] lg:h-[460px] flex-shrink-0 rounded-2xl overflow-hidden mb-8 lg:mb-0">
           <img
             src={slide.image}
             alt="Success stories"
@@ -62,7 +62,7 @@ const SuccessStories = () => {
         </div>
 
         {/* Content */}
-        <div className="md:mt-16 xl:mt-0 w-full lg:w-[55%] flex flex-col gap-6">
+        <div className="xl:mt-0 w-full lg:w-[55%] lg:h-[460px] flex flex-col gap-4 lg:justify-between">
           <span className="inline-block self-start bg-[#5C0335] text-white rounded-full font-bold text-sm md:text-base px-5 py-2.5">
             Success Stories
           </span>

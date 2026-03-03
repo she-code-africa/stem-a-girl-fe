@@ -53,7 +53,7 @@ const StemClubs = () => {
         <div className="flex gap-6 items-center overflow-x-auto no-scrollbar w-full mt-10 md:mt-16">
           {isLoading ? (
             <ApiLoading />
-          ) : data.length > 0 ? (
+          ) : data?.length > 0 ? (
             <>
               {data.map((story, index) => (
                 <ImpactStoryCard key={index} stories={story} />

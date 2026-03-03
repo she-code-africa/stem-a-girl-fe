@@ -19,6 +19,9 @@ import clubStudentsImage from "./club-students.png";
 import floralWhiteImage from "./floral-white.svg";
 import starImage from "./star-image.svg";
 import faqImage from "./homepage/faq.png";
+import pixelatedVideoGameIcon from "./pixelated-video-game-icon.svg";
+import pixelatedStarIcon from "./pixelated-star-icon.svg";
+import pixelatedPlayGameIcon from "./pixelated-play-game-icon.svg";
 
 export {
   scaLogo,
@@ -41,4 +44,7 @@ export {
   floralWhiteImage,
   starImage,
   faqImage,
+  pixelatedVideoGameIcon,
+  pixelatedStarIcon,
+  pixelatedPlayGameIcon,
 };

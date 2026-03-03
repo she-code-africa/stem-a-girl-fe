@@ -12,14 +12,14 @@ const Stats = () => {
       />
 
       <div className="relative w-[90%] max-w-[1280px] mx-auto">
-        <h2 className="text-center text-[#B70569] text-2xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-14">
+        <h2 className="text-center text-[#B70569] text-2xl md:text-4xl lg:text-6xl font-bold mb-10 md:mb-14">
           Our Impact in Numbers
         </h2>
 
         <div className="flex flex-col md:flex-row justify-between items-center md:items-center gap-10 md:gap-4">
           {stats.map(({ title, stat }, i) => (
             <div className="flex items-center gap-4" key={i}>
-              <span className="text-[#7D355D] font-bold text-4xl lg:text-7xl shrink-0 leading-none">
+              <span className="text-[#7D355D] font-thunder font-bold text-4xl lg:text-7xl shrink-0 leading-none">
                 {stat}
               </span>
               <p className="text-sm md:text-base lg:text-lg text-[#000000] max-w-[232px] leading-snug font-medium">

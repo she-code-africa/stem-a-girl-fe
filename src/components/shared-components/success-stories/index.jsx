@@ -69,7 +69,7 @@ const SuccessStories = () => {
 
           <div className="flex flex-col gap-4">
             {slide.testimonials.map((t, i) => (
-              <div key={i} className="flex flex-col gap-1">
+              <div key={i} className={`flex flex-col gap-1 border-l-4 pl-4 ${i === 0 ? "border-[#FF8A3F]" : "border-[#B70569]"}`}>
                 <p className="text-black text-base md:text-lg xl:text-xl leading-relaxed font-light italic">
                   &ldquo;{t.quote}&rdquo;
                 </p>

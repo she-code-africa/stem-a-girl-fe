@@ -168,7 +168,7 @@ export const clubActivities = [
 
 export const activities = [
   {
-    title: "Coding from Scratch",
+    title: "Coding with Scratch",
     image: codingFromScratchCardImg,
     description:
       "Start your programming journey using Scratch, a fun and visual coding language that helps you build animations, games, and stories, with no prior experience needed.",

@@ -235,16 +235,16 @@ export const faqs = [
 
 export const stats = [
   {
-    title: "Schools Visited",
-    stat: "25",
+    title: "Girls reached across 8 Nigerian States",
+    stat: "3503+",
   },
   {
-    title: "States",
+    title: "STEM clubs launched for continued learning.",
     stat: "7",
   },
   {
-    title: "Students Impacted",
-    stat: "1700+",
+    title: "Students trained in workshops on Coding & Robotics ",
+    stat: "250+",
   },
 ];
 

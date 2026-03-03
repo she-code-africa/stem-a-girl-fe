@@ -22,6 +22,7 @@ import faqImage from "./homepage/faq.png";
 import pixelatedVideoGameIcon from "./pixelated-video-game-icon.svg";
 import pixelatedStarIcon from "./pixelated-star-icon.svg";
 import pixelatedPlayGameIcon from "./pixelated-play-game-icon.svg";
+import ourImpactBg from "./our-impact-bg.jpg";
 
 export {
   scaLogo,
@@ -47,4 +48,5 @@ export {
   pixelatedVideoGameIcon,
   pixelatedStarIcon,
   pixelatedPlayGameIcon,
+  ourImpactBg,
 };

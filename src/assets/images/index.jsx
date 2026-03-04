@@ -37,6 +37,7 @@ import badge from './badge.png';
 import stemClubStudents1 from "./stem-club/stem-club-students-1.jpg";
 import stemClubStudents2 from "./stem-club/stem-club-students-2.jpg";
 import stemClubStudents3 from "./stem-club/stem-club-students-3.jpg";
+import stemGirl from "./stem-club/stem-girl.jpg";
 
 export {
   scaLogo,
@@ -77,4 +78,5 @@ export {
   stemClubStudents1,
   stemClubStudents2,
   stemClubStudents3,
+  stemGirl,
 };

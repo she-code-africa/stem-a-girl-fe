@@ -10,6 +10,7 @@ import GetInvolved from "./get-involved";
 import ShareModal from "./share-modal";
 import StemClubActivities from "./stem-club-activities";
 import ViewStemClubs from "./view-stem-clubs";
+import StemClubCTA from "./stem-club-cta";
 
 export {
   HeroComponent,
@@ -24,4 +25,5 @@ export {
   ShareModal,
   StemClubActivities,
   ViewStemClubs,
+  StemClubCTA,
 };

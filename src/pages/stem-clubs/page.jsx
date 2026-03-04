@@ -1,19 +1,8 @@
 import React from "react";
-import { ApiLoading, EmptyResponse, GlobalLayout } from "../../components";
-import Stats from "../../components/shared-components/stats";
-import ActivitiesSection from "../../components/shared-components/activities/activities-section";
+import { GlobalLayout } from "../../components";
 // import Schools from "../../components/schools";
-import { InfoCardHeader, StemClubActivities, ViewStemClubs } from "../../components/shared-components";
-import ImpactStoryCard from "../../components/cards/impact-stories-card";
-import { clubStudentsImage, floralWhiteImage } from "../../assets/images";
-import { useQuery } from "@tanstack/react-query";
-import { getAllImpactStories } from "../../services/queries";
+import { StemClubActivities, ViewStemClubs, StemClubCTA } from "../../components/shared-components";
 const StemClubs = () => {
-  const { isLoading, data } = useQuery({
-    queryKey: ["impactstories"],
-    queryFn: getAllImpactStories,
-  });
-
   return (
     <GlobalLayout>
       <section
@@ -35,6 +24,7 @@ const StemClubs = () => {
       </section>
       <StemClubActivities />
       <ViewStemClubs />
+      <StemClubCTA />
     </GlobalLayout>
   );
 };

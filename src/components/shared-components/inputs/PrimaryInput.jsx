@@ -22,13 +22,13 @@ const PrimaryInput = ({
     <div className="w-full md:max-w-[613px] mb-6">
       <label
         htmlFor={name}
-        className="text-base capitalize font-medium text-[#000000] "
+        className="text-base capitalize font-medium text-[#000000]"
       >
         {label}
       </label>
 
       <div
-        className={`w-full rounded-md border border-gains h-[50px] overflow-hidden mt-2 ${
+        className={`w-full rounded-md border border-[#000000] h-[48px] overflow-hidden mt-2 ${
           errors && "border-primaryPink"
         }`}
         ref={inputRef}

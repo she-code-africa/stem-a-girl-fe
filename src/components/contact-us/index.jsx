@@ -38,10 +38,10 @@ const ContactUsComponent = () => {
     mutationFn: makeEnquiry,
     onSuccess: () => {
       toast.success("Message sent Successfully!", {
-        position: "top-right", 
+        position: "top-right",
       });
       reset();
-      setRecaptchaToken(""); 
+      setRecaptchaToken("");
     },
     onError: (error, variables) => {
       toast.error("An error occurred.", {
@@ -52,7 +52,9 @@ const ContactUsComponent = () => {
 
   const onSubmit = (data) => {
     if (!recaptchaToken) {
-      toast.error("Please complete the reCAPTCHA.", { position: toast.POSITION.TOP_RIGHT });
+      toast.error("Please complete the reCAPTCHA.", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
       return;
     }
     handleContactUs(data);
@@ -137,7 +139,7 @@ const ContactUsComponent = () => {
                   enter message
                 </label>
                 <div
-                  className={`w-full md:max-w-[549px] h-[290px] mt-2 rounded-md border border-gains overflow-hidden ${
+                  className={`w-full md:max-w-[549px] h-[290px] mt-2 rounded-md border border-black overflow-hidden ${
                     errors.description?.message && "border-primaryPink"
                   }`}
                   ref={textareaRef}
@@ -146,7 +148,7 @@ const ContactUsComponent = () => {
                     {...register("description")}
                     name="description"
                     placeholder="Write your message"
-                    className="text-base w-full h-full border-0 outline-none p-3 bg-white placeholder:text-[rgba(130,130,130,1)] resize-none"
+                    className="text-base w-full h-full border-0 outline-none p-3 bg-transparent placeholder:text-[rgba(130,130,130,1)] resize-none"
                     onFocus={handleTextAreaFocus}
                     onBlur={handleTextAreaBlur}
                   ></textarea>
@@ -180,5 +182,3 @@ const ContactUsComponent = () => {
 };
 
 export default ContactUsComponent;
-
-

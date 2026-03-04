@@ -12,6 +12,14 @@ import {
   stemClubStudents1,
   stemClubStudents2,
   stemClubStudents3,
+  outreachRivers,
+  outreachOsun,
+  outreachOgun,
+  outreachLagos,
+  outreachFCT,
+  outreachDelta,
+  outreachAbia,
+  outreachKaduna,
 } from "../assets/images";
 import { FaCode, FaGamepad, FaRobot } from "react-icons/fa6";
 
@@ -46,7 +54,7 @@ export const navigationMenu = [
   },
   {
     pathname: "Outreaches",
-    path: "https://drive.google.com/drive/folders/10YrxGw17PeiTtYPAy-qMlko4C0cCtS48",
+    path: "/outreaches",
     isDropdown: false,
     dropdownMenu: [],
   },
@@ -413,5 +421,75 @@ export const impactStories = [
     school: "FGGC Abuja",
     story:
       " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
+  },
+];
+
+export const outreachStates = [
+  {
+    state: "Ogun State",
+    description: "Some Text here",
+    date: "August, 2025",
+    image: outreachOgun,
+  },
+  {
+    state: "Lagos State",
+    description: "Some Text here",
+    date: "March 2024",
+    image: outreachLagos,
+  },
+  {
+    state: "Osun State",
+    description: "Some Text here",
+    date: "February 2023",
+    image: outreachOsun,
+  },
+  {
+    state: "FCT",
+    description: "Some Text here",
+    date: "15/01/2024",
+    image: outreachFCT,
+  },
+  {
+    state: "Rivers State",
+    description: "Some Text here",
+    date: "February 2025",
+    image: outreachRivers,
+  },
+  {
+    state: "Delta State",
+    description: "Some Text here",
+    date: "April 2025",
+    image: outreachDelta,
+  },
+  {
+    state: "Abia State",
+    description: "Some Text here",
+    date: "May 2025",
+    image: outreachAbia,
+  },
+  {
+    state: "Kaduna State",
+    description: "Some Text here",
+    date: "May 2025",
+    image: outreachKaduna,
+  },
+];
+
+export const outreachApproach = [
+  {
+    title: "Awareness Seminar",
+    description: "Interactive sessions that showcase STEM career possibilities",
+  },
+  {
+    title: "Hands-on Coding Workshops",
+    description: "Introducing students to programming through Scratch",
+  },
+  {
+    title: "Sustainable STEM Clubs/ Donations",
+    description: "Ensuring continued learning beyond our initial engagement",
+  },
+  {
+    title: "Exciting Robotics Experience",
+    description: "Building simple Arduino robots",
   },
 ];

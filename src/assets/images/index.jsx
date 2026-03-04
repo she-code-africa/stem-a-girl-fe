@@ -38,6 +38,14 @@ import stemClubStudents1 from "./stem-club/stem-club-students-1.jpg";
 import stemClubStudents2 from "./stem-club/stem-club-students-2.jpg";
 import stemClubStudents3 from "./stem-club/stem-club-students-3.jpg";
 import stemGirl from "./stem-club/stem-girl.jpg";
+import outreachRivers from "./outreach/outreach-rivers.png";
+import outreachOsun from "./outreach/outreach-osun.png";
+import outreachOgun from "./outreach/outreach-ogun.png";
+import outreachLagos from "./outreach/outreach-lagos.png";
+import outreachFCT from "./outreach/outreach-fct.png";
+import outreachDelta from "./outreach/outreach-delta.png";
+import outreachAbia from "./outreach/outreach-abia.png";
+import outreachKaduna from "./outreach/outreach-kaduna.png";
 
 export {
   scaLogo,
@@ -79,4 +87,12 @@ export {
   stemClubStudents2,
   stemClubStudents3,
   stemGirl,
+  outreachAbia,
+  outreachDelta,
+  outreachFCT,
+  outreachKaduna,
+  outreachLagos,
+  outreachOgun,
+  outreachOsun,
+  outreachRivers,
 };

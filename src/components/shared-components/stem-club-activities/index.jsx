@@ -1,25 +1,4 @@
-import { stemClubStudents1, stemClubStudents2, stemClubStudents3 } from "../../../assets/images";
-
-const activities = [
-  {
-    image: stemClubStudents1,
-    title: "Routine Club Meetups",
-    description:
-      "Our STEM Club meet-ups are designed to be engaging, educational, and fun. Each meeting offers a variety of activities to spark your curiosity and deepen your understanding of STEM.",
-  },
-  {
-    image: stemClubStudents2,
-    title: "Interactive Coding, Robotics & Game Development Workshops",
-    description:
-      "Exploring initiatives that are making tech more inclusive for women across Africa.",
-  },
-  {
-    image: stemClubStudents3,
-    title: "Group Discussions and Brainstorming",
-    description:
-      "Plan projects, brainstorm ideas, and solve problems with your peers.",
-  },
-];
+import { stemClubActivitiesCards as activities } from "../../../utils/appData";
 
 const StemClubActivities = () => {
   return (

@@ -1,43 +1,6 @@
 import React, { useState } from "react";
-import { successStoryImg1, successStoryImg2 } from "../../../assets/images";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
-
-const slides = [
-  {
-    image: successStoryImg1,
-    testimonials: [
-      {
-        name: "School Principal, Queen Amina Collage",
-        location: "Kakuri, Kaduna State",
-        quote:
-          "Some of them have never participated this actively in any extracurricular activity. STEM-A-Girl has shown them that their dreams can be bigger.",
-      },
-      {
-        name: "Participant, Federal Government Girls’ College Abuloma,",
-        location: "Port Harcourt, Rivers State",
-        quote:
-          "I loved the outreach and the fact that I could ask questions I had in mind. This session has given me more clarity on what I want to do in the future.",
-      },
-    ],
-  },
-  {
-    image: successStoryImg2,
-    testimonials: [
-      {
-        name: "Participant, Top Flight College, ",
-        location: "Gbagada, Lagos",
-        quote:
-          "I used to hear that only smart people should go to science class. But today I know that’s not true. Anyone can do science if they’re interested and dedicated.",
-      },
-      {
-        name: "Teacher and Club Facilitator, Government Model Secondary School,",
-        location: "Asaba, Delta State ",
-        quote:
-          "The STEM-A-Girl Outreach gave me tools and motivation to support these girls beyond the classroom. Now, I’m not just teaching, I’m mentoring future innovators.",
-      },
-    ],
-  },
-];
+import { successStoriesSlides as slides } from "../../../utils/appData";
 
 const SuccessStories = () => {
   const [current, setCurrent] = useState(0);

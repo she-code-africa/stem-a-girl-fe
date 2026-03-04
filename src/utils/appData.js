@@ -7,6 +7,11 @@ import {
   roboticsCardImg,
   stemProjectsImage,
   upcomingEventPhoto,
+  successStoryImg1,
+  successStoryImg2,
+  stemClubStudents1,
+  stemClubStudents2,
+  stemClubStudents3,
 } from "../assets/images";
 import { FaCode, FaGamepad, FaRobot } from "react-icons/fa6";
 
@@ -276,6 +281,70 @@ export const faqs = [
     content:
       "Yes! If your school doesn’t currently host a STEM Club, you can express interest through our website or contact She Code Africa directly to learn how to bring the program to your school or join a nearby club.",
     list: false,
+  },
+];
+
+export const successStoriesSlides = [
+  {
+    image: successStoryImg1,
+    testimonials: [
+      {
+        name: "School Principal, Queen Amina Collage",
+        location: "Kakuri, Kaduna State",
+        quote:
+          "Some of them have never participated this actively in any extracurricular activity. STEM-A-Girl has shown them that their dreams can be bigger.",
+      },
+      {
+        name: "Participant, Federal Government Girls' College Abuloma,",
+        location: "Port Harcourt, Rivers State",
+        quote:
+          "I loved the outreach and the fact that I could ask questions I had in mind. This session has given me more clarity on what I want to do in the future.",
+      },
+    ],
+  },
+  {
+    image: successStoryImg2,
+    testimonials: [
+      {
+        name: "Participant, Top Flight College, ",
+        location: "Gbagada, Lagos",
+        quote:
+          "I used to hear that only smart people should go to science class. But today I know that's not true. Anyone can do science if they're interested and dedicated.",
+      },
+      {
+        name: "Teacher and Club Facilitator, Government Model Secondary School,",
+        location: "Asaba, Delta State ",
+        quote:
+          "The STEM-A-Girl Outreach gave me tools and motivation to support these girls beyond the classroom. Now, I'm not just teaching, I'm mentoring future innovators.",
+      },
+    ],
+  },
+];
+
+export const getInvolvedBulletPoints = [
+  "Know a girl curious about tech, coding, or robotics? Share this platform with her.",
+  "Take a Course, it is completely free",
+  "Spread the Word",
+];
+
+export const stemClubActivitiesCards = [
+  {
+    image: stemClubStudents1,
+    title: "Routine Club Meetups",
+    description:
+      "Our STEM Club meet-ups are designed to be engaging, educational, and fun. Each meeting offers a variety of activities to spark your curiosity and deepen your understanding of STEM.",
+  },
+  {
+    image: stemClubStudents2,
+    title: "Interactive Coding, Robotics & Game Development Workshops",
+    description:
+      "Exploring initiatives that are making tech more inclusive for women across Africa.",
+  },
+  {
+    image: stemClubStudents3,
+    title: "Group Discussions and Brainstorming",
+    description:
+      "Plan projects, brainstorm ideas, and solve problems with your peers.",
   },
 ];
 

@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { getInvolvedHeroImg, getInvolvedBg } from "../../../assets/images";
 import ShareModal from "../share-modal";
-
-const bulletPoints = [
-  "Know a girl curious about tech, coding, or robotics? Share this platform with her.",
-  "Take a Course, it is completely free",
-  "Spread the Word",
-];
+import { getInvolvedBulletPoints as bulletPoints } from "../../../utils/appData";
 
 const GetInvolved = () => {
   const [modalOpen, setModalOpen] = useState(false);

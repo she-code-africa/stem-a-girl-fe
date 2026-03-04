@@ -210,15 +210,33 @@ export const roboticsHeroSubContent = [
 
 export const faqs = [
   {
-    title: "What is the SheCodeAfrica STEM-A-GIRL Program about?",
+    title: "What is the She Code Africa STEM-A-GIRL Program about?",
     content:
       "The She Code Africa STEM-A-Girl Program is an initiative aimed at empowering girls to pursue careers in Science, Technology, Engineering, and Math (STEM).",
     list: false,
   },
   {
+    title: "What is the main goal of the STEM-A-Girl initiative?",
+    content:
+      "The goal is to increase awareness, interest, and participation of young African girls in STEM by providing them with the resources, support, and inspiration they need to build confidence and develop relevant skills for the future.",
+    list: false,
+  },
+  {
+    title: "Is this initiative only for students?",
+    content:
+      "While the initiative is focused on students aged 10-21, it also engages educators, parents, and community stakeholders to foster a supportive ecosystem for girls in STEM.",
+    list: false,
+  },
+  {
+    title: "Is the learning content suitable for beginners?",
+    content:
+      "Yes! All content is designed to be beginner-friendly, age-appropriate, and self-paced to ensure girls with little or no prior experience can actively participate and learn.",
+    list: false,
+  },
+  {
     title: "Who can join the STEM Club?",
     content:
-      "The STEM Club is open to African girls aged 10 - 21, regardless of grade level. The club is designed to be inclusive and welcoming to female secondary students of all backgrounds and interests.",
+      "The STEM Club is open to African girls aged 10 - 21, regardless of grade level. The club is designed to be inclusive and welcoming to female secondary students of all backgrounds and interests. For specific meeting times, location details, and information about upcoming activities, please check with your school administration or the designated STEM Club coordinator.",
     list: false,
   },
   {
@@ -234,7 +252,19 @@ export const faqs = [
   {
     title: "Do I need prior experience in STEM?",
     content:
-      "No prior experience in STEM is necessary to join the club. She Code Africa’s STEM club is designed to be accessible and engaging for female students of all skill levels aged 10 - 21. Club members will have the opportunity to learn and develop STEM skills in a supportive and encouraging environment.",
+      "No prior experience in STEM is necessary to join the club. She Code Africa’s STEM club is designed to be accessible and engaging for female students of all skill levels aged 10 – 21. Club members will have the opportunity to learn and develop STEM skills in a supportive and encouraging environment.",
+    list: false,
+  },
+  {
+    title: "How often does the STEM Club meet?",
+    content:
+      "Meeting frequency may vary depending on the school and location. Check with your local STEM Club coordinator for the specific schedule.",
+    list: false,
+  },
+  {
+    title: "Can I still participate if my school doesn’t have a STEM Club?",
+    content:
+      "Yes! If your school doesn’t currently host a STEM Club, you can express interest through our website or contact She Code Africa directly to learn how to bring the program to your school or join a nearby club.",
     list: false,
   },
 ];

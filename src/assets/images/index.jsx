@@ -33,7 +33,10 @@ import successStoryImg1 from "./homepage/success-story-img-1.png";
 import successStoryImg2 from "./homepage/success-story-img-2.png";
 import getInvolvedHeroImg from "./homepage/get-involved-hero-img.jpg";
 import getInvolvedBg from "./homepage/get-involved-bg.jpg";
-import badge from './badge.png'
+import badge from './badge.png';
+import stemClubStudents1 from "./stem-club/stem-club-students-1.jpg";
+import stemClubStudents2 from "./stem-club/stem-club-students-2.jpg";
+import stemClubStudents3 from "./stem-club/stem-club-students-3.jpg";
 
 export {
   scaLogo,
@@ -70,5 +73,8 @@ export {
   successStoryImg2,
   getInvolvedHeroImg,
   getInvolvedBg,
-  badge
+  badge,
+  stemClubStudents1,
+  stemClubStudents2,
+  stemClubStudents3,
 };

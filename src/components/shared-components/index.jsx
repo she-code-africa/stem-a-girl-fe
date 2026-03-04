@@ -8,6 +8,7 @@ import ProgramMission from "./program-mission";
 import SuccessStories from "./success-stories";
 import GetInvolved from "./get-involved";
 import ShareModal from "./share-modal";
+import StemClubActivities from "./stem-club-activities";
 
 export {
   HeroComponent,
@@ -20,4 +21,5 @@ export {
   SuccessStories,
   GetInvolved,
   ShareModal,
+  StemClubActivities,
 };

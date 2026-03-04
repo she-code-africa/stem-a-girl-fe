@@ -1,5 +1,5 @@
 // import scaLogo from "./SCA-LOGO.png";
-import scaLogo from "./new-logo/new-logo-footer.png";
+import scaLogo from "./new-logo/new-logo-header.png";
 import cpu from "./activities/Cpu.png";
 import codingHeroImage from "./activities/codingHeroImage.png";
 import flower from "./activities/Group.png";
@@ -33,6 +33,7 @@ import successStoryImg1 from "./homepage/success-story-img-1.png";
 import successStoryImg2 from "./homepage/success-story-img-2.png";
 import getInvolvedHeroImg from "./homepage/get-involved-hero-img.jpg";
 import getInvolvedBg from "./homepage/get-involved-bg.jpg";
+import badge from './badge.png'
 
 export {
   scaLogo,
@@ -69,4 +70,5 @@ export {
   successStoryImg2,
   getInvolvedHeroImg,
   getInvolvedBg,
+  badge
 };

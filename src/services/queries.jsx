@@ -7,16 +7,22 @@ export const getAllActivities = async () => {
   return activities.data.data;
 };
 
+export const getReports = async () => {
+  const programs = await axios.get(`${process.env.REACT_APP_BASE_URL}/reports`);
+
+  return programs.data.data;
+};
+
 export const getActivityCourses = async (activityID) => {
   const activityCourses = await axios.get(
-    `${baseURL}course?activity=${activityID}`
+    `${baseURL}course?activity=${activityID}`,
   );
   return activityCourses.data.data;
 };
 
 export const getActivityEvents = async (activityID) => {
   const activityEvents = await axios.get(
-    `${baseURL}event?activity=${activityID}`
+    `${baseURL}event?activity=${activityID}`,
   );
   return activityEvents.data.data;
 };

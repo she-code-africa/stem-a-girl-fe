@@ -1,22 +1,43 @@
-import React, { useState } from "react";
-import { scaLogo } from "../../assets/images";
+import React, { useEffect, useState } from "react";
+import { badge, scaLogo } from "../../assets/images";
 import { Link } from "react-router-dom";
-import { aboutUsLinks, communityLinks } from "../../utils/appData";
+import {
+  aboutUsLinks,
+  communityLinks,
+  getInvolvedLinks,
+} from "../../utils/appData";
+import { useQuery } from "@tanstack/react-query";
 import {
   FaLinkedinIn,
   FaFacebookF,
   FaYoutube,
   FaInstagram,
   FaTwitter,
+  FaCaretDown,
 } from "react-icons/fa6";
 import { NewsLetter } from "../modals";
+import { getReports } from "../../services/queries";
 
 const Footer = () => {
   const [showNewsLetterModal, setShowNewsLetterModal] = useState(false);
+  const [openCaret, setOpenCaret] = useState(false);
+  const { data, isError, isLoading, isSuccess } = useQuery({
+    queryKey: ["reports"],
+    queryFn: getReports,
+  });
+
+  const [reports, setReports] = useState([]);
+
+  useEffect(() => {
+    if (isSuccess) {
+      setReports(data);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLoading]);
   return (
-    <section className="bg-whiteSmoke w-full font-libreFranklin">
-      <div className="w-[90%] mx-auto max-w-[1280px] md:flex md:items-center md:justify-between pt-10 pb-8 md:pt-20">
-        <figure className="hidden md:block w-[150px] h-[100px]">
+    <footer className="bg-[#FEFEFE] w-full font-figtree">
+      <div className="w-[90%] mx-auto max-w-[1280px] lg:flex  md:items-center md:justify-between pt-10 pb-8 md:pt-20 space-y-10 lg:space-y-0">
+        <figure className="w-full max-w-[150px] h-[100px]">
           <img
             src={scaLogo}
             alt="SCA-LOGO"
@@ -24,9 +45,59 @@ const Footer = () => {
           />
         </figure>
 
-        <div className="flex flex-col md:flex-row md:items-start md:justify-end gap-10 md:gap-40">
+        <section className="flex flex-col md:flex-row md:items-start md:justify-between lg:justify-end gap-10 ">
           <article className="">
-            <h2 className="text-xl md:text-[32px] font-bold capitalize mb-6">
+            <h2 className="text-xl md:text-[32px] font-bold capitalize mb-6 font-figtree">
+              Get Involved
+            </h2>
+
+            <ul className="flex flex-col gap-5">
+              {getInvolvedLinks.map((menu, i) => (
+                <li
+                  className="text-base font-normal hover:text-primaryPink"
+                  key={i}
+                >
+                  <Link to={menu.path}>{menu.pathname}</Link>
+                </li>
+              ))}
+
+              {isError ? null : (
+                <div className="relative">
+                  <button
+                    className="button-text mb-5 flex gap-x-2 items-center hover:text-primary-main-pink focus:outline-none focus:ring focus:ring-tutu relative text-black"
+                    onClick={() => {
+                      setOpenCaret(!openCaret);
+                    }}
+                  >
+                    <span>Annual Reports</span>
+                    <FaCaretDown
+                      className={`transition-transform duration-300 ${
+                        openCaret ? "rotate-180" : null
+                      }`}
+                    />
+                  </button>
+                  {openCaret && (
+                    <ul className="bg-white shadow-[0px_0px_8px_2px_rgba(0,0,0,0.20)] w-40 px-2 py-3 rounded absolute max-h-[120px] overflow-y-auto">
+                      {reports.map((report) => (
+                        <li key={report._id} className="hover:bg-gray-200 p-2">
+                          <a
+                            href={report?.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-text focus:outline-none focus:ring focus:ring-tutu block"
+                          >
+                            {report.year}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
+            </ul>
+          </article>
+          <article className="">
+            <h2 className="text-xl md:text-[32px] font-bold capitalize mb-6 font-figtree">
               about us
             </h2>
 
@@ -42,7 +113,7 @@ const Footer = () => {
             </ul>
           </article>
           <article className="">
-            <h2 className="text-xl md:text-[32px] font-bold capitalize mb-6">
+            <h2 className="text-xl md:text-[32px] font-bold capitalize mb-6 font-figtree">
               community
             </h2>
             <ul className="flex flex-col gap-5">
@@ -68,11 +139,11 @@ const Footer = () => {
             </ul>
 
             <div className="mt-5">
-              <h3 className="text-base font-normal">
+              <h3 className="text-base font-normal font-figtree">
                 Follow Us On Social Media
               </h3>
               <ul className="mt-5 flex items-center gap-4">
-                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-black">
+                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-primaryPink">
                   <Link
                     to="https://www.linkedin.com/company/she-code-africa/"
                     title="Follow us on Linkedin"
@@ -83,7 +154,7 @@ const Footer = () => {
                     <FaLinkedinIn />
                   </Link>
                 </li>
-                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-black">
+                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-primaryPink">
                   <Link
                     to="https://www.facebook.com/shecodeafrica/"
                     title="Follow us on Facebook"
@@ -94,7 +165,7 @@ const Footer = () => {
                     <FaFacebookF />
                   </Link>
                 </li>
-                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-black">
+                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-primaryPink">
                   <Link
                     to="https://www.youtube.com/channel/UCNZzVEyJege5-d_ekKw6dFA"
                     title="Subscribe to our Youtube channel"
@@ -105,7 +176,7 @@ const Footer = () => {
                     <FaYoutube />
                   </Link>
                 </li>
-                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-black">
+                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-primaryPink">
                   <Link
                     to="https://www.instagram.com/shecodeafrica/"
                     title="Follow us on Instagram"
@@ -116,7 +187,7 @@ const Footer = () => {
                     <FaInstagram />
                   </Link>
                 </li>
-                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-black">
+                <li className="w-[31px] h-[31px] flex items-center justify-center rounded-[50%] bg-primaryPink">
                   <Link
                     to="https://www.twitter.com/shecodeafrica/"
                     title="Follow us on Twitter"
@@ -130,19 +201,28 @@ const Footer = () => {
               </ul>
             </div>
           </article>
-        </div>
+
+          {/*  */}
+          <figure className="max-w-[141px] md:hidden w-full h-[141px]">
+            <img src={badge} alt="Badge" />
+          </figure>
+        </section>
+        {/*  */}
+        <figure className="max-w-[141px] w-full h-[141px] hidden md:block">
+          <img src={badge} alt="Badge" />
+        </figure>
       </div>
 
-      <div className="bg-black py-6 px-5">
+      <div className="bg-primaryPink py-6 px-5">
         <p className="text-white text-base text-center w-full">
-          All rights reserved. She Code Africa 2024.
+          All rights reserved. She Code Africa {new Date().getFullYear()}.
         </p>
       </div>
 
       {showNewsLetterModal && (
         <NewsLetter setShowNewsLetterModal={setShowNewsLetterModal} />
       )}
-    </section>
+    </footer>
   );
 };
 

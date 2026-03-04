@@ -3,7 +3,7 @@ import { ApiLoading, EmptyResponse, GlobalLayout } from "../../components";
 import Stats from "../../components/shared-components/stats";
 import ActivitiesSection from "../../components/shared-components/activities/activities-section";
 // import Schools from "../../components/schools";
-import { InfoCardHeader, StemClubActivities } from "../../components/shared-components";
+import { InfoCardHeader, StemClubActivities, ViewStemClubs } from "../../components/shared-components";
 import ImpactStoryCard from "../../components/cards/impact-stories-card";
 import { clubStudentsImage, floralWhiteImage } from "../../assets/images";
 import { useQuery } from "@tanstack/react-query";
@@ -34,28 +34,7 @@ const StemClubs = () => {
         </div>
       </section>
       <StemClubActivities />
-      <Stats />
-      <ActivitiesSection />
-      {/* <Schools /> */}
-      <section className="w-full mt-24 mb-5">
-        <InfoCardHeader
-          infoCardHeading="Impact Stories"
-          infoCardParagraph="Read about the inspiring journeys of some of our STEM Club members:"
-        />
-        <div className="flex gap-6 items-center overflow-x-auto no-scrollbar w-full mt-10 md:mt-16">
-          {isLoading ? (
-            <ApiLoading />
-          ) : data?.length > 0 ? (
-            <>
-              {data.map((story, index) => (
-                <ImpactStoryCard key={index} stories={story} />
-              ))}
-            </>
-          ) : (
-            <EmptyResponse text="story" />
-          )}
-        </div>
-      </section>
+      <ViewStemClubs />
     </GlobalLayout>
   );
 };

@@ -327,6 +327,14 @@ export const getInvolvedBulletPoints = [
   "Spread the Word",
 ];
 
+export const stemClubSchools = [
+  { name: "Methodist Comprehensive College, Sagamu, Ogun State", isPink: false },
+  { name: "SOS Children's Villages School, Isolo, Lagos State", isPink: true },
+  { name: "Government Model Secondary School, Asaba, Delta State", isPink: true },
+  { name: "Gates Academy, Asaga Ohafia, Abia State", isPink: false },
+  { name: "Queen Amina College, Kakuri, Kaduna State", isPink: true },
+];
+
 export const stemClubActivitiesCards = [
   {
     image: stemClubStudents1,

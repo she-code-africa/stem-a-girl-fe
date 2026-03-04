@@ -9,6 +9,7 @@ import SuccessStories from "./success-stories";
 import GetInvolved from "./get-involved";
 import ShareModal from "./share-modal";
 import StemClubActivities from "./stem-club-activities";
+import ViewStemClubs from "./view-stem-clubs";
 
 export {
   HeroComponent,
@@ -22,4 +23,5 @@ export {
   GetInvolved,
   ShareModal,
   StemClubActivities,
+  ViewStemClubs,
 };

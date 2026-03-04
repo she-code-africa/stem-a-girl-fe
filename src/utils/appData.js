@@ -33,7 +33,6 @@ export const navigationMenu = [
         title: "Robotics",
         url: "/activities/robotics",
       },
-     
     ],
   },
   {
@@ -50,13 +49,32 @@ export const navigationMenu = [
   },
 ];
 
-export const aboutUsLinks = [
+export const getInvolvedLinks = [
   {
-    pathname: "SCA Website",
-    path: "https://shecodeafrica.org/",
+    pathname: "Donate To A Cause",
+    path: "https://shecodeafrica.org/donate",
   },
   {
-    pathname: "F.A.Q",
+    pathname: "Partner With Us",
+    path: "https://shecodeafrica.org/donate-partner",
+  },
+  {
+    pathname: "Start An S.C.A Chapter",
+    path: "https://shecodeafrica.org/chapters",
+  },
+  {
+    pathname: "Summit",
+    path: "https://summit.shecodeafrica.org/",
+  },
+];
+
+export const aboutUsLinks = [
+  {
+    pathname: "Meet The Team",
+    path: "https://shecodeafrica.org/team",
+  },
+  {
+    pathname: "FAQs",
     path: "https://shecodeafrica.org/faq",
   },
   {
@@ -75,24 +93,15 @@ export const aboutUsLinks = [
 
 export const communityLinks = [
   {
-    pathname: "Recent Outreach",
-    path: "https://drive.google.com/drive/folders/10YrxGw17PeiTtYPAy-qMlko4C0cCtS48",
+    pathname: "Upcoming Events",
+    path: "https://shecodeafrica.org/events",
     isNewsLetter: false,
   },
+
   {
-    pathname: "Contact Us",
-    path: "/contact-us",
-    isNewsLetter: false,
-  },
-  {
-    pathname: "Join Our Slack Community",
+    pathname: "Join Our Community",
     path: "https://bit.ly/joinshecodeafrica",
     isNewsLetter: false,
-  },
-  {
-    pathname: "Sign Up For Our Newsletter",
-    path: "#",
-    isNewsLetter: true,
   },
 ];
 

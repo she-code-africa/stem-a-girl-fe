@@ -1,5 +1,5 @@
 // import scaLogo from "./SCA-LOGO.png";
-import scaLogo from "./new-logo/new-logo-footer.png";
+import scaLogo from "./new-logo/new-logo-header.png";
 import cpu from "./activities/Cpu.png";
 import codingHeroImage from "./activities/codingHeroImage.png";
 import flower from "./activities/Group.png";
@@ -18,6 +18,7 @@ import clubStudentsImage from "./club-students.png";
 import floralWhiteImage from "./floral-white.svg";
 import starImage from "./star-image.svg";
 import faqImage from "./homepage/faq.png";
+import badge from './badge.png'
 
 export {
   scaLogo,
@@ -39,4 +40,5 @@ export {
   floralWhiteImage,
   starImage,
   faqImage,
+  badge
 };

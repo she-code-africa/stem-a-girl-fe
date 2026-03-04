@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { GlobalLayout } from "../../components";
 import { outreachStates, outreachApproach } from "../../utils/appData";
 import { ourImpactBg, getInvolvedBg } from "../../assets/images";
-import { FaCalendarAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const CARDS_PER_PAGE = 4;
 

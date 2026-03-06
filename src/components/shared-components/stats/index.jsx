@@ -1,16 +1,30 @@
+import { ourImpactBg } from "../../../assets/images";
 import { stats } from "../../../utils/appData";
+
 
 const Stats = () => {
   return (
-    <div className="border-b-4 border-r-4 border-[#B70569] w-full max-w-[95%] md:max-w-[80%] mx-auto my-10 rounded-2xl">
-      <div className="border-black border-[0.3px] py-6 rounded-xl max-md:px-4">
-        <div className=" flex justify-between max-w-xl mx-auto">
+    <div className="w-full relative overflow-hidden bg-[#FFF5FA] py-12 md:py-16">
+      <img
+        src={ourImpactBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      />
+
+      <div className="relative w-[90%] max-w-[1280px] mx-auto">
+        <h2 className="text-center text-[#B70569] text-2xl md:text-4xl lg:text-6xl font-bold mb-10 md:mb-14">
+          Our Impact in Numbers
+        </h2>
+
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-center gap-10 md:gap-4">
           {stats.map(({ title, stat }, i) => (
-            <div className="text-center space-y-1" key={i}>
-              <h2 className="text-[#B70569] font-bold text-2xl md:text-3xl lg:text-5xl">
+            <div className="flex items-center gap-4" key={i}>
+              <span className="text-[#7D355D] font-thunder font-bold text-4xl lg:text-7xl shrink-0 leading-none">
                 {stat}
-              </h2>
-              <p className="text-xs md:text-xl">{title}</p>
+              </span>
+              <p className="text-sm md:text-base lg:text-lg text-[#000000] max-w-[232px] leading-snug font-medium">
+                {title}
+              </p>
             </div>
           ))}
         </div>

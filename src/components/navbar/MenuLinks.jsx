@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
 
@@ -26,23 +25,25 @@ const MenuLinks = ({ menuItem, isOpen, onToggle }) => {
           </span>
 
           {isOpen && (
-            <>
-              <ul className="lg:absolute bg-white left-0 lg:w-max p-4 flex flex-col gap-3">
-                {menuItem.dropdownMenu.map((menu, i) => (
-                  <li className="text-sm hover:text-primaryPink" key={i}>
-                    <Link
-                      to={menu.url}
-                      className={`pb-1 ${
-                        pathname === menu.url &&
-                        "border-b-2 border-b-primaryPink"
-                      }`}
-                    >
-                      {menu.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </>
+            <ul className="lg:absolute bg-white left-0 lg:w-max p-4 flex flex-col gap-4 rounded-2xl shadow-lg">
+              {menuItem.dropdownMenu.map((menu, i) => (
+                <li key={i}>
+                  <Link
+                    to={menu.url}
+                    className={`group flex items-center gap-3 text-sm hover:text-primaryPink ${
+                      pathname === menu.url && "text-primaryPink font-semibold"
+                    }`}
+                  >
+                    {menu.icon && (
+                      <span className="w-10 h-10 rounded-full bg-[#FFF0F8] group-hover:bg-primaryPink flex items-center justify-center shrink-0 transition-colors">
+                        <menu.icon className="w-5 h-5 text-primaryPink group-hover:text-white transition-colors" />
+                      </span>
+                    )}
+                    {menu.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           )}
         </li>
       ) : (

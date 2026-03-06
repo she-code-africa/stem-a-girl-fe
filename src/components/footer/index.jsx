@@ -13,7 +13,6 @@ import {
   FaYoutube,
   FaInstagram,
   FaTwitter,
-  FaCaretDown,
 } from "react-icons/fa6";
 import { NewsLetter } from "../modals";
 import { getReports } from "../../services/queries";
@@ -36,7 +35,7 @@ const Footer = () => {
   }, [isLoading]);
   return (
     <footer className="bg-[#FEFEFE] w-full font-figtree">
-      <div className="w-[90%] mx-auto max-w-[1280px] lg:flex  md:items-center md:justify-between pt-10 pb-8 md:pt-20 space-y-10 lg:space-y-0">
+      <div className="w-[90%] mx-auto max-w-[1280px] lg:flex lg:items-start lg:justify-between pt-10 pb-8 md:pt-16 space-y-10 lg:space-y-0">
         <figure className="w-full max-w-[150px] h-[100px]">
           <img
             src={scaLogo}
@@ -45,13 +44,13 @@ const Footer = () => {
           />
         </figure>
 
-        <section className="flex flex-col md:flex-row md:items-start md:justify-between lg:justify-end gap-10 ">
+        <section className="flex flex-col md:flex-row md:items-start gap-10 lg:gap-16">
           <article className="">
             <h2 className="text-xl md:text-[32px] font-bold capitalize mb-6 font-figtree">
               Get Involved
             </h2>
 
-            <ul className="flex flex-col gap-5">
+            <ul className="flex flex-col gap-4">
               {getInvolvedLinks.map((menu, i) => (
                 <li
                   className="text-base font-normal hover:text-primaryPink"
@@ -62,29 +61,22 @@ const Footer = () => {
               ))}
 
               {isError ? null : (
-                <div className="relative">
+                <li className="relative text-base font-normal hover:text-primaryPink">
                   <button
-                    className="button-text mb-5 flex gap-x-2 items-center hover:text-primary-main-pink focus:outline-none focus:ring focus:ring-tutu relative text-black"
-                    onClick={() => {
-                      setOpenCaret(!openCaret);
-                    }}
+                    className="text-left hover:text-primaryPink"
+                    onClick={() => setOpenCaret(!openCaret)}
                   >
-                    <span>Annual Reports</span>
-                    <FaCaretDown
-                      className={`transition-transform duration-300 ${
-                        openCaret ? "rotate-180" : null
-                      }`}
-                    />
+                    Annual Reports
                   </button>
                   {openCaret && (
-                    <ul className="bg-white shadow-[0px_0px_8px_2px_rgba(0,0,0,0.20)] w-40 px-2 py-3 rounded absolute max-h-[120px] overflow-y-auto">
+                    <ul className="bg-white shadow-[0px_0px_8px_2px_rgba(0,0,0,0.20)] w-40 px-2 py-3 rounded absolute max-h-[120px] overflow-y-auto z-10">
                       {reports.map((report) => (
                         <li key={report._id} className="hover:bg-gray-200 p-2">
                           <a
                             href={report?.link}
                             target="_blank"
                             rel="noreferrer"
-                            className="button-text focus:outline-none focus:ring focus:ring-tutu block"
+                            className="block text-black"
                           >
                             {report.year}
                           </a>
@@ -92,7 +84,7 @@ const Footer = () => {
                       ))}
                     </ul>
                   )}
-                </div>
+                </li>
               )}
             </ul>
           </article>
@@ -101,7 +93,7 @@ const Footer = () => {
               about us
             </h2>
 
-            <ul className="flex flex-col gap-5">
+            <ul className="flex flex-col gap-4">
               {aboutUsLinks.map((menu, i) => (
                 <li
                   className="text-base font-normal hover:text-primaryPink"
@@ -116,7 +108,7 @@ const Footer = () => {
             <h2 className="text-xl md:text-[32px] font-bold capitalize mb-6 font-figtree">
               community
             </h2>
-            <ul className="flex flex-col gap-5">
+            <ul className="flex flex-col gap-4">
               {communityLinks.map((menu, i) => {
                 return !menu.isNewsLetter ? (
                   <li
@@ -214,7 +206,7 @@ const Footer = () => {
       </div>
 
       <div className="bg-primaryPink py-6 px-5">
-        <p className="text-white text-base text-center w-full">
+        <p className="text-white text-base text-center w-full font-normal">
           All rights reserved. She Code Africa {new Date().getFullYear()}.
         </p>
       </div>

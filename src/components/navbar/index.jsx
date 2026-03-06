@@ -10,10 +10,10 @@ const NavigationBar = () => {
   const [showDropdown, setShowDropdown] = useState(null);
 
   return (
-    <nav className="fixed top-0 right-0 left-0 bg-white py-5 drop-shadow-md text-sealBrown font-mulish z-[2]">
+    <nav className="fixed top-0 right-0 left-0 bg-white py-5 text-sealBrown font-mulish z-[20]">
       <section className="w-[90%] max-w-[1280px] mx-auto flex gap-8 items-center ">
         <div className="flex justify-between w-full lg:w-fit ">
-          <figure className="w-[70px] h-[70px]">
+          <figure className="w-[210px] h-[70px]">
             <Link to="/" className="w-full h-full logo block"></Link>
           </figure>
 
@@ -44,10 +44,10 @@ const NavigationBar = () => {
           </ul>
           <div className="flex w-[90%] max-w-[1280px] mx-auto  lg:max-w-[200px]">
             <Link
-              to="/contact-us"
-              className="text-white capitalize w-full max-w-[136px] h-[45px] rounded-[30px] text-sm flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-transparent hover:text-primaryPink transition-all"
+              to=""
+              className="text-white capitalize w-full max-w-[150px] h-[45px] rounded-[8px] text-sm flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-[#5C0335] hover:border-[#5C0335] transition-all"
             >
-              contact us
+              Start Learning
             </Link>
           </div>
         </div>

@@ -26,6 +26,7 @@ import ourImpactBg from "./our-impact-bg.jpg";
 import programMissionPinkBg from "./homepage/program-mission-pink-bg.svg";
 import programMissionYellowBg from "./homepage/program-mission-yellow-bg.svg";
 import programMissionGirl from "./homepage/program-mission-girl.png";
+import programMissionImg from "./homepage/program-mission.png"
 import codingFromScratchCardImg from "./homepage/coding-from-scratch-card-img.jpg";
 import gameDevCardImg from "./homepage/game-dev-card-img.png";
 import roboticsCardImg from "./homepage/robotics-card-img.jpg";
@@ -75,6 +76,7 @@ export {
   programMissionPinkBg,
   programMissionYellowBg,
   programMissionGirl,
+  programMissionImg,
   codingFromScratchCardImg,
   gameDevCardImg,
   roboticsCardImg,

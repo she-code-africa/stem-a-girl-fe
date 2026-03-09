@@ -30,7 +30,7 @@ const GameDevelopmentPage = () => {
   useEffect(() => {
     const activityExists =
       !isLoading &&
-      allActivities.find(
+      allActivities?.find(
         (activity) => activity.title.toLowerCase() === "game development"
       );
     if (activityExists) {

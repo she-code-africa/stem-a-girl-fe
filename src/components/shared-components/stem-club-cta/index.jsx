@@ -20,7 +20,7 @@ const StemClubCTA = () => {
                 Send a Mail
               </a>
               <a
-                href="https://forms.gle/stemclub"
+                href="https://forms.gle/d2Vqo27vZNSQBzBe9"
                 target="_blank"
                 rel="noreferrer"
                 className="border border-[#5C0335] text-primaryPink text-base font-normal px-6 py-3 rounded-lg hover:border-primaryPink transition-colors"

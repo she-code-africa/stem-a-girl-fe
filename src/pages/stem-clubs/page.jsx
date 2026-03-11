@@ -11,10 +11,10 @@ const StemClubs = () => {
       >
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative z-10 w-[90%] max-w-[1280px] mx-auto">
-          <h1 className="text-center font-bold text-4xl md:text-7xl md:leading-tight">
+          <h1 className="text-center font-semibold text-4xl md:text-7xl lg:text-8xl xl:text-[128px] md:leading-tight">
             Empowering Young Minds: <br /> She Code Africa STEM Club
           </h1>
-          <p className="text-center md:w-[54%] mx-auto text-base md:text-xl md:leading-8 text-[#FEFEFE] font-medium">
+          <p className="text-center md:w-[70%] mx-auto text-base md:text-xl lg:text-2xl md:leading-8 text-[#FEFEFE] font-medium">
             She Code Africa's STEM Club tackles the underrepresentation of women
             in STEM fields. By bringing engaging programs directly to schools,
             they spark curiosity and equip girls with the skills and confidence

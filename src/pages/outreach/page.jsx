@@ -11,7 +11,10 @@ const OutreachPage = () => {
 
   const totalPages = Math.ceil(outreachStates.length / CARDS_PER_PAGE);
   const startIdx = (currentPage - 1) * CARDS_PER_PAGE;
-  const visibleStates = outreachStates.slice(startIdx, startIdx + CARDS_PER_PAGE);
+  const visibleStates = outreachStates.slice(
+    startIdx,
+    startIdx + CARDS_PER_PAGE
+  );
 
   return (
     <GlobalLayout>
@@ -25,10 +28,10 @@ const OutreachPage = () => {
           <h1 className="font-semibold text-5xl md:text-9xl md:leading-tight text-[#FEFEFE]">
             Our Reach
           </h1>
-          <p className="md:w-[55%] mx-auto text-base md:text-2xl md:leading-8 text-[#FEFEFE] font-medium">
-            She Code Africa has taken STEM education directly to schools across
-            Nigeria, empowering young girls with skills, confidence, and
-            inspiration to pursue careers in technology and innovation.
+          <p className="md:w-[70%] mx-auto text-base md:text-2xl md:leading-8 text-[#FEFEFE] font-medium">
+            The STEM-A-Girl Initiative has successfully impacted over 3,000
+            girls across multiple states in Nigeria, introducing young African
+            girls to the exciting world of STEM education.
           </p>
         </div>
       </section>
@@ -65,7 +68,9 @@ const OutreachPage = () => {
                   <h3 className="font-figtree font-bold text-base text-[#5C0335]">
                     {item.state}
                   </h3>
-                  <p className="font-figtree text-sm font-medium text-[#5C0335]">{item.description}</p>
+                  <p className="font-figtree text-sm font-medium text-[#5C0335]">
+                    {item.description}
+                  </p>
                   <div className="flex items-center justify-between mt-2">
                     <div className="font-figtree flex items-center gap-2 text-[#5C0335] text-sm">
                       <FaCalendarAlt size={13} />
@@ -83,19 +88,21 @@ const OutreachPage = () => {
           {/* Pagination */}
           {totalPages > 1 && (
             <div className="flex items-center justify-center gap-3 mt-12">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                <button
-                  key={page}
-                  onClick={() => setCurrentPage(page)}
-                  className={`w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium transition-colors ${
-                    currentPage === page
-                      ? "bg-primaryPink text-white"
-                      : "border border-primaryPink text-primaryPink hover:bg-primaryPink hover:text-white"
-                  }`}
-                >
-                  {page}
-                </button>
-              ))}
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (page) => (
+                  <button
+                    key={page}
+                    onClick={() => setCurrentPage(page)}
+                    className={`w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium transition-colors ${
+                      currentPage === page
+                        ? "bg-primaryPink text-white"
+                        : "border border-primaryPink text-primaryPink hover:bg-primaryPink hover:text-white"
+                    }`}
+                  >
+                    {page}
+                  </button>
+                )
+              )}
             </div>
           )}
         </div>
@@ -108,19 +115,22 @@ const OutreachPage = () => {
             Our Approach
           </h2>
           <p className="text-center text-white text-base md:text-xl mb-12 font-medium">
-            Our meticulously planned 4-day program creates a meaningful impact through
+            Our meticulously planned 4-day program creates a meaningful impact
+            through
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {outreachApproach.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#F4AACD] rounded-2xl p-8 flex flex-col items-center text-center gap-3"
+                className={`${(Math.floor(idx / 2) + idx % 2) % 2 === 0 ? "bg-[#FF8FCE]" : "bg-[#FFB8E0]"} rounded-2xl p-8 flex flex-col items-center text-center gap-3`}
               >
                 <h3 className="font-figtree font-bold text-xl md:text-3xl text-black">
                   {item.title}
                 </h3>
-                <p className="text-base md:text-xl text-[#210D15]">{item.description}</p>
+                <p className="text-base md:text-xl text-[#210D15]">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -137,9 +147,11 @@ const OutreachPage = () => {
             Sponsor an Outreach
           </h2>
           <p className="text-white text-base md:text-xl font-medium leading-relaxed">
-            Help us expand our reach to more schools and communities across Nigeria.
+            Help us expand our reach to more schools and communities across
+            Nigeria.
             <br />
-            Together, we can inspire the next generation of female innovators and leaders in STEM fields.
+            Together, we can inspire the next generation of female innovators
+            and leaders in STEM fields.
           </p>
           <a
             href="/contact-us"

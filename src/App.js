@@ -38,7 +38,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/outreaches" element={<OutreachPage />} />
+        <Route path="/outreach" element={<OutreachPage />} />
         <Route path="/activities/coding" element={<CodingPage />} />
         <Route path="/activities/robotics" element={<RoboticsPage />} />
         <Route path="/activities/game-development" element={<GameDevelopment />} />

@@ -33,10 +33,10 @@ const HomePage = () => {
           <div className="my-10 flex max-lg:flex-col items-stretch gap-7 md:gap-6 lg:gap-8 md:justify-start xl:justify-center md:overflow-x-auto xl:overflow-hidden no-scrollbar">
             {activities.map((activity, i) => (
               <div
-                className="flex flex-col border-2 border-[#B70569] p-5 rounded-2xl text-fiord"
+                className="flex flex-col border-2 border-[#B70569] p-5 rounded-2xl text-fiord flex-1 min-w-0"
                 key={i}
               >
-                <div className="h-48 md:h-52 overflow-hidden rounded-lg">
+                <div className="w-full aspect-square overflow-hidden rounded-lg">
                   <img
                     src={activity.image}
                     alt=""

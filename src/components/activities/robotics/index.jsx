@@ -31,7 +31,7 @@ const RoboticsPageComponent = () => {
   useEffect(() => {
     const activityExists =
       !isLoading &&
-      allActivities.find(
+      allActivities?.find(
         (activity) => activity.title.toLowerCase() === "robotics"
       );
 

@@ -4,7 +4,7 @@ const StemClubActivities = () => {
   return (
     <section className="w-full bg-primaryPink py-16 md:py-20">
       <div className="w-[90%] max-w-[1280px] mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-10 md:mb-14">
+        <h2 className="text-3xl md:text-5xl lg:text-[64px] font-semibold text-center text-white mb-10 md:mb-14">
           STEM Club Activities
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">

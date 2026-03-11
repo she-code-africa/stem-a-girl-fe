@@ -53,8 +53,8 @@ export const navigationMenu = [
     dropdownMenu: [],
   },
   {
-    pathname: "Outreaches",
-    path: "/outreaches",
+    pathname: "Outreach",
+    path: "/outreach",
     isDropdown: false,
     dropdownMenu: [],
   },

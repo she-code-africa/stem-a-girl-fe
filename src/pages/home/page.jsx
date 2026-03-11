@@ -18,12 +18,12 @@ const HomePage = () => {
         id="zero-tech-skills"
       >
         <div className="bg-white my-4 w-[90%] max-w-[1280px] mx-auto px-5">
-          <h4 className="font-medium text-2xl md:text-3xl lg:text-6xl leading-normal md:leading-normal lg:leading-normal text-center">
+          <h4 className="font-medium text-2xl md:text-3xl lg:text-5xl xl:text-[64px] leading-normal md:leading-normal lg:leading-normal text-center">
             <span className="text-[#B70569] font-semibold">
               Your STEM Journey Starts Here
             </span>
           </h4>
-          <p className="text-black text-base md:text-lg leading-normal md:leading-normal text-center mt-3 max-w-[800px] md:mx-auto w-full font-medium">
+          <p className="text-black text-base md:text-lg lg:text-xl xl:text-2xl leading-normal md:leading-normal text-center mt-3 max-w-[800px] xl:max-w-[980px] md:mx-auto w-full font-medium">
             At She Code Africa, we believe every girl deserves a chance to
             explore the world of STEM,  no experience needed. Our
             beginner-friendly courses are designed to spark curiosity, build
@@ -33,10 +33,10 @@ const HomePage = () => {
           <div className="my-10 flex max-lg:flex-col items-stretch gap-7 md:gap-6 lg:gap-8 md:justify-start xl:justify-center md:overflow-x-auto xl:overflow-hidden no-scrollbar">
             {activities.map((activity, i) => (
               <div
-                className="flex flex-col border-2 border-[#B70569] p-5 rounded-2xl text-fiord"
+                className="flex flex-col border-2 border-[#B70569] p-5 rounded-2xl text-fiord flex-1 min-w-0"
                 key={i}
               >
-                <div className="h-48 md:h-52 overflow-hidden rounded-lg">
+                <div className="w-full aspect-square overflow-hidden rounded-lg">
                   <img
                     src={activity.image}
                     alt=""

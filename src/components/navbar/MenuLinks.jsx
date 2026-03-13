@@ -35,7 +35,7 @@ const MenuLinks = ({ menuItem, isOpen, onToggle }) => {
                     }`}
                   >
                     {menu.icon && (
-                      <span className="w-10 h-10 rounded-full bg-[#FFF0F8] group-hover:bg-primaryPink flex items-center justify-center shrink-0 transition-colors">
+                      <span className="w-10 h-10 rounded-full bg-[#FFB8E0] group-hover:bg-primaryPink flex items-center justify-center shrink-0 transition-colors">
                         <menu.icon className="w-5 h-5 text-primaryPink group-hover:text-white transition-colors" />
                       </span>
                     )}

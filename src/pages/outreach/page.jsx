@@ -76,9 +76,14 @@ const OutreachPage = () => {
                       <FaCalendarAlt size={13} />
                       <span>{item.date}</span>
                     </div>
-                    <button className="font-figtree border border-primaryPink text-primaryPink text-base font-medium px-4 py-1.5 rounded-lg transition-colors">
+                    <a
+                      href={item.driveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-figtree border border-primaryPink text-primaryPink text-base font-medium px-4 py-1.5 rounded-lg transition-colors"
+                    >
                       View all Images
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

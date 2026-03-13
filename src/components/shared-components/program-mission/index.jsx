@@ -2,7 +2,8 @@ import { programMissionImg } from "../../../assets/images";
 
 const ProgramMission = () => {
   return (
-    <section className="w-full relative overflow-hidden">
+    <section className="w-full overflow-hidden">
+      <div className="relative max-w-[1440px] mx-auto">
       <img
         src={programMissionImg}
         alt=""
@@ -19,6 +20,7 @@ const ProgramMission = () => {
           providing young girls with STEM education, mentorship, and hands-on 
           experiences that could shape their futures.
         </p>
+      </div>
       </div>
     </section>
   );

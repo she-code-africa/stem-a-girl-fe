@@ -14,7 +14,7 @@ const StemClubCTA = () => {
             </h2>
             <div className="flex items-center gap-4 flex-wrap">
               <a
-                href="mailto:stemclub@shecodeafrica.org"
+                href="mailto:programs@shecodeafrica.org"
                 className="bg-primaryPink text-white text-base font-normal px-6 py-3 rounded-lg hover:opacity-90 transition-opacity hover:bg-[#5C0335]"
               >
                 Send a Mail

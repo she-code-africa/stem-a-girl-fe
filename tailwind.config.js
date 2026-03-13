@@ -13,11 +13,11 @@ module.exports = {
         primaryBtnHover: "#5C0335",
         scaGrape: "#7D355D",
         scaBloom: "#FF8FCE",
-        
       },
       fontFamily: {
         figtree: ["Figtree", "sans-serif"],
         thunder: ["Thunder", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },

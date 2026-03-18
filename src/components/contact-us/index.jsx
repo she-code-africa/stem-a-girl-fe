@@ -22,6 +22,7 @@ const ContactUsComponent = () => {
         .email("Please enter a valid email address.")
         .required("Please enter your email address."),
       description: yup.string().required("Please enter your message."),
+      subject: yup.string().required("Please enter your subject."),
     })
     .required();
 
@@ -35,7 +36,7 @@ const ContactUsComponent = () => {
     mode: "onBlur",
   });
 
-  const { mutate: handleContactUs } = useMutation({
+  const { mutate: handleContactUs, isPending } = useMutation({
     mutationFn: makeEnquiry,
     onSuccess: () => {
       toast.success("Message sent Successfully!", {
@@ -46,19 +47,26 @@ const ContactUsComponent = () => {
     },
     onError: (error, variables) => {
       toast.error("An error occurred.", {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
       });
     },
   });
 
   const onSubmit = (data) => {
+    const payload = {
+      description: data.description,
+      email: data.email,
+      fullName: data.fullName,
+      message: data.description,
+      subject: data.subject,
+    };
     if (!recaptchaToken) {
       toast.error("Please complete the reCAPTCHA.", {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
       });
       return;
     }
-    handleContactUs(data);
+    handleContactUs(payload);
   };
 
   const textareaRef = useRef();
@@ -126,16 +134,17 @@ const ContactUsComponent = () => {
                   errors={errors.email}
                 />
                 <PrimaryInput
-                  isRequired={false}
                   label="enter subject"
                   name="subject"
                   placeholder="What is the subject of this message"
                   type="text"
+                  errors={errors.subject}
+                  register={register}
                 />
 
                 <div className="w-full">
                   <label
-                    htmlFor="message"
+                    htmlFor="description"
                     className="text-base capitalize font-roboto font-medium text-[rgba(46,52,79,1)]"
                   >
                     enter message
@@ -148,6 +157,7 @@ const ContactUsComponent = () => {
                   >
                     <textarea
                       {...register("description")}
+                      id="description"
                       name="description"
                       placeholder="Write your message"
                       className="text-base w-full h-full border-0 outline-none p-3 bg-transparent placeholder:text-[rgba(130,130,130,1)] resize-none"
@@ -164,7 +174,7 @@ const ContactUsComponent = () => {
                   <PrimaryButton
                     isLink={false}
                     className="mt-5 font-figtree md:mt-8 w-full max-w-[116px] rounded-lg h-[55px] overflow-hidden "
-                    title="Submit"
+                    title={isPending ? "Submitting" : "Submit"}
                   />
                 </div>
               </form>

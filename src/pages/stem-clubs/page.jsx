@@ -1,13 +1,17 @@
 import React from "react";
 import { GlobalLayout } from "../../components";
 // import Schools from "../../components/schools";
-import { StemClubActivities, ViewStemClubs, StemClubCTA } from "../../components/shared-components";
+import {
+  StemClubActivities,
+  ViewStemClubs,
+  StemClubCTA,
+} from "../../components/shared-components";
 const StemClubs = () => {
   return (
     <GlobalLayout>
       <section
         className="relative py-16 md:py-24 text-white -mt-8"
-        style={{ backgroundColor: '#B70569' }}
+        style={{ backgroundColor: "#B70569" }}
       >
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative z-10 w-[90%] max-w-[1280px] mx-auto">

@@ -26,22 +26,22 @@ import { FaCode, FaGamepad, FaRobot } from "react-icons/fa6";
 export const navigationMenu = [
   {
     pathname: "Courses",
-    path: "#",
+    path: "/courses",
     isDropdown: true,
     dropdownMenu: [
       {
         title: "Coding from Scratch",
-        url: "/activities/coding",
+        url: "/courses/coding",
         icon: FaCode,
       },
       {
         title: "Game Development",
-        url: "/activities/game-development",
+        url: "/courses/game-development",
         icon: FaGamepad,
       },
       {
         title: "Robotics",
-        url: "/activities/robotics",
+        url: "/courses/robotics",
         icon: FaRobot,
       },
     ],
@@ -336,9 +336,15 @@ export const getInvolvedBulletPoints = [
 ];
 
 export const stemClubSchools = [
-  { name: "Methodist Comprehensive College, Sagamu, Ogun State", isPink: false },
+  {
+    name: "Methodist Comprehensive College, Sagamu, Ogun State",
+    isPink: false,
+  },
   { name: "SOS Children's Villages School, Isolo, Lagos State", isPink: true },
-  { name: "Government Model Secondary School, Asaba, Delta State", isPink: true },
+  {
+    name: "Government Model Secondary School, Asaba, Delta State",
+    isPink: true,
+  },
   { name: "Gates Academy, Asaga Ohafia, Abia State", isPink: false },
   { name: "Queen Amina College, Kakuri, Kaduna State", isPink: true },
 ];
@@ -430,56 +436,64 @@ export const outreachStates = [
     description: "Some Text here",
     date: "August, 2025",
     image: outreachOgun,
-    driveLink: "https://drive.google.com/drive/folders/1ZU6kN-PhnXWB4cTL2VlDUSxgFYu6_UDn?usp=drive_link",
+    driveLink:
+      "https://drive.google.com/drive/folders/1ZU6kN-PhnXWB4cTL2VlDUSxgFYu6_UDn?usp=drive_link",
   },
   {
     state: "Lagos State",
     description: "Some Text here",
     date: "March 2024",
     image: outreachLagos,
-    driveLink: "https://drive.google.com/drive/folders/1CKfQkfU-T1j2MKW4g5Jt8qUj4D3p2u5h?usp=sharing",
+    driveLink:
+      "https://drive.google.com/drive/folders/1CKfQkfU-T1j2MKW4g5Jt8qUj4D3p2u5h?usp=sharing",
   },
   {
     state: "Osun State",
     description: "Some Text here",
     date: "February 2023",
     image: outreachOsun,
-    driveLink: "https://drive.google.com/drive/folders/1klJJnNMBGs9PcD99bV6cUnb4dd6FFCMX?usp=sharing",
+    driveLink:
+      "https://drive.google.com/drive/folders/1klJJnNMBGs9PcD99bV6cUnb4dd6FFCMX?usp=sharing",
   },
   {
     state: "FCT",
     description: "Some Text here",
     date: "15/01/2024",
     image: outreachFCT,
-    driveLink: "https://drive.google.com/drive/folders/1TjS2GWvcwwFt61Bbka0tLiJRWsx5Nzua?usp=sharing",
+    driveLink:
+      "https://drive.google.com/drive/folders/1TjS2GWvcwwFt61Bbka0tLiJRWsx5Nzua?usp=sharing",
   },
   {
     state: "Rivers State",
     description: "Some Text here",
     date: "February 2025",
     image: outreachRivers,
-    driveLink: "https://drive.google.com/drive/folders/1KV5y-6iTqbMyuXn8NSAbakmc4KQn_8rI?usp=sharing",
+    driveLink:
+      "https://drive.google.com/drive/folders/1KV5y-6iTqbMyuXn8NSAbakmc4KQn_8rI?usp=sharing",
   },
   {
     state: "Delta State",
     description: "Some Text here",
     date: "April 2025",
     image: outreachDelta,
-    driveLink: "https://drive.google.com/drive/folders/1p4PodzxctLzbSEpVwKRfdUs9RR0Ws2kY?usp=sharing",
+    driveLink:
+      "https://drive.google.com/drive/folders/1p4PodzxctLzbSEpVwKRfdUs9RR0Ws2kY?usp=sharing",
   },
   {
     state: "Abia State",
     description: "Some Text here",
     date: "May 2025",
     image: outreachAbia,
-    driveLink: "https://drive.google.com/drive/folders/12gBpoSJt0-VZq7MfGagJhbbqBn7c17CT?usp=sharing",
+    driveLink:
+      "https://drive.google.com/drive/folders/12gBpoSJt0-VZq7MfGagJhbbqBn7c17CT?usp=sharing",
   },
   {
     state: "Kaduna State",
     description: "Some Text here",
     date: "May 2025",
     image: outreachKaduna,
-    driveLink: "https://drive.google.com/drive/folders/1nW033SAF7oVt-xPcr1lR9Z9aUXfCTc0b",
+    driveLink:
+      "https://drive.google.com/drive/folders/1nW033SAF7oVt-xPcr1lR9Z9aUXfCTc0b",
   },
 ];
 

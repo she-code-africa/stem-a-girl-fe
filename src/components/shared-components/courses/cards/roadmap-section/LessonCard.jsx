@@ -6,7 +6,12 @@ import LessonModal from "../../../../modals/LessonModal";
 import VideoViewer from "./VideoViewer";
 import DocViewer from "./DocViewer";
 
-const LessonCard = ({ lesson }) => {
+const LessonCard = ({
+  lesson,
+  markCompleted,
+  selectedLesson,
+  setSelectedLesson,
+}) => {
   const [isDisabled, setIsDisabled] = useState(false);
   const [showLesson, setShowLesson] = useState(false);
 
@@ -21,7 +26,13 @@ const LessonCard = ({ lesson }) => {
 
   const handleOpenModal = () => {
     setShowLesson(true);
+    setSelectedLesson(lesson)
   };
+
+  // viewers
+  
+
+  
   return (
     <>
       <section className="mt-4 w-full border border-[#E5E7EB] shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0px_rgba(0,0,0,0.1)] p-5 md:p-[26px] rounded-[14px] ">
@@ -135,8 +146,16 @@ const LessonCard = ({ lesson }) => {
                 <IoMdClose />
               </button>
             </div>
-            {lesson.type === "video" && <VideoViewer />}
-            {lesson.type !== "video" && <DocViewer />}
+            {lesson.type === "video" && (
+              <VideoViewer lesson={selectedLesson} onComplete={markCompleted} />
+            )}
+            {lesson.type !== "video" && (
+              <DocViewer
+                // lesson={lesson}
+                lesson={selectedLesson}
+                onComplete={markCompleted}
+              />
+            )}
           </div>
         </LessonModal>
       )}

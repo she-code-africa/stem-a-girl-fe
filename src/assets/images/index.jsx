@@ -49,6 +49,7 @@ import outreachAbia from "./outreach/outreach-abia.png";
 import outreachKaduna from "./outreach/outreach-kaduna.png";
 import posterImage from "./posterImage.jpg";
 
+
 export {
   scaLogo,
   cpu,

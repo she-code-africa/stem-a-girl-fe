@@ -61,6 +61,7 @@ export const howItWorks = [
 export const roadmapData = [
   {
     week: 1,
+    id: "week-1",
     title: "Lorem ipsum pellentesque tincidunt est",
     description:
       "Lorem ipsum dolor sit amet consectetur. Sollicitudin accumsan sem fusce dui porttitor enim volutpat etiam proin. Nunc fermentum dolor nunc euismod sollicitudin dolor et ipsum varius.",
@@ -69,6 +70,7 @@ export const roadmapData = [
     status: "inProgress",
     lessons: [
       {
+        id: "lesson-1",
         type: "video",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
@@ -88,10 +90,12 @@ export const roadmapData = [
           },
         ],
       },
+      
       {
+        id: "lesson-2",
         type: "pdf",
         status: "inProgress",
-        link: "https://drive.google.com/file/d/1VkIQeixK9m5x2okWz_0tLWgXJN-gpE1-/view",
+        link: "https://drive.google.com/file/d/1VkIQeixK9m5x2okWz_0tLWgXJN-gpE1-/preview",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
         completed: false,
@@ -109,6 +113,7 @@ export const roadmapData = [
         ],
       },
       {
+        id: "lesson-3",
         type: "video",
         status: "inComplete",
         link: "https://www.youtube.com/embed/tasLK8UrE88?si=Cq0dKpW9H8fIMuIQ",
@@ -129,6 +134,7 @@ export const roadmapData = [
         ],
       },
       {
+        id: "lesson-4",
         type: "video",
         status: "inComplete",
         link: "https://www.youtube.com/embed/tasLK8UrE88?si=Cq0dKpW9H8fIMuIQ",
@@ -151,6 +157,7 @@ export const roadmapData = [
     ],
   },
   {
+    id: "week-1",
     week: 2,
     title: "Lorem ipsum pellentesque tincidunt est",
     description:
@@ -160,6 +167,7 @@ export const roadmapData = [
     status: "locked",
     lessons: [
       {
+        id: "lesson-1",
         type: "pdf",
         status: "inComplete",
         link: "https://drive.google.com/file/d/1VkIQeixK9m5x2okWz_0tLWgXJN-gpE1-/view",
@@ -180,9 +188,10 @@ export const roadmapData = [
         ],
       },
       {
+        id: "lesson-2",
         type: "pdf",
         status: "inComplete",
-        link: "https://drive.google.com/file/d/1VkIQeixK9m5x2okWz_0tLWgXJN-gpE1-/view",
+        link: "'../assets/images/AnnualReport_2025.pdf'",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
         completed: false,
@@ -200,6 +209,7 @@ export const roadmapData = [
         ],
       },
       {
+        id: "lesson-3",
         type: "video",
         status: "inComplete",
         link: "https://www.youtube.com/embed/tasLK8UrE88?si=Cq0dKpW9H8fIMuIQ",

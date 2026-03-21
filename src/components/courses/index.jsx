@@ -9,9 +9,9 @@ const CoursesPage = () => {
       <section className="w-full bg-primaryPink  font-figtree">
         <div className="flex max-w-[1040px] mx-auto w-[90%] min-h-[398px] justify-center items-center">
           <article className="w-full text-center">
-            <h2 className="text-white text-[48px] lg:text-[128px] lg:leading-[130px] md:text-[64px] leading-normal font-semibold text-center">
+            <h1 className="text-white text-[64px] lg:text-9xl lg:leading-[130px] md:text-8xl leading-normal  font-semibold text-center">
               Online Courses
-            </h2>
+            </h1>
 
             <p className="font-figtree text-center text-white font-medium lg:text-2xl text-lg md:text-xl">
               Choose your learning journey. Each course is a complete,

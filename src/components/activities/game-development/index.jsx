@@ -14,6 +14,7 @@ import {
 } from "../../../services/queries";
 import { ApiLoading, EmptyResponse } from "../../index";
 import { gameDevelopmentHeroSubContent } from "../../../utils/appData";
+import CoursePageHero from "../../shared-components/courses/courses-page/CoursePageHero";
 
 const GameDevelopmentPage = () => {
   const {
@@ -31,7 +32,7 @@ const GameDevelopmentPage = () => {
     const activityExists =
       !isLoading &&
       allActivities?.find(
-        (activity) => activity.title.toLowerCase() === "game development"
+        (activity) => activity.title.toLowerCase() === "game development",
       );
     if (activityExists) {
       setActivityId(activityExists._id);
@@ -50,7 +51,7 @@ const GameDevelopmentPage = () => {
     activityCourses.filter((courses) => courses.state === "published");
   const [currentIndex, setCurrentIndex] = useState(1);
   const [items, setItems] = useState(
-    filteredCourses ? filteredCourses.slice(0, 12) : []
+    filteredCourses ? filteredCourses.slice(0, 12) : [],
   );
   const [hasMore, setHasMore] = useState(true);
 
@@ -72,51 +73,65 @@ const GameDevelopmentPage = () => {
     }
   };
   return (
-    <section className=" text-sealBrown font-mulish w-full">
-      <div className=" w-[90%] max-w-[1280px] mx-auto">
-        <HeroComponent
-          heroHeading="The Game Development Hub!"
-          heroParagraph="Unleash your creativity and start building your own games. Whether you're a beginner or looking to advance your skills, we have the resources you need to become a game developer."
-          heroImage={gameDevHeroImage}
-          subContent={gameDevelopmentHeroSubContent}
-        />
+    <>
+      <CoursePageHero
+        title="Game Development"
+        paragraph="Bring your ideas to life using drag-and-drop blocks. Create
+            animations, games, and interactive stories."
+        duration={"12 - 15 hours"}
+        weeks={"11 weeks"}
+        totalCompleted={"0/11"}
+        progress={0}
+      />
+      <section className="hidden text-sealBrown font-mulish w-full">
+        <div className=" w-[90%] max-w-[1280px] mx-auto">
+          <HeroComponent
+            heroHeading="The Game Development Hub!"
+            heroParagraph="Unleash your creativity and start building your own games. Whether you're a beginner or looking to advance your skills, we have the resources you need to become a game developer."
+            heroImage={gameDevHeroImage}
+            subContent={gameDevelopmentHeroSubContent}
+          />
 
-        <div className="mt-[100px] w-full mb-32">
-          <UpcomingEvents activityTitle="game development" />
+          <div className="mt-[100px] w-full mb-32">
+            <UpcomingEvents activityTitle="game development" />
+          </div>
+          <div className="my-16 lg:my-20">
+            <section className="w-full">
+              <InfoCardHeader
+                infoCardHeading="Resources"
+                infoCardParagraph=""
+              />
+              {isCoursesLoading ? (
+                <ApiLoading />
+              ) : filteredCourses && filteredCourses.length > 0 ? (
+                <InfiniteScroll
+                  dataLength={items.length}
+                  next={fetchMore}
+                  loader={<ApiLoading />}
+                  hasMore={hasMore}
+                >
+                  <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+                    {filteredCourses.map((item, i) => (
+                      <InfoCard
+                        key={i}
+                        title={item.title}
+                        cardImage={item.image}
+                        paragraph={item.description}
+                        link={item.link}
+                      />
+                    ))}
+                  </section>
+                </InfiniteScroll>
+              ) : (
+                <>
+                  <EmptyResponse text="course" />
+                </>
+              )}
+            </section>
+          </div>
         </div>
-        <div className="my-16 lg:my-20">
-          <section className="w-full">
-            <InfoCardHeader infoCardHeading="Resources" infoCardParagraph="" />
-            {isCoursesLoading ? (
-              <ApiLoading />
-            ) : filteredCourses && filteredCourses.length > 0 ? (
-              <InfiniteScroll
-                dataLength={items.length}
-                next={fetchMore}
-                loader={<ApiLoading />}
-                hasMore={hasMore}
-              >
-                <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
-                  {filteredCourses.map((item, i) => (
-                    <InfoCard
-                      key={i}
-                      title={item.title}
-                      cardImage={item.image}
-                      paragraph={item.description}
-                      link={item.link}
-                    />
-                  ))}
-                </section>
-              </InfiniteScroll>
-            ) : (
-              <>
-                <EmptyResponse text="course" />
-              </>
-            )}
-          </section>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

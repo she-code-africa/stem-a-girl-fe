@@ -13,7 +13,9 @@ module.exports = {
         primaryBtnHover: "#5C0335",
         scaGrape: "#7D355D",
         scaBloom: "#FF8FCE",
+        // new colors
         customGrey: "#4A5565",
+        darkBlue: "#101828",
       },
       fontFamily: {
         figtree: ["Figtree", "sans-serif"],

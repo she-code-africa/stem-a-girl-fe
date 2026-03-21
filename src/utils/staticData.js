@@ -12,7 +12,7 @@ export const coursesData = [
     duration: "8-10 hours",
     proficiency: "Beginner to Advanced",
     cardGradient: "bg-pinkGradient ",
-  url:"/courses/game-development"
+    url: "/courses/game-development",
   },
   {
     icon: <CodeTag />,
@@ -23,7 +23,7 @@ export const coursesData = [
     duration: "9-12 hours",
     proficiency: "Beginner to Advanced",
     cardGradient: "bg-blueGradient",
-    url:"/courses/coding"
+    url: "/courses/coding",
   },
 
   {
@@ -35,7 +35,7 @@ export const coursesData = [
     duration: "10-14 hours",
     proficiency: "Beginner to Advanced",
     cardGradient: "bg-orangeGradient ",
-    url:"/courses/robotics"
+    url: "/courses/robotics",
   },
 ];
 
@@ -54,5 +54,156 @@ export const howItWorks = [
     id: 3,
     title: "Test & Progress",
     description: "Completely watch videos to unlock the next level",
+  },
+];
+
+export const roadmapData = [
+  {
+    week: 1,
+    title: "Lorem ipsum pellentesque tincidunt est",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Sollicitudin accumsan sem fusce dui porttitor enim volutpat etiam proin. Nunc fermentum dolor nunc euismod sollicitudin dolor et ipsum varius.",
+    duration: "48 mins",
+    completed: false,
+    status: "inProgress",
+    lessons: [
+      {
+        type: "video",
+        title: "Lorem ipsum pellentesque",
+        duration: "⏱️ 10 min",
+        completed: false,
+        task: "Create a Scratch account and explore the different block categories.",
+        poster: "",
+        resources: [
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+        ],
+      },
+      {
+        type: "video",
+        title: "Lorem ipsum pellentesque",
+        duration: "⏱️ 10 min",
+        completed: false,
+        task: "Create a Scratch account and explore the different block categories.",
+        poster: "",
+        resources: [
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+        ],
+      },
+      {
+        type: "video",
+        title: "Lorem ipsum pellentesque",
+        duration: "⏱️ 10 min",
+        completed: false,
+        task: "Create a Scratch account and explore the different block categories.",
+        poster: "",
+        resources: [
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+        ],
+      },
+      {
+        type: "video",
+        title: "Lorem ipsum pellentesque",
+        duration: "⏱️ 10 min",
+        completed: false,
+        task: "Create a Scratch account and explore the different block categories.",
+        poster: "",
+        resources: [
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    week: 2,
+    title: "Lorem ipsum pellentesque tincidunt est",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Sollicitudin accumsan sem fusce dui porttitor enim volutpat etiam proin. Nunc fermentum dolor nunc euismod sollicitudin dolor et ipsum varius.",
+    duration: "48 mins",
+    completed: false,
+    status: "locked",
+    lessons: [
+      {
+        type: "video",
+        title: "Lorem ipsum pellentesque",
+        duration: "⏱️ 10 min",
+        completed: false,
+        task: "Create a Scratch account and explore the different block categories.",
+        poster: "",
+        resources: [
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+        ],
+      },
+      {
+        type: "video",
+        title: "Lorem ipsum pellentesque",
+        duration: "⏱️ 10 min",
+        completed: false,
+        task: "Create a Scratch account and explore the different block categories.",
+        poster: "",
+        resources: [
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+        ],
+      },
+      {
+        type: "video",
+        title: "Lorem ipsum pellentesque",
+        duration: "⏱️ 10 min",
+        completed: false,
+        task: "Create a Scratch account and explore the different block categories.",
+        poster: "",
+        resources: [
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+          {
+            title: "Scratch Interface Guide",
+            url: "",
+          },
+        ],
+      },
+    ],
   },
 ];

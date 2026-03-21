@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const CodeTag = () => {
   return (
@@ -25,6 +25,6 @@ const CodeTag = () => {
       />
     </svg>
   );
-}
+};
 
-export default CodeTag
+export default CodeTag;

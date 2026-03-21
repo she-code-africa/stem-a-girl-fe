@@ -86,7 +86,7 @@ export const roadmapData = [
         ],
       },
       {
-        type: "video",
+        type: "pdf",
         title: "Lorem ipsum pellentesque",
         duration: "⏱️ 10 min",
         completed: false,
@@ -151,7 +151,7 @@ export const roadmapData = [
     status: "locked",
     lessons: [
       {
-        type: "video",
+        type: "pdf",
         title: "Lorem ipsum pellentesque",
         duration: "⏱️ 10 min",
         completed: false,
@@ -169,7 +169,7 @@ export const roadmapData = [
         ],
       },
       {
-        type: "video",
+        type: "pdf",
         title: "Lorem ipsum pellentesque",
         duration: "⏱️ 10 min",
         completed: false,

@@ -13,7 +13,7 @@ const RoadMapSection = () => {
             textColor="text-primaryPink text-center"
           />
 
-          <section className="py-7 px-8 w-full">
+          <section className="py-7 sm:px-8 w-full">
             {roadmapData.map((roadmap, idx) => (
               <WeekCards key={idx} roadmap={roadmap} />
             ))}

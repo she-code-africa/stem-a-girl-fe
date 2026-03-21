@@ -23,6 +23,8 @@ const WeekCards = ({ roadmap }) => {
     });
   }, []);
   return (
+
+    
     <div className="w-full pb-6 pl-0 sm:pl-[52px] border-0 relative last:border-0 sm:border-l border-l-[#FFB8E0]">
       {roadmap.completed || roadmap.status !== "locked" ? (
         <span className="hidden sm:inline-block h-7 w-7 rounded-full bg-white border-4 border-[#C1106A] absolute top-0 -left-[14px]"></span>

@@ -15,6 +15,7 @@ import {
 import { ApiLoading, EmptyResponse } from "../../index";
 import { gameDevelopmentHeroSubContent } from "../../../utils/appData";
 import CoursePageHero from "../../shared-components/courses/courses-page/CoursePageHero";
+import RoadMapSection from "../../shared-components/courses/courses-page/RoadMapSection";
 
 const GameDevelopmentPage = () => {
   const {
@@ -83,6 +84,7 @@ const GameDevelopmentPage = () => {
         totalCompleted={"0/11"}
         progress={0}
       />
+      <RoadMapSection />
       <section className="hidden text-sealBrown font-mulish w-full">
         <div className=" w-[90%] max-w-[1280px] mx-auto">
           <HeroComponent

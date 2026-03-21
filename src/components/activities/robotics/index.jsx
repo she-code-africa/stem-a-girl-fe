@@ -16,6 +16,7 @@ import {
 import { ApiLoading, EmptyResponse } from "../../index";
 import { roboticsHeroSubContent } from "../../../utils/appData";
 import CoursePageHero from "../../shared-components/courses/courses-page/CoursePageHero";
+import RoadMapSection from "../../shared-components/courses/courses-page/RoadMapSection";
 
 const RoboticsPageComponent = () => {
   const {
@@ -86,6 +87,9 @@ const RoboticsPageComponent = () => {
         totalCompleted={"0/4"}
         progress={0}
       />
+
+      <RoadMapSection />
+      {/*  */}
       <section className="hidden text-sealBrown font-mulish w-full">
         <div className=" w-[90%] max-w-[1280px] mx-auto">
           <HeroComponent

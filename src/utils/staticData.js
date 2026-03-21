@@ -76,7 +76,7 @@ export const roadmapData = [
         task: "Create a Scratch account and explore the different block categories.",
         poster: posterImage,
         status: "completed",
-        link: "",
+        link: "https://www.youtube.com/embed/tasLK8UrE88?si=Cq0dKpW9H8fIMuIQ",
         resources: [
           {
             title: "Scratch Interface Guide",
@@ -91,7 +91,7 @@ export const roadmapData = [
       {
         type: "pdf",
         status: "inProgress",
-        link: "",
+        link: "https://drive.google.com/file/d/1VkIQeixK9m5x2okWz_0tLWgXJN-gpE1-/view",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
         completed: false,
@@ -111,7 +111,7 @@ export const roadmapData = [
       {
         type: "video",
         status: "inComplete",
-        link: "",
+        link: "https://www.youtube.com/embed/tasLK8UrE88?si=Cq0dKpW9H8fIMuIQ",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
         completed: false,
@@ -131,7 +131,7 @@ export const roadmapData = [
       {
         type: "video",
         status: "inComplete",
-        link: "",
+        link: "https://www.youtube.com/embed/tasLK8UrE88?si=Cq0dKpW9H8fIMuIQ",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
         completed: false,
@@ -162,7 +162,7 @@ export const roadmapData = [
       {
         type: "pdf",
         status: "inComplete",
-        link: "",
+        link: "https://drive.google.com/file/d/1VkIQeixK9m5x2okWz_0tLWgXJN-gpE1-/view",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
         completed: false,
@@ -182,7 +182,7 @@ export const roadmapData = [
       {
         type: "pdf",
         status: "inComplete",
-        link: "",
+        link: "https://drive.google.com/file/d/1VkIQeixK9m5x2okWz_0tLWgXJN-gpE1-/view",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
         completed: false,
@@ -202,7 +202,7 @@ export const roadmapData = [
       {
         type: "video",
         status: "inComplete",
-        link: "",
+        link: "https://www.youtube.com/embed/tasLK8UrE88?si=Cq0dKpW9H8fIMuIQ",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
         completed: false,

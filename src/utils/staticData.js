@@ -1,6 +1,7 @@
 import GameControl from "../components/shared-components/icons/GameControl";
 import CodeTag from "../components/shared-components/icons/CodeTag";
 import RobotIcon from "../components/shared-components/icons/RobotIcon";
+import { posterImage } from "../assets/images";
 
 export const coursesData = [
   {
@@ -70,10 +71,12 @@ export const roadmapData = [
       {
         type: "video",
         title: "Lorem ipsum pellentesque",
-        duration: "⏱️ 10 min",
-        completed: false,
+        duration: "10 min",
+        completed: true,
         task: "Create a Scratch account and explore the different block categories.",
-        poster: "",
+        poster: posterImage,
+        status: "completed",
+        link: "",
         resources: [
           {
             title: "Scratch Interface Guide",
@@ -87,11 +90,13 @@ export const roadmapData = [
       },
       {
         type: "pdf",
+        status: "inProgress",
+        link: "",
         title: "Lorem ipsum pellentesque",
-        duration: "⏱️ 10 min",
+        duration: "10 min",
         completed: false,
         task: "Create a Scratch account and explore the different block categories.",
-        poster: "",
+        poster: posterImage,
         resources: [
           {
             title: "Scratch Interface Guide",
@@ -105,11 +110,13 @@ export const roadmapData = [
       },
       {
         type: "video",
+        status: "inComplete",
+        link: "",
         title: "Lorem ipsum pellentesque",
-        duration: "⏱️ 10 min",
+        duration: "10 min",
         completed: false,
         task: "Create a Scratch account and explore the different block categories.",
-        poster: "",
+        poster: posterImage,
         resources: [
           {
             title: "Scratch Interface Guide",
@@ -123,11 +130,13 @@ export const roadmapData = [
       },
       {
         type: "video",
+        status: "inComplete",
+        link: "",
         title: "Lorem ipsum pellentesque",
-        duration: "⏱️ 10 min",
+        duration: "10 min",
         completed: false,
         task: "Create a Scratch account and explore the different block categories.",
-        poster: "",
+        poster: posterImage,
         resources: [
           {
             title: "Scratch Interface Guide",
@@ -152,11 +161,13 @@ export const roadmapData = [
     lessons: [
       {
         type: "pdf",
+        status: "inComplete",
+        link: "",
         title: "Lorem ipsum pellentesque",
-        duration: "⏱️ 10 min",
+        duration: "10 min",
         completed: false,
         task: "Create a Scratch account and explore the different block categories.",
-        poster: "",
+        poster: posterImage,
         resources: [
           {
             title: "Scratch Interface Guide",
@@ -170,11 +181,13 @@ export const roadmapData = [
       },
       {
         type: "pdf",
+        status: "inComplete",
+        link: "",
         title: "Lorem ipsum pellentesque",
-        duration: "⏱️ 10 min",
+        duration: "10 min",
         completed: false,
         task: "Create a Scratch account and explore the different block categories.",
-        poster: "",
+        poster: posterImage,
         resources: [
           {
             title: "Scratch Interface Guide",
@@ -188,11 +201,13 @@ export const roadmapData = [
       },
       {
         type: "video",
+        status: "inComplete",
+        link: "",
         title: "Lorem ipsum pellentesque",
-        duration: "⏱️ 10 min",
+        duration: "10 min",
         completed: false,
         task: "Create a Scratch account and explore the different block categories.",
-        poster: "",
+        poster: posterImage,
         resources: [
           {
             title: "Scratch Interface Guide",

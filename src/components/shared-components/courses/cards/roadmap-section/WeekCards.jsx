@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LockIcon from "../../../icons/LockIcon";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
+import LessonCard from "./LessonCard";
 
 const WeekCards = ({ roadmap }) => {
   const [showLessons, setShowLessons] = useState(false);
@@ -37,6 +38,7 @@ const WeekCards = ({ roadmap }) => {
         <div
           className={`${roadmap.completed || roadmap.status !== "locked" ? "opacity-100" : "opacity-60"}`}
         >
+          {/* text and button component */}
           <div className="w-full flex justify-between sm:gap-6 md:gap-12 items-start">
             <article className="w-full ">
               <h4
@@ -99,6 +101,16 @@ const WeekCards = ({ roadmap }) => {
               {showLessons ? <FaAngleUp /> : <FaAngleDown />}
             </button>
           </div>
+
+          {/* lessons */}
+
+          {showLessons && roadmap.status !== "locked" && (
+            <>
+              {roadmap.lessons.map((lesson, i) => (
+                <LessonCard key={`${i}lesson${lesson.type}`} lesson={lesson} />
+              ))}
+            </>
+          )}
         </div>
       </section>
     </div>

@@ -36,7 +36,7 @@ const WeekCards = ({ roadmap }) => {
         className={`w-full border border-[#E5E7EB] shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0px_rgba(0,0,0,0.1)] p-5 sm:p-[26px] rounded-[14px] `}
       >
         <div
-          className={`${roadmap.completed || roadmap.status !== "locked" ? "opacity-100" : "opacity-60"}`}
+          className={`${roadmap.completed || roadmap.status !== "locked" ? "opacity-100 grayscale-0" : "opacity-60 grayscale"}`}
         >
           {/* text and button component */}
           <div className="w-full flex justify-between sm:gap-6 md:gap-12 items-start">

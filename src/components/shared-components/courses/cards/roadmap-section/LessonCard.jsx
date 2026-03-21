@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaPlay } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 const LessonCard = ({ lesson }) => {
@@ -11,7 +12,7 @@ const LessonCard = ({ lesson }) => {
   return (
     <section className="mt-4 w-full border border-[#E5E7EB] shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0px_rgba(0,0,0,0.1)] p-5 md:p-[26px] rounded-[14px] ">
       <div
-        className={`w-full ${lesson.completed || lesson.status !== "inComplete" ? "opacity-100" : "opacity-60"}`}
+        className={`w-full ${lesson.completed || lesson.status !== "inComplete" ? "opacity-100 grayscale-0" : "opacity-60 grayscale"}`}
       >
         {(lesson.completed || lesson.status === "completed") && (
           <div className="w-full flex justify-end md:hidden">
@@ -33,6 +34,13 @@ const LessonCard = ({ lesson }) => {
               alt="poster"
               className="w-full h-full object-cover"
             />
+
+            <button
+              className="absolute w-9 h-9 rounded-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center justify-center bg-primaryPink"
+              disabled={isDisabled}
+            >
+              <FaPlay className="text-white text-[15px]" />
+            </button>
           </figure>
 
           <div className="w-full flex justify-between">
@@ -60,7 +68,7 @@ const LessonCard = ({ lesson }) => {
         {/* practice task */}
 
         <article
-          className={`w-full mt-4 rounded-[10px]  ${lesson.completed || lesson.status !== "inComplete" ? "bg-[#FDF2F8]" : "bg-[#f9f9f9]"} py-4 px-[15px]`}
+          className={`w-full mt-4 rounded-[10px] bg-[#FDF2F8] py-4 px-[15px]`}
         >
           <h4 className="text-sm font-semibold font-inter text-darkBlue">
             📝 Practice Task:

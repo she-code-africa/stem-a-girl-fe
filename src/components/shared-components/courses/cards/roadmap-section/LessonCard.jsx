@@ -5,6 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import LessonModal from "../../../../modals/LessonModal";
 import VideoViewer from "./VideoViewer";
 import DocViewer from "./DocViewer";
+import { IoDocumentText } from "react-icons/io5";
 
 const LessonCard = ({
   lesson,
@@ -26,13 +27,11 @@ const LessonCard = ({
 
   const handleOpenModal = () => {
     setShowLesson(true);
-    setSelectedLesson(lesson)
+    setSelectedLesson(lesson);
   };
 
   // viewers
-  
 
-  
   return (
     <>
       <section className="mt-4 w-full border border-[#E5E7EB] shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0px_rgba(0,0,0,0.1)] p-5 md:p-[26px] rounded-[14px] ">
@@ -65,7 +64,11 @@ const LessonCard = ({
                 disabled={isDisabled}
                 onClick={handleOpenModal}
               >
-                <FaPlay className="text-white text-[15px]" />
+                {lesson.type === "video" ? (
+                  <FaPlay className="text-white text-[15px]" />
+                ) : (
+                  <IoDocumentText className="text-white text-[15px]" />
+                )}
               </button>
             </figure>
 
@@ -138,9 +141,10 @@ const LessonCard = ({
       {showLesson && (
         <LessonModal onClose={handleCloseModal}>
           <div className="w-full">
-            <div className="w-full flex justify-end items-center">
+            <div className="w-full flex justify-end items-center ">
               <button
-                className="text-primaryPink text-2xl"
+                className="text-primaryPink text-2xl h-8 w-8 rounded-full bg-white/80 flex items-center justify-center"
+                title="Close modal"
                 onClick={handleCloseModal}
               >
                 <IoMdClose />

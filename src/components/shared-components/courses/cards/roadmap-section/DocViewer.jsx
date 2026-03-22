@@ -8,7 +8,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 
 const DocViewer = ({ lesson, onComplete }) => {
   const [numPages, setNumPages] = useState(null);
-  const [completed, setCompleted] = useState(false);
 
   const onLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
@@ -16,7 +15,7 @@ const DocViewer = ({ lesson, onComplete }) => {
 
   return (
     <>
-      <div className="w-full mt-3 h-[500px] lg:h-[700px] overflow-y-auto flex flex-col items-center gap-4 p-4">
+      <div className="w-full mt-3 h-[500px] lg:h-[600px] overflow-y-auto flex flex-col items-center gap-4 p-4">
         <Document
           file="https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf"
           onLoadSuccess={onLoadSuccess}
@@ -30,8 +29,8 @@ const DocViewer = ({ lesson, onComplete }) => {
               onLoadSuccess={() => {
                 // mark complete when last page renders
                 if (index + 1 === numPages) {
-                  // onComplete(lesson);
-                  setCompleted(true);
+                  onComplete(lesson);
+          
                 }
               }}
             />
@@ -39,14 +38,6 @@ const DocViewer = ({ lesson, onComplete }) => {
         </Document>
       </div>
 
-      {!completed && (
-        <button
-          className="mt-2 bg-primaryPink hover:bg-primaryBtnHover transition-all duration-300 text-white px-4 py-2 rounded"
-          onClick={() => onComplete(lesson)}
-        >
-          Mark as Completed
-        </button>
-      )}
     </>
   );
 };

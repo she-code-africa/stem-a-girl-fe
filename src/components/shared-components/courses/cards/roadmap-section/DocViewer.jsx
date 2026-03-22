@@ -1,56 +1,53 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+import "react-pdf/dist/Page/TextLayer.css";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const DocViewer = ({ lesson, onComplete }) => {
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  // convert google drive link
-  const fileUrl = lesson.link.replace("/view", "/preview");
+  const [completed, setCompleted] = useState(false);
 
   const onLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
   };
 
-  const nextPage = () => {
-    if (pageNumber < numPages) {
-      const next = pageNumber + 1;
-      setPageNumber(next);
-
-      if (next === numPages) {
-        onComplete(lesson);
-      }
-    }
-  };
-
-  const prevPage = () => {
-    if (pageNumber > 1) {
-      setPageNumber(pageNumber - 1);
-    }
-  };
-
   return (
-    <div className="flex flex-col items-center">
-      <Document file={fileUrl} onLoadSuccess={onLoadSuccess}>
-        <Page pageNumber={pageNumber} />
-      </Document>
-
-      <div className="flex gap-4 mt-4">
-        <button onClick={prevPage} disabled={pageNumber === 1}>
-          Prev
-        </button>
-
-        <span>
-          Page {pageNumber} of {numPages}
-        </span>
-
-        <button onClick={nextPage} disabled={pageNumber === numPages}>
-          Next
-        </button>
+    <>
+      <div className="w-full mt-3 h-[500px] lg:h-[700px] overflow-y-auto flex flex-col items-center gap-4 p-4">
+        <Document
+          file="https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf"
+          onLoadSuccess={onLoadSuccess}
+        >
+          {Array.from(new Array(numPages), (_, index) => (
+            <Page
+              key={index}
+              pageNumber={index + 1}
+              width={500}
+              className="shadow-md"
+              onLoadSuccess={() => {
+                // mark complete when last page renders
+                if (index + 1 === numPages) {
+                  // onComplete(lesson);
+                  setCompleted(true);
+                }
+              }}
+            />
+          ))}
+        </Document>
       </div>
-    </div>
+
+      {!completed && (
+        <button
+          className="mt-2 bg-primaryPink hover:bg-primaryBtnHover transition-all duration-300 text-white px-4 py-2 rounded"
+          onClick={() => onComplete(lesson)}
+        >
+          Mark as Completed
+        </button>
+      )}
+    </>
   );
 };
 

@@ -90,12 +90,13 @@ export const roadmapData = [
           },
         ],
       },
-      
+
       {
         id: "lesson-2",
         type: "pdf",
         status: "inProgress",
-        link: "https://drive.google.com/file/d/1VkIQeixK9m5x2okWz_0tLWgXJN-gpE1-/preview",
+
+        link: "https://drive.google.com/file/d/1VkIQeixK9m5x2okWz_0tLWgXJN-gpE1-/view",
         title: "Lorem ipsum pellentesque",
         duration: "10 min",
         completed: false,

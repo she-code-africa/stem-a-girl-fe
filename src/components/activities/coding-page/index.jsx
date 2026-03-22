@@ -48,8 +48,6 @@ const CodingPageComponent = () => {
     enabled: !!activityId && !isLoading,
   });
 
-  console.log(activityCourses);
-
   // inifinite scrolling
   const filteredCourses =
     activityCourses &&

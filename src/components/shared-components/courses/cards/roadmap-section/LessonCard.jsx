@@ -4,8 +4,9 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import LessonModal from "../../../../modals/LessonModal";
 import VideoViewer from "./VideoViewer";
-import DocViewer from "./DocViewer";
+import DocsViewer from "./DocViewer";
 import { IoDocumentText } from "react-icons/io5";
+import PrimaryButton from "../../../buttons/PrimaryButton";
 
 const LessonCard = ({
   lesson,
@@ -135,6 +136,17 @@ const LessonCard = ({
               ))}
             </ul>
           </div>
+
+          {(lesson.completed || lesson.status === "completed") && (
+            <div className="w-full mt-4">
+              <PrimaryButton
+                className={"py-[18px] px-8 h-[55px] rounded-lg w-auto"}
+                isLink={false}
+                handleClick={handleOpenModal}
+                title="Watch again"
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -154,7 +166,7 @@ const LessonCard = ({
               <VideoViewer lesson={selectedLesson} onComplete={markCompleted} />
             )}
             {lesson.type !== "video" && (
-              <DocViewer
+              <DocsViewer
                 // lesson={lesson}
                 lesson={selectedLesson}
                 onComplete={markCompleted}

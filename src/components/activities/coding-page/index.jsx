@@ -15,6 +15,8 @@ import {
 import { ApiLoading, EmptyResponse } from "../../index";
 import { codingHeroSubContent } from "../../../utils/appData";
 import InfiniteScroll from "react-infinite-scroll-component";
+import CoursePageHero from "../../shared-components/courses/courses-page/CoursePageHero";
+import RoadMapSection from "../../shared-components/courses/courses-page/RoadMapSection";
 
 const CodingPageComponent = () => {
   const {
@@ -32,7 +34,7 @@ const CodingPageComponent = () => {
     const activityExists =
       !isLoading &&
       allActivities?.find(
-        (activity) => activity.title.toLowerCase() === "coding"
+        (activity) => activity.title.toLowerCase() === "coding",
       );
 
     if (activityExists) {
@@ -53,7 +55,7 @@ const CodingPageComponent = () => {
     activityCourses.filter((courses) => courses.state === "published");
   const [currentIndex, setCurrentIndex] = useState(1);
   const [items, setItems] = useState(
-    filteredCourses ? filteredCourses.slice(0, 12) : []
+    filteredCourses ? filteredCourses.slice(0, 12) : [],
   );
   const [hasMore, setHasMore] = useState(true);
 
@@ -77,7 +79,19 @@ const CodingPageComponent = () => {
 
   return (
     <>
-      <div className=" text-sealBrown font-mulish w-full ">
+      <CoursePageHero
+        title="Coding from Scratch"
+        paragraph="Bring your ideas to life using drag-and-drop blocks. Create
+            animations, games, and interactive stories."
+        duration={"9 - 12 hours"}
+        weeks={"8 weeks"}
+        totalCompleted={"0/8"}
+        progress={0}
+      />
+
+      <RoadMapSection />
+      {/* not being used */}
+      <div className="hidden text-sealBrown font-mulish w-full ">
         <section className=" w-[90%] max-w-[1280px] mx-auto ">
           <HeroComponent
             heroHeading="The Coding Hub"

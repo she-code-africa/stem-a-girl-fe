@@ -13,7 +13,7 @@ import interactiveWorkshopImage from "./interactive-workshop.svg";
 import stemProjectsImage from "./stem-projects.svg";
 import codingBootcampImage from "./coding-bootcamp.svg";
 import homeHeroImage from "./home-page-hero-image.svg";
-import homePageHeroImage from "./homepage-hero-image.svg"
+import homePageHeroImage from "./homepage-hero-image.svg";
 import studentsImage from "./students.png";
 import clubStudentsImage from "./club-students.png";
 import floralWhiteImage from "./floral-white.svg";
@@ -26,7 +26,7 @@ import ourImpactBg from "./our-impact-bg.jpg";
 import programMissionPinkBg from "./homepage/program-mission-pink-bg.svg";
 import programMissionYellowBg from "./homepage/program-mission-yellow-bg.svg";
 import programMissionGirl from "./homepage/program-mission-girl.png";
-import programMissionImg from "./homepage/program-mission.png"
+import programMissionImg from "./homepage/program-mission.png";
 import codingFromScratchCardImg from "./homepage/coding-from-scratch-card-img.jpg";
 import gameDevCardImg from "./homepage/game-dev-card-img.png";
 import roboticsCardImg from "./homepage/robotics-card-img.jpg";
@@ -34,7 +34,7 @@ import successStoryImg1 from "./homepage/success-story-img-1.png";
 import successStoryImg2 from "./homepage/success-story-img-2.png";
 import getInvolvedHeroImg from "./homepage/get-involved-hero-img.jpg";
 import getInvolvedBg from "./homepage/get-involved-bg.jpg";
-import badge from './badge.png';
+import badge from "./badge.png";
 import stemClubStudents1 from "./stem-club/stem-club-students-1.jpg";
 import stemClubStudents2 from "./stem-club/stem-club-students-2.jpg";
 import stemClubStudents3 from "./stem-club/stem-club-students-3.jpg";
@@ -47,6 +47,8 @@ import outreachFCT from "./outreach/outreach-fct.png";
 import outreachDelta from "./outreach/outreach-delta.png";
 import outreachAbia from "./outreach/outreach-abia.png";
 import outreachKaduna from "./outreach/outreach-kaduna.png";
+import posterImage from "./posterImage.jpg";
+
 
 export {
   scaLogo,
@@ -97,4 +99,5 @@ export {
   outreachOgun,
   outreachOsun,
   outreachRivers,
+  posterImage,
 };

@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Recaptcha from "../Recaptcha";
 import PrimaryButton from "../shared-components/buttons/PrimaryButton";
+import HeadingThree from "../shared-components/typography/HeadingThree";
 
 const ContactUsComponent = () => {
   const [recaptchaToken, setRecaptchaToken] = useState("");
@@ -84,9 +85,9 @@ const ContactUsComponent = () => {
       <ToastContainer />
       <section className=" text-sealBrown font-mulish w-full -mt-8 bg-whiteSmoke ">
         <div className="relative bg-[#B70569]  ">
-          <div className="bg-[rgba(0,0,0,0.35)] py-14 md:py-[100px]">
+          <div className="bg-[rgba(0,0,0,0.35)] py-14 md:py-[100px] w-full flex items-center justify-center">
             <article className="w-[90%] max-w-[1040px] mx-auto text-center text-white">
-              <h2 className=" text-[36px] lg:text-[128px] lg:leading-[130px] md:text-[64px] leading-normal ">
+              <h2 className=" text-[64px] lg:text-9xl lg:leading-[130px] md:text-8xl leading-normal  ">
                 Contact Us
               </h2>
 
@@ -110,9 +111,7 @@ const ContactUsComponent = () => {
               />
             </figure>
             <div className="w-full max-w-[613px] mx-auto xl:mx-0 xl:pt-5">
-              <h2 className="text-3xl md:text-4xl lg:text-[64px] text-primaryPink">
-                Leave us a message
-              </h2>
+              <HeadingThree title="Leave us a message" />
               <form
                 className="w-full mt-4 md:mt-8"
                 onSubmit={handleSubmit(onSubmit)}

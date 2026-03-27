@@ -42,3 +42,8 @@ export const getAllImpactStories = async () => {
 
   return impactStories.data.data;
 };
+
+export const getOutreach = async () => {
+  const outreach = await axios.get(`${baseURL}outreach`);
+  return outreach?.data?.data?.data;
+};

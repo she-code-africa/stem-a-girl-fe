@@ -10,8 +10,8 @@ const ViewStemClubs = () => {
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
       />
       <div className="relative w-[90%] max-w-[1024px] mx-auto">
-        <h2 className="text-center text-primaryPink text-3xl md:text-5xl font-semibold mb-10 md:mb-14">
-          View Stem Clubs
+        <h2 className="text-center text-primaryPink text-3xl md:text-5xl lg:text-[64px] font-semibold mb-10 md:mb-14">
+          Available Stem Clubs
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {stemClubSchools.map((school, i) => (

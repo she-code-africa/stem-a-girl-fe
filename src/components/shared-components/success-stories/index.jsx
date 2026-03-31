@@ -8,8 +8,12 @@ const SuccessStories = () => {
   const isFirst = current === 0;
   const isLast = current === slides.length - 1;
 
-  const prev = () => { if (!isFirst) setCurrent((c) => c - 1); };
-  const next = () => { if (!isLast) setCurrent((c) => c + 1); };
+  const prev = () => {
+    if (!isFirst) setCurrent((c) => c - 1);
+  };
+  const next = () => {
+    if (!isLast) setCurrent((c) => c + 1);
+  };
 
   const slide = slides[current];
 
@@ -24,22 +28,27 @@ const SuccessStories = () => {
           />
         </div>
 
-        {/* Content */}
-        <div className="xl:mt-0 w-full lg:w-[55%] lg:h-[460px] flex flex-col gap-4 lg:justify-between">
+        {/* Content lg:h-[460px] */}
+        <div className="xl:mt-0 w-full lg:w-[55%]  flex flex-col gap-4 lg:justify-between">
           <span className="inline-block self-start bg-[#5C0335] text-white rounded-full font-bold text-sm md:text-base px-5 py-2.5">
             Success Stories
           </span>
 
           <div className="flex flex-col gap-4">
             {slide.testimonials.map((t, i) => (
-              <div key={i} className={`flex flex-col gap-1 border-l-4 pl-4 ${i === 0 ? "border-[#FF8A3F]" : "border-[#B70569]"}`}>
+              <div
+                key={i}
+                className={`flex flex-col gap-1 border-l-4 pl-4 ${i === 0 ? "border-[#FF8A3F]" : "border-[#B70569]"}`}
+              >
                 <p className="text-black text-base md:text-lg xl:text-xl leading-relaxed font-light italic">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <p className="text-black text-sm md:text-lg xl:text-xl mt-1 xl:mt-3 font-medium">
                   {t.name}
                 </p>
-                <p className="text-[#B70569] text-base font-medium">{t.location}</p>
+                <p className="text-[#B70569] text-base font-medium">
+                  {t.location}
+                </p>
               </div>
             ))}
           </div>

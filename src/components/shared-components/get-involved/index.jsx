@@ -20,7 +20,8 @@ const GetInvolved = () => {
               </h2>
               <p className="text-black text-base md:text-lg font-normal">
                 As a student, teacher, or parent, help us inspire more African
-                girls <br />to kick start their journey into STEM!
+                girls <br />
+                to kick start their journey into STEM!
               </p>
               <ul className="text-black font-normal border-l-4 border-[#B70569] pl-4 flex flex-col gap-3 max-w-[379px]">
                 {bulletPoints.map((point, i) => (

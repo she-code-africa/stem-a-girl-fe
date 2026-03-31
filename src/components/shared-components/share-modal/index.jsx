@@ -1,7 +1,14 @@
 import React, { useState } from "react";
-import { FaXmark, FaWhatsapp, FaLinkedinIn, FaFacebookF, FaTelegram } from "react-icons/fa6";
+import {
+  FaXmark,
+  FaWhatsapp,
+  FaLinkedinIn,
+  FaFacebookF,
+  FaTelegram,
+  FaXTwitter,
+} from "react-icons/fa6";
 
-const SHARE_URL = "https://stem-a-girl.shecodeafrica.org/";
+const SHARE_URL = "https://stem-a-girl.shecodeafrica.org/courses";
 
 const socialLinks = [
   {
@@ -28,6 +35,12 @@ const socialLinks = [
     href: `https://t.me/share/url?url=${encodeURIComponent(SHARE_URL)}`,
     label: "Telegram",
   },
+  {
+    icon: FaXTwitter,
+    bg: "#222222",
+    href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(SHARE_URL)}`,
+    label: "X (Twitter)",
+  },
 ];
 
 const ShareModal = ({ isOpen, onClose }) => {
@@ -52,7 +65,9 @@ const ShareModal = ({ isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-black">Share Courses</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black">
+            Share Courses
+          </h2>
           <button
             onClick={onClose}
             aria-label="Close modal"
@@ -83,7 +98,9 @@ const ShareModal = ({ isOpen, onClose }) => {
 
         <p className="text-black font-medium mb-3">Or copy link</p>
         <div className="flex items-center border border-gray-200 rounded-lg overflow-hidden">
-          <span className="flex-1 px-4 py-3 text-sm text-gray-500 truncate">{SHARE_URL}</span>
+          <span className="flex-1 px-4 py-3 text-sm text-gray-500 truncate">
+            {SHARE_URL}
+          </span>
           <button
             onClick={handleCopy}
             className="bg-[#B70569] text-white text-sm font-semibold px-5 py-3 hover:bg-[#9a0458] transition-colors shrink-0"

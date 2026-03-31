@@ -130,7 +130,7 @@ const OutreachPage = () => {
                   >
                     {page}
                   </button>
-                )
+                ),
               )}
             </div>
           )}
@@ -152,7 +152,7 @@ const OutreachPage = () => {
             {outreachApproach.map((item, idx) => (
               <div
                 key={idx}
-                className={`${(Math.floor(idx / 2) + idx % 2) % 2 === 0 ? "bg-[#FF8FCE]" : "bg-[#FFB8E0]"} rounded-2xl p-8 flex flex-col items-center text-center gap-3`}
+                className={`${(Math.floor(idx / 2) + (idx % 2)) % 2 === 0 ? "bg-[#FF8FCE]" : "bg-[#FFB8E0]"} rounded-2xl p-8 flex flex-col items-center justify-center text-center gap-3`}
               >
                 <h3 className="font-figtree font-bold text-xl md:text-3xl text-black">
                   {item.title}
@@ -183,7 +183,7 @@ const OutreachPage = () => {
             and leaders in STEM fields.
           </p>
           <a
-            href="/contact-us"
+            href="mailto:programs@shecodeafrica.org"
             className="bg-primaryPink text-white text-base font-normal px-8 py-4 rounded-lg hover:opacity-90 transition-opacity"
           >
             Contact Us

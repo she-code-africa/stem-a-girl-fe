@@ -91,7 +91,7 @@ const NavigationBar = () => {
           </ul>
           <div className="flex w-[90%] max-w-[1280px] mx-auto  lg:max-w-[200px]">
             <Link
-              to=""
+              to="/courses"
               className="text-white capitalize w-full max-w-[165px] h-[55px] rounded-lg flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-[#5C0335] hover:border-[#5C0335] transition-all font-figtree text-base"
             >
               Start Learning

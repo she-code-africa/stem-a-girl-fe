@@ -2,8 +2,16 @@ import React from "react";
 import HeadingThree from "../shared-components/typography/HeadingThree";
 import CourseCard from "../shared-components/courses/cards/CourseCard";
 import { coursesData, howItWorks } from "../../utils/staticData";
+import { useQuery } from "@tanstack/react-query";
+import { getAllCourses } from "../../services/queries";
 
 const CoursesPage = () => {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["courses"],
+    queryFn: getAllCourses,
+  });
+
+  console.log("courses", data);
   return (
     <>
       <section className="w-full bg-primaryPink  font-figtree">

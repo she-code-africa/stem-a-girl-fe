@@ -4,9 +4,6 @@ import {
   HomePage,
   OutreachPage,
   StemClubs,
-  CodingPage,
-  RoboticsPage,
-  GameDevelopment,
   ContactUsPage,
   CodePlaygroundPage,
 } from "./pages";
@@ -15,6 +12,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import Courses from "./pages/activities";
+import CoursePage from "./pages/activities/CoursePage";
 
 const queryClient = new QueryClient();
 
@@ -40,9 +38,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/outreach" element={<OutreachPage />} />
-        <Route path="/courses/coding" element={<CodingPage />} />
-        <Route path="/courses/robotics" element={<RoboticsPage />} />
-        <Route path="/courses/game-development" element={<GameDevelopment />} />
+        <Route path="/course/:id" element={<CoursePage />} />
+
         <Route path="/courses" element={<Courses />} />
         <Route path="/stem-clubs" element={<StemClubs />} />
         <Route path="/contact-us" element={<ContactUsPage />} />

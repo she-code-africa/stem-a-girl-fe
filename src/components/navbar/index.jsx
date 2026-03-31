@@ -1,16 +1,59 @@
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
-import { useState } from "react";
-import { navigationMenu } from "../../utils/appData";
+import { useRef, useState, useEffect } from "react";
+
 import MenuLinks from "./MenuLinks";
+import { useDynamicCourseNav } from "../../utils/helper";
 
 const NavigationBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(null);
+  const { courseDropdown, isLoading } = useDynamicCourseNav();
+  const navigationMenu = [
+    {
+      pathname: "Courses",
+      path: "/courses",
+      isDropdown: true,
+      dropdownMenu: isLoading ? [] : courseDropdown,
+    },
+    {
+      pathname: "STEM Club",
+      path: "/stem-clubs",
+      isDropdown: false,
+      dropdownMenu: [],
+    },
+    {
+      pathname: "Outreach",
+      path: "/outreach",
+      isDropdown: false,
+      dropdownMenu: [],
+    },
+    {
+      pathname: "Contact us",
+      path: "/contact-us",
+      isDropdown: false,
+      dropdownMenu: [],
+    },
+  ];
+
+  const navRef = useRef(null);
+ useEffect(() => {
+   const handleClickOutside = (event) => {
+     if (navRef.current && !navRef.current.contains(event.target)) {
+       setShowDropdown(null); // ✅ close dropdown
+     }
+   };
+
+   document.addEventListener("mousedown", handleClickOutside);
+
+   return () => {
+     document.removeEventListener("mousedown", handleClickOutside);
+   };
+ }, []);
 
   return (
-    <nav className="fixed top-0 right-0 left-0 bg-white py-5 text-sealBrown font-mulish z-[20]">
+    <nav ref={navRef} className="fixed top-0 right-0 left-0 bg-white py-5 text-sealBrown font-mulish z-[20]">
       <section className="w-[90%] max-w-[1280px] mx-auto flex gap-8 items-center ">
         <div className="flex justify-between w-full lg:w-fit ">
           <figure className="w-[210px] h-[70px]">
@@ -39,6 +82,7 @@ const NavigationBar = () => {
                 menuItem={menu}
                 isOpen={showDropdown === i}
                 onToggle={() => setShowDropdown(showDropdown === i ? null : i)}
+                closeDropdown={() => setShowDropdown(null)}
               />
             ))}
           </ul>

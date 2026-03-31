@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeadingThree from "../shared-components/typography/HeadingThree";
 import CourseCard from "../shared-components/courses/cards/CourseCard";
 import { coursesData, howItWorks } from "../../utils/staticData";
+import { useQuery } from "@tanstack/react-query";
+import { getAllCourses } from "../../services/queries";
+import ApiLoading from "../loaders/ApiLoading";
 
 const CoursesPage = () => {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["courses"],
+    queryFn: getAllCourses,
+  });
+
+  const [courseInfo, setCourseInfo] = useState([]);
+
+  useEffect(() => {
+    if (!isLoading) {
+      const coursesInfo = data.map((course) => ({
+        title: course.title,
+        description: course.description,
+        id: course._id,
+        estimatedHours: course.estimatedHours,
+        levels: course.modules.length,
+        difficulty: course.difficulty,
+      }));
+      setCourseInfo(coursesInfo);
+    }
+  }, [isLoading, data]);
+
+  const findMatchingCourse = (course, staticData) => {
+    return course.find((c) =>
+      c.title.toLowerCase().includes(staticData.title.toLowerCase()),
+    );
+  };
+
   return (
     <>
       <section className="w-full bg-primaryPink  font-figtree">
@@ -30,19 +60,37 @@ const CoursesPage = () => {
           />
 
           <section className="mt-[50px] gap-8 flex flex-col items-center md:flex-row md:items-start md:justify-center w-full ">
-            {coursesData.map((course, i) => (
-              <CourseCard
-                key={i}
-                icon={course.icon}
-                customClass={course.cardGradient}
-                title={course.title}
-                description={course.description}
-                level={course.levels}
-                duration={course.duration}
-                proficiency={course.proficiency}
-                url={course.url}
-              />
-            ))}
+            {isLoading ? (
+              <ApiLoading />
+            ) : (
+              coursesData.map((course, i) => {
+                const levels =
+                  findMatchingCourse(courseInfo, course)?.levels ||
+                  course.levels;
+                const id = findMatchingCourse(courseInfo, course)?.id || "#";
+
+                const duration =
+                  findMatchingCourse(courseInfo, course)?.estimatedHours ||
+                  course.duration;
+
+                const difficulty =
+                  findMatchingCourse(courseInfo, course)?.difficulty ||
+                  course.proficiency;
+                return (
+                  <CourseCard
+                    key={i}
+                    icon={course.icon}
+                    customClass={course.cardGradient}
+                    title={course.title}
+                    description={course.description}
+                    level={levels}
+                    duration={duration}
+                    proficiency={difficulty}
+                    url={`/course/${id}`}
+                  />
+                );
+              })
+            )}
           </section>
         </div>
       </section>

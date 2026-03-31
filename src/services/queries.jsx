@@ -43,7 +43,19 @@ export const getAllImpactStories = async () => {
   return impactStories.data.data;
 };
 
+// courses
+export const getAllCourses = async () => {
+  const courses = await axios.get(`${baseURL}course`);
+
+  return courses.data.data;
+};
+
+export const getACourse = async (courseID) => {
+  const course = await axios.get(`${baseURL}course/${courseID}`);
+  return course.data.data;
+};
+//outreach
 export const getOutreach = async () => {
   const outreach = await axios.get(`${baseURL}outreach`);
-  return outreach?.data?.data?.data;
+  return outreach?.data?.data;
 };

@@ -4,13 +4,10 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import LessonModal from "../../../../modals/LessonModal";
 import VideoViewer from "./VideoViewer";
-import DocsViewer from "./DocViewer";
-import { IoDocumentText } from "react-icons/io5";
-import PrimaryButton from "../../../buttons/PrimaryButton";
 
 const LessonCard = ({
   lesson,
-  markCompleted,
+
   selectedLesson,
   setSelectedLesson,
 }) => {
@@ -36,26 +33,24 @@ const LessonCard = ({
   return (
     <>
       <section className="mt-4 w-full border border-[#E5E7EB] shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0px_rgba(0,0,0,0.1)] p-5 md:p-[26px] rounded-[14px] ">
-        <div
-          className={`w-full ${lesson.completed || lesson.status !== "inComplete" ? "opacity-100 grayscale-0" : "opacity-60 grayscale"}`}
-        >
-          {(lesson.completed || lesson.status === "completed") && (
+        <div className={`w-full opacity-100 grayscale-0 `}>
+          {/* {(lesson.completed || lesson.status === "completed") && (
             <div className="w-full flex justify-end md:hidden">
               <span className="bg-[#E5E7EB] inline-flex w-auto rounded-full items-center justify-center py-[5px] px-2.5 text-customGrey font-semibold text-xs font-inter">
                 Watched
               </span>
             </div>
-          )}
+          )} */}
 
           <div
             className={`w-full flex md:mt-0 mt-3 flex-col-reverse md:flex-row md:items-center  gap-5 `}
           >
             <p className="text-[#6A7282] text-md  md:hidden">
-              ⏱️{lesson.duration}
+              ⏱️{lesson.durationMinutes} minutes
             </p>
             <figure className="relative w-full md:max-w-[173px] h-[150px] md:h-[114px] overflow-hidden rounded-[10px]">
               <img
-                src={lesson.poster}
+                src={lesson.thumbnail}
                 alt="poster"
                 className="w-full h-full object-cover"
               />
@@ -65,35 +60,30 @@ const LessonCard = ({
                 disabled={isDisabled}
                 onClick={handleOpenModal}
               >
-                {lesson.type === "video" ? (
-                  <FaPlay className="text-white text-[15px]" />
-                ) : (
-                  <IoDocumentText className="text-white text-[15px]" />
-                )}
+                <FaPlay className="text-white text-[15px]" />
               </button>
             </figure>
 
             <div className="w-full flex justify-between">
               <article className="w-auto">
                 <h4
-                  className={`font-figtree text-lg md:text-xl font-bold ${lesson.completed || lesson.status !== "locked" ? "text-darkBlue" : "text-customGrey"}`}
+                  className={`font-figtree text-lg md:text-xl font-bold  text-darkBlue`}
                 >
-                  {lesson.type === "video" ? `Video` : `Reading`}:{" "}
-                  {lesson.title}
+                  Video: {lesson.title}
                 </h4>
 
                 <p className="text-[#6A7282] text-md mt-3 md:block hidden">
-                  ⏱️{lesson.duration}
+                  ⏱️{lesson.durationMinutes} minutes
                 </p>
               </article>
             </div>
-            {(lesson.completed || lesson.status === "completed") && (
+            {/* {(lesson.completed || lesson.status === "completed") && (
               <div className="w-auto md:flex justify-end hidden">
                 <span className="bg-[#E5E7EB] inline-flex w-auto rounded-full items-center justify-center py-[5px] px-2.5 text-customGrey font-semibold text-xs font-inter">
                   Watched
                 </span>
               </div>
-            )}
+            )} */}
           </div>
 
           {/* practice task */}
@@ -106,8 +96,7 @@ const LessonCard = ({
             </h4>
 
             <p className="font-inter text-[#364153] text-sm mt-2">
-              Create a Scratch account and explore the different block
-              categories.
+             {lesson.practiceTask}
             </p>
           </article>
 
@@ -121,9 +110,9 @@ const LessonCard = ({
               {lesson.resources.map((resource, i) => (
                 <li className="w-auto " key={i}>
                   <a
-                    href="/#"
+                    href={resource.url}
                     download={resource.title}
-                    className={`py-2.5 px-5 rounded-[100px] overflow-hidden border border-[#E9E1E6] flex items-center justify-center font-inter text-sm ${isDisabled && "cursor-not-allowed"}`}
+                    className={`py-2.5 px-5 rounded-[100px] overflow-hidden border border-[#E9E1E6] flex items-center capitalize justify-center font-inter text-sm ${isDisabled && "cursor-not-allowed"}`}
                     onClick={(e) => {
                       if (isDisabled) {
                         e.preventDefault();
@@ -137,7 +126,7 @@ const LessonCard = ({
             </ul>
           </div>
 
-          {(lesson.completed || lesson.status === "completed") && (
+          {/* {(lesson.completed || lesson.status === "completed") && (
             <div className="w-full mt-4">
               <PrimaryButton
                 className={"py-[18px] px-8 h-[55px] rounded-lg w-auto"}
@@ -146,7 +135,7 @@ const LessonCard = ({
                 title="Watch again"
               />
             </div>
-          )}
+          )} */}
         </div>
       </section>
 
@@ -162,16 +151,9 @@ const LessonCard = ({
                 <IoMdClose />
               </button>
             </div>
-            {lesson.type === "video" && (
-              <VideoViewer lesson={selectedLesson} onComplete={markCompleted} />
-            )}
-            {lesson.type !== "video" && (
-              <DocsViewer
-                // lesson={lesson}
-                lesson={selectedLesson}
-                onComplete={markCompleted}
-              />
-            )}
+
+            <VideoViewer lesson={selectedLesson} />
+            {/* onComplete={markCompleted} */}
           </div>
         </LessonModal>
       )}

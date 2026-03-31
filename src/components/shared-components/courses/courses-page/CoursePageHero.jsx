@@ -2,9 +2,16 @@ import React from "react";
 import { IoCode } from "react-icons/io5";
 import { FaRegClock, FaRegCircleCheck } from "react-icons/fa6";
 import Ribbon from "../../icons/Ribbon";
-import CourseProgress from "./CourseProgress";
+// import CourseProgress from "./CourseProgress";
 
-const CoursePageHero = ({ title,paragraph,duration,weeks, totalCompleted,progress }) => {
+const CoursePageHero = ({
+  title,
+  paragraph,
+  duration,
+  weeks,
+  totalCompleted,
+  progress,
+}) => {
   return (
     <section className="w-full bg-primaryPink  font-figtree">
       {/* min-h-[535px]  */}
@@ -35,20 +42,20 @@ const CoursePageHero = ({ title,paragraph,duration,weeks, totalCompleted,progres
             <li className="flex w-auto gap-2 items-center text-white text-sm">
               <Ribbon stroke="#ffffff" />
               <span className="font-inter inline-block text-sm">
-                {weeks}
+                {weeks} week(s)
               </span>
             </li>
 
             <li className="flex w-auto gap-2 items-center text-white text-sm">
               <FaRegCircleCheck />
               <span className="font-inter inline-block text-sm">
-               {totalCompleted} completed
+                {totalCompleted} lessons
               </span>
             </li>
           </ul>
 
           <div className="mt-6 w-full">
-            <CourseProgress progress={progress} />
+            {/* <CourseProgress progress={progress} /> */}
           </div>
         </article>
       </div>

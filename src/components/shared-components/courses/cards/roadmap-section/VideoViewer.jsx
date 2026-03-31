@@ -1,38 +1,33 @@
-import React, { useRef, useState } from "react";
-import ReactPlayer from "react-player";
+import React from "react";
 
-const VideoViewer = ({ lesson, onComplete }) => {
-  const playerRef = useRef(null);
-  const [completed, setCompleted] = useState(false);
 
-  const handleProgress = ({ played }) => {
-    // mark complete at 90%
-    if (played >= 0.9 && !completed) {
-      setCompleted(true);
-      onComplete(lesson);
-    }
-  };
+const VideoViewer = ({ lesson }) => {
 
+ const formatDrivePreviewLink = (url) => {
+  if (!url) return "";
+
+  // Extract file ID from different possible formats
+  const match = url.match(/\/d\/([^/]+)/);
+
+  if (!match) return url; // fallback if not a drive link
+
+  const fileId = match[1];
+
+  return `https://drive.google.com/file/d/${fileId}/preview`;
+};
+  
+    
   return (
     <div className="w-full my-3">
-      <ReactPlayer
-        ref={playerRef}
-        src={lesson.link}
-        controls={true}
+      <iframe
+        title={lesson.title}
+        src={formatDrivePreviewLink(lesson.videoUrl)}
         width="100%"
-        height="500px"
-        className=""
-        onProgress={handleProgress}
-      />
-
-      {!completed && (
-        <button
-          className="mt-2 bg-primaryPink hover:bg-primaryBtnHover transition-all duration-300 text-white px-4 py-2 rounded"
-          onClick={() => onComplete(lesson)}
-        >
-          Mark as Completed
-        </button>
-      )}
+        height="600px"
+        allow="autoplay"
+        allowFullScreen
+        style={{ border: "none" }}
+      ></iframe>
     </div>
   );
 };

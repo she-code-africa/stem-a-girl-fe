@@ -37,7 +37,7 @@ const CourseCard = ({
             <CourseLevel />
 
             <span className="inline-block text-customGrey text-sm">
-              {level}
+              {level} level{level > 1 && "s"}
             </span>
           </li>
           <li className="flex items-center gap-3">

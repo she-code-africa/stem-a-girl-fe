@@ -1,20 +1,32 @@
 import React, { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { GlobalLayout } from "../../components";
-import { outreachStates, outreachApproach } from "../../utils/appData";
+import { outreachApproach } from "../../utils/appData";
 import { ourImpactBg, getInvolvedBg } from "../../assets/images";
 import { FaCalendarAlt } from "react-icons/fa";
+import { getOutreach } from "../../services/queries";
 
 const CARDS_PER_PAGE = 4;
 
 const OutreachPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const totalPages = Math.ceil(outreachStates.length / CARDS_PER_PAGE);
+  const { data: outreachData } = useQuery({
+    queryKey: ["outreach"],
+    queryFn: getOutreach,
+  });
+  console.log("outreach data:", outreachData);
+
+  const states = outreachData ?? [];
+  const totalPages = Math.ceil(states.length / CARDS_PER_PAGE);
   const startIdx = (currentPage - 1) * CARDS_PER_PAGE;
-  const visibleStates = outreachStates.slice(
-    startIdx,
-    startIdx + CARDS_PER_PAGE
-  );
+  const visibleStates = states.slice(startIdx, startIdx + CARDS_PER_PAGE);
+
+  const formatDate = (dateStr) => {
+    if (!dateStr) return "";
+    const date = new Date(dateStr);
+    return date.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+  };
 
   return (
     <GlobalLayout>
@@ -51,16 +63,22 @@ const OutreachPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {visibleStates.map((item, idx) => (
               <div
-                key={idx}
+                key={item._id ?? idx}
                 className="bg-white border border-[#E1E6ED] rounded-2xl shadow-sm p-4 flex flex-col gap-4"
               >
-                {/* Image with thick pink border frame */}
-                <div className="rounded-xl overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={`${item.state} outreach`}
-                    className="w-full h-auto"
-                  />
+                {/* 2x2 image grid with pink border frame */}
+                <div className="rounded-2xl overflow-hidden border-[15px] border-primaryPink bg-primaryPink">
+                  <div className="grid grid-cols-2 gap-[15px]">
+                    {item.previewImages?.slice(0, 4).map((img, i) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`${item.state} outreach ${i + 1}`}
+                        className="w-full aspect-square object-cover rounded-2xl"
+                        loading="lazy"
+                      />
+                    ))}
+                  </div>
                 </div>
 
                 {/* Card Content */}
@@ -74,16 +92,22 @@ const OutreachPage = () => {
                   <div className="flex items-center justify-between mt-2">
                     <div className="font-figtree flex items-center gap-2 text-[#5C0335] text-sm">
                       <FaCalendarAlt size={13} />
-                      <span>{item.date}</span>
+                      <span>{formatDate(item.outreachDate)}</span>
                     </div>
-                    <a
-                      href={item.driveLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-figtree border border-primaryPink text-primaryPink text-base font-medium px-4 py-1.5 rounded-lg transition-colors"
-                    >
-                      View all Images
-                    </a>
+                    {item.galleryLink ? (
+                      <a
+                        href={item.galleryLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-figtree border border-primaryPink text-primaryPink text-base font-medium px-4 py-1.5 rounded-lg transition-colors"
+                      >
+                        View all Images
+                      </a>
+                    ) : (
+                      <span className="font-figtree border border-[#E1E6ED] text-[#aaa] text-base font-medium px-4 py-1.5 rounded-lg cursor-not-allowed">
+                        View all Images
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

@@ -43,9 +43,8 @@ export const getAllImpactStories = async () => {
   return impactStories.data.data;
 };
 
-// courses -"69cb6e41c1e5dd2990cc5aa0", robotics
+// courses
 export const getAllCourses = async () => {
-  // const slug = "69cb6e41c1e5dd2990cc5aa0";
   const courses = await axios.get(`${baseURL}course`);
 
   return courses.data.data;
@@ -54,4 +53,9 @@ export const getAllCourses = async () => {
 export const getACourse = async (courseID) => {
   const course = await axios.get(`${baseURL}course/${courseID}`);
   return course.data.data;
+};
+//outreach
+export const getOutreach = async () => {
+  const outreach = await axios.get(`${baseURL}outreach`);
+  return outreach?.data?.data?.data;
 };

@@ -1,3 +1,4 @@
+
 import {
   codingBootcampImage,
   codingFromScratchCardImg,
@@ -23,6 +24,9 @@ import {
 } from "../assets/images";
 import { FaCode, FaGamepad, FaRobot } from "react-icons/fa6";
 
+
+
+
 export const navigationMenu = [
   {
     pathname: "Courses",
@@ -31,17 +35,17 @@ export const navigationMenu = [
     dropdownMenu: [
       {
         title: "Coding from Scratch",
-        url: "/courses/coding",
+        url: "/course/coding",
         icon: FaCode,
       },
       {
         title: "Game Development",
-        url: "/courses/game-development",
+        url: "/course/game-development",
         icon: FaGamepad,
       },
       {
         title: "Robotics",
-        url: "/courses/robotics",
+        url: "/course/robotics",
         icon: FaRobot,
       },
     ],

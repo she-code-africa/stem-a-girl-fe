@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
 
-const MenuLinks = ({ menuItem, isOpen, onToggle }) => {
+const MenuLinks = ({ menuItem, isOpen, onToggle, closeDropdown }) => {
   const { pathname } = useLocation();
 
   return (
@@ -10,11 +10,12 @@ const MenuLinks = ({ menuItem, isOpen, onToggle }) => {
         <li className={`text-base font-medium cursor-pointer relative `}>
           <span
             className={`flex gap-1 items-center hover:text-primaryPink ${
-              pathname.includes(menuItem.pathname.toLowerCase()) &&
+              (pathname.includes(menuItem.pathname.toLowerCase()) ||
+                pathname.includes("course")) &&
               "text-primaryPink font-bold"
             }`}
           >
-            <Link to={menuItem.path}>
+            <Link to={menuItem.path} onClick={closeDropdown}>
               <span className="">{menuItem.pathname}</span>
             </Link>
             <button className="" onClick={onToggle}>
@@ -29,6 +30,7 @@ const MenuLinks = ({ menuItem, isOpen, onToggle }) => {
               {menuItem.dropdownMenu.map((menu, i) => (
                 <li key={i}>
                   <Link
+                    onClick={closeDropdown}
                     to={menu.url}
                     className={`group flex items-center gap-3 text-sm hover:text-primaryPink ${
                       pathname === menu.url && "text-primaryPink font-semibold"

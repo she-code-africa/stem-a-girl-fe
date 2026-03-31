@@ -11,7 +11,6 @@ const CoursePage = () => {
     queryFn: () => getACourse(id),
   });
 
-  console.log("course", data);
   return (
     <div>
       <GlobalLayout>

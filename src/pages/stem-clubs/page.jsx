@@ -9,12 +9,9 @@ import {
 const StemClubs = () => {
   return (
     <GlobalLayout>
-      <section
-        className="relative py-16 md:py-24 text-white -mt-8"
-        style={{ backgroundColor: "#B70569" }}
-      >
+      <section className="relative py-16 md:py-24 text-white -mt-8 bg-primaryPink min-h-[562px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/35" />
-        <div className="relative z-10 w-[90%] max-w-[1280px] mx-auto">
+        <article className="relative z-10 w-[90%] max-w-[1040px] mx-auto">
           <h1 className="text-center font-semibold text-4xl md:text-7xl lg:text-8xl xl:text-[128px] md:leading-tight">
             Empowering Young Minds: <br /> She Code Africa STEM Club
           </h1>
@@ -24,7 +21,7 @@ const StemClubs = () => {
             they spark curiosity and equip girls with the skills and confidence
             to thrive.
           </p>
-        </div>
+        </article>
       </section>
       <StemClubActivities />
       <ViewStemClubs />

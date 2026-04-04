@@ -12,8 +12,24 @@ const CoursePageHero = ({
   totalCompleted,
   progress,
 }) => {
+  const heroBackground = [
+    {
+      cardGradient: "bg-pinkGradient",
+      slug: "game",
+    },
+    {
+      cardGradient: "bg-blueGradient",
+      slug: "coding",
+    },
+    {
+      cardGradient: "bg-orangeGradient",
+      slug: "robotics",
+    },
+  ];
   return (
-    <section className="w-full bg-primaryPink  font-figtree">
+    <section
+      className={`w-full  font-figtree ${heroBackground.find((bg) => title.toLowerCase().includes(bg.slug))?.cardGradient || "bg-primaryPink"}`}
+    >
       {/* min-h-[535px]  */}
       <div className="flex max-w-[1040px] mx-auto w-[90%] justify-center items-center py-[89.5px]">
         <article className="w-full">

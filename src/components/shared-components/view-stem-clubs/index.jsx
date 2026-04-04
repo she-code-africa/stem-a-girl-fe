@@ -9,17 +9,19 @@ const ViewStemClubs = () => {
         alt=""
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
       />
-      <div className="relative w-[90%] max-w-[1024px] mx-auto">
+      <div className="relative w-[90%] max-w-[1256px] mx-auto">
         <h2 className="text-center text-primaryPink text-3xl md:text-5xl lg:text-[64px] font-semibold mb-10 md:mb-14">
           Available Stem Clubs
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[50px] md:justify-self-center">
           {stemClubSchools.map((school, i) => (
             <div
               key={i}
-              className={`bg-white rounded-2xl border-2 px-8 py-8 flex items-center justify-center text-center font-semibold text-lg md:text-xl ${
-                i === stemClubSchools.length - 1 && stemClubSchools.length % 2 !== 0
-                  ? "md:col-span-2 md:max-w-[50%] md:mx-auto w-full"
+              // md:max-w-[50%]
+              className={`w-full md:max-w-[445px] bg-white rounded-2xl border-2 px-8 py-8 flex items-center justify-center text-center font-semibold text-xl md:text-2xl ${
+                i === stemClubSchools.length - 1 &&
+                stemClubSchools.length % 2 !== 0
+                  ? "md:col-span-2  md:mx-auto w-full"
                   : ""
               } ${school.isPink ? "text-primaryPink border-primaryPink" : "text-[#5C0335] border-[#5C0335]"}`}
             >

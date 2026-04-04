@@ -1,13 +1,21 @@
 import { GlobalLayout } from "../../components";
 import Header from "../../components/header";
 import Stats from "../../components/shared-components/stats";
-import { ProgramMission, SuccessStories, GetInvolved } from "../../components/shared-components";
+import {
+  ProgramMission,
+  SuccessStories,
+  GetInvolved,
+} from "../../components/shared-components";
 import FAQ from "../../components/faq";
 import { activities } from "../../utils/appData";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 
+import { useDynamicCourseNav } from "../../utils/helper";
+
 const HomePage = () => {
+  const { coursesLinks } = useDynamicCourseNav();
+
   return (
     <GlobalLayout>
       <Header />
@@ -31,31 +39,44 @@ const HomePage = () => {
             tech-driven world.
           </p>
           <div className="my-10 flex max-lg:flex-col items-stretch gap-7 md:gap-6 lg:gap-8 md:justify-start xl:justify-center md:overflow-x-auto xl:overflow-hidden no-scrollbar">
-            {activities.map((activity, i) => (
-              <div
-                className="group flex flex-col border-2 border-[#B70569] p-5 rounded-2xl text-fiord flex-1 min-w-0 hover:bg-[#B70569] transition-colors duration-200"
-                key={i}
-              >
-                <div className="w-full aspect-square overflow-hidden rounded-lg">
-                  <img
-                    src={activity.image}
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
+            {activities.map((activity, i) => {
+              const url =
+                coursesLinks.find((course) => {
+                  const courseWords = course.title.toLowerCase().split(" ");
+                  const activityWords = activity.title.toLowerCase().split(" ");
+                  return courseWords.some(
+                    (word) => activityWords.includes(word) && word.length > 3,
+                  );
+                })?.url || "/courses";
+              return (
+                <div
+                  className="group flex flex-col border-2 border-[#B70569] p-5 rounded-2xl text-fiord flex-1 min-w-0 hover:bg-[#B70569] transition-colors duration-200"
+                  key={i}
+                >
+                  <div className="w-full aspect-square overflow-hidden rounded-lg">
+                    <img
+                      src={activity.image}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-[#B70569] group-hover:text-white text-lg md:text-2xl my-3 font-bold transition-colors duration-200">
+                      {activity.title}
+                    </p>
+                    <p className="text-lg md:text-xl my-3 font-medium group-hover:text-white transition-colors duration-200">
+                      {activity.description}
+                    </p>
+                  </div>
+                  <Link
+                    to={url}
+                    className="flex items-center gap-2 text-[#B70569] group-hover:text-white font-medium transition-colors duration-200"
+                  >
+                    Learn more <FaArrowRight />
+                  </Link>
                 </div>
-                <div className="flex-1">
-                  <p className="text-[#B70569] group-hover:text-white text-lg md:text-2xl my-3 font-bold transition-colors duration-200">
-                    {activity.title}
-                  </p>
-                  <p className="text-lg md:text-xl my-3 font-medium group-hover:text-white transition-colors duration-200">
-                    {activity.description}
-                  </p>
-                </div>
-                <Link to={activity.link} className="flex items-center gap-2 text-[#B70569] group-hover:text-white font-medium transition-colors duration-200">
-                  Learn more <FaArrowRight />
-                </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

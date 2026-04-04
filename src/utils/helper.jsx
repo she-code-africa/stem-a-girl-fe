@@ -1,19 +1,24 @@
 import { useQuery } from "@tanstack/react-query";
 import { getAllCourses } from "../services/queries";
-import { FaCode, FaGamepad, FaRobot } from "react-icons/fa6";
+
+import NavCodeTagIcon from "../components/shared-components/icons/NavCodeTagIcon";
+import NavGameControlIcon from "../components/shared-components/icons/NavGameControlIcon";
+import NavRobotIcon from "../components/shared-components/icons/NavRobotIcon";
 
 export const useDynamicCourseNav = () => {
   const allowedCourses = ["coding", "robotics", "game development"];
+  const order = ["coding", "game", "robot"];
+
   const { data: courses, isLoading } = useQuery({
     queryKey: ["courses"],
     queryFn: getAllCourses,
   });
 
   const getIcon = (title) => {
-    if (title.toLowerCase().includes("coding")) return FaCode;
-    if (title.toLowerCase().includes("game")) return FaGamepad;
-    if (title.toLowerCase().includes("robot")) return FaRobot;
-    return FaCode;
+    if (title.toLowerCase().includes("coding")) return NavCodeTagIcon;
+    if (title.toLowerCase().includes("game")) return NavGameControlIcon;
+    if (title.toLowerCase().includes("robot")) return NavRobotIcon;
+    return NavCodeTagIcon;
   };
 
   const courseDropdown =
@@ -27,7 +32,21 @@ export const useDynamicCourseNav = () => {
         title: course.title,
         url: `/course/${course._id}`,
         icon: getIcon(course.title),
-      })) || [];
+      }))
+      .sort((a, b) => {
+        const aIndex = order.findIndex((keyword) =>
+          a.title.toLowerCase().includes(keyword),
+        );
+        const bIndex = order.findIndex((keyword) =>
+          b.title.toLowerCase().includes(keyword),
+        );
+        return aIndex - bIndex;
+      }) || [];
 
-  return { courseDropdown , isLoading};
+  const coursesLinks = courseDropdown.map((course) => ({
+    url: course.url,
+    title: course.title,
+  }));
+
+  return { courseDropdown, isLoading, coursesLinks };
 };

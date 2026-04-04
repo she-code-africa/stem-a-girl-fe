@@ -9,7 +9,10 @@ const StemClubActivities = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           {activities.map((activity, i) => (
-            <div key={i} className="bg-white rounded-2xl p-4 overflow-hidden flex flex-col">
+            <div
+              key={i}
+              className="bg-white rounded-2xl p-[18.26px] overflow-hidden flex flex-col"
+            >
               <div className="h-72 overflow-hidden">
                 <img
                   src={activity.image}
@@ -17,7 +20,7 @@ const StemClubActivities = () => {
                   className="w-full h-full object-cover rounded-xl"
                 />
               </div>
-              <div className="p-5 flex flex-col gap-1">
+              <div className="pt-5 flex flex-col gap-1">
                 <h3 className="font-figtree font-bold text-sm md:text-base text-[#5C0335]">
                   {activity.title}
                 </h3>

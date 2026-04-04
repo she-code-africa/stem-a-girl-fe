@@ -32,13 +32,15 @@ const MenuLinks = ({ menuItem, isOpen, onToggle, closeDropdown }) => {
                   <Link
                     onClick={closeDropdown}
                     to={menu.url}
-                    className={`group flex items-center gap-3 text-sm hover:text-primaryPink ${
+                    className={`text-base group flex items-center gap-3 hover:text-primaryPink ${
                       pathname === menu.url && "text-primaryPink font-semibold"
                     }`}
                   >
                     {menu.icon && (
                       <span className="w-10 h-10 rounded-full bg-[#FFB8E0] group-hover:bg-primaryPink flex items-center justify-center shrink-0 transition-colors">
-                        <menu.icon className="w-5 h-5 text-primaryPink group-hover:text-white transition-colors" />
+                        <menu.icon
+                          className={`${menu.title.toLowerCase().includes("game") ? "text-black" : "text-primaryPink "} group-hover:text-white transition-colors`}
+                        />
                       </span>
                     )}
                     {menu.title}

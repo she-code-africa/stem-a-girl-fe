@@ -12,7 +12,7 @@ export const coursesData = [
     levels: 6,
     duration: "8-10 hours",
     proficiency: "Beginner to Advanced",
-    cardGradient: "bg-pinkGradient ",
+    cardGradient: "bg-pinkGradient",
     url: "/courses/game-development",
   },
   {

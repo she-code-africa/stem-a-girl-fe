@@ -34,7 +34,7 @@ export const navigationMenu = [
     isDropdown: true,
     dropdownMenu: [
       {
-        title: "Coding from Scratch",
+        title: "Coding with Scratch",
         url: "/course/coding",
         icon: FaCode,
       },

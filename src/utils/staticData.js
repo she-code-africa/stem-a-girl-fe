@@ -17,7 +17,7 @@ export const coursesData = [
   },
   {
     icon: <CodeTag />,
-    title: "Coding from Scratch",
+    title: "Coding with Scratch",
     description:
       "Bring your ideas to life using drag-and-drop blocks. Create animations, games, and interactive stories while learning real programming concepts.",
     levels: 7,

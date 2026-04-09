@@ -32,7 +32,7 @@ const OutreachPage = () => {
     <GlobalLayout>
       {/* Hero Section */}
       <section
-        className="relative py-20 md:py-32 text-white -mt-8"
+        className="relative pt-28 pb-20 md:pt-40 md:pb-32 text-white -mt-8"
         style={{ backgroundColor: "#C78FFF" }}
       >
         <div className="absolute inset-0 bg-black/35" />

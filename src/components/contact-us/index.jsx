@@ -85,7 +85,7 @@ const ContactUsComponent = () => {
       <ToastContainer />
       <section className=" text-sealBrown font-mulish w-full -mt-8 bg-whiteSmoke ">
         <div className="relative bg-[#B70569]  ">
-          <div className="bg-[rgba(0,0,0,0.35)] py-14 md:py-[100px] w-full flex items-center justify-center">
+          <div className="bg-[rgba(0,0,0,0.35)] pt-22 pb-14 md:pt-[132px] md:pb-[100px] w-full flex items-center justify-center">
             <article className="w-[90%] max-w-[1040px] mx-auto text-center text-white">
               <h2 className=" text-[64px] lg:text-9xl lg:leading-[130px] md:text-8xl leading-normal  ">
                 Contact Us

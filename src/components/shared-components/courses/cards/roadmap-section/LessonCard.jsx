@@ -88,43 +88,47 @@ const LessonCard = ({
 
           {/* practice task */}
 
-          <article
-            className={`w-full mt-4 rounded-[10px] bg-[#FDF2F8] py-4 px-[15px]`}
-          >
-            <h4 className="text-sm font-semibold font-inter text-darkBlue">
-              📝 Practice Task:
-            </h4>
+          {lesson.practiceTask && (
+            <article
+              className={`w-full mt-4 rounded-[10px] bg-[#FDF2F8] py-4 px-[15px]`}
+            >
+              <h4 className="text-sm font-semibold font-inter text-darkBlue">
+                📝 Practice Task:
+              </h4>
 
-            <p className="font-inter text-[#364153] text-sm mt-2">
-             {lesson.practiceTask}
-            </p>
-          </article>
+              <p className="font-inter text-[#364153] text-sm mt-2">
+                {lesson.practiceTask}
+              </p>
+            </article>
+          )}
 
-          <div className="mt-4 w-full">
-            <p className="font-inter text-sm text-darkBlue flex items-center gap-2 font-semibold">
-              <MdOutlineFileDownload />
-              Resources:
-            </p>
+          {lesson.resources && lesson.resources.length > 0 && (
+            <div className="mt-4 w-full">
+              <p className="font-inter text-sm text-darkBlue flex items-center gap-2 font-semibold">
+                <MdOutlineFileDownload />
+                Resources:
+              </p>
 
-            <ul className="mt-1 flex w-full gap-5 items-center">
-              {lesson.resources.map((resource, i) => (
-                <li className="w-auto " key={i}>
-                  <a
-                    href={resource.url}
-                    download={resource.title}
-                    className={`py-2.5 px-5 rounded-[100px] overflow-hidden border border-[#E9E1E6] flex items-center capitalize justify-center font-inter text-sm ${isDisabled && "cursor-not-allowed"}`}
-                    onClick={(e) => {
-                      if (isDisabled) {
-                        e.preventDefault();
-                      }
-                    }}
-                  >
-                    {resource.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+              <ul className="mt-1 flex w-full gap-5 items-center">
+                {lesson.resources.map((resource, i) => (
+                  <li className="w-auto " key={i}>
+                    <a
+                      href={resource.url}
+                      download={resource.title}
+                      className={`py-2.5 px-5 rounded-[100px] overflow-hidden border border-[#E9E1E6] flex items-center capitalize justify-center font-inter text-sm ${isDisabled && "cursor-not-allowed"}`}
+                      onClick={(e) => {
+                        if (isDisabled) {
+                          e.preventDefault();
+                        }
+                      }}
+                    >
+                      {resource.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* {(lesson.completed || lesson.status === "completed") && (
             <div className="w-full mt-4">

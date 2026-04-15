@@ -88,7 +88,7 @@ const LessonCard = ({
 
           {/* practice task */}
 
-          {lesson.practiceTask && (
+          {lesson.practiceTask && lesson.practiceTask !== "nil" && (
             <article
               className={`w-full mt-4 rounded-[10px] bg-[#FDF2F8] py-4 px-[15px]`}
             >
@@ -102,7 +102,9 @@ const LessonCard = ({
             </article>
           )}
 
-          {lesson.resources && lesson.resources.length > 0 && (
+          {lesson.resources &&
+          lesson.resources.length > 0 &&
+          lesson.resources[0].title !== "nil" ? (
             <div className="mt-4 w-full">
               <p className="font-inter text-sm text-darkBlue flex items-center gap-2 font-semibold">
                 <MdOutlineFileDownload />
@@ -128,6 +130,8 @@ const LessonCard = ({
                 ))}
               </ul>
             </div>
+          ) : (
+            ""
           )}
 
           {/* {(lesson.completed || lesson.status === "completed") && (

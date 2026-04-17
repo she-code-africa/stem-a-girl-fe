@@ -4,6 +4,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import LessonModal from "../../../../modals/LessonModal";
 import VideoViewer from "./VideoViewer";
+import thumbnail from "../../../../../assets/images/SCA-Badge-hero.png";
 
 const LessonCard = ({
   lesson,
@@ -50,7 +51,7 @@ const LessonCard = ({
             </p>
             <figure className="relative w-full md:max-w-[173px] h-[150px] md:h-[114px] overflow-hidden rounded-[10px]">
               <img
-                src={lesson.thumbnail}
+                src={thumbnail}
                 alt="poster"
                 className="w-full h-full object-cover"
               />

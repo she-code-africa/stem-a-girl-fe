@@ -18,8 +18,6 @@ const VideoViewer = ({ lesson }) => {
       <iframe
         title={lesson.title}
         src={lesson.videoUrl}
-        // src={formatDrivePreviewLink(lesson.videoUrl)}
-        // src={"https://www.youtube.com/embed/h71dBFr1wsY?si=AqxfWQQXz1hfSfbV"}
         width="100%"
         height="600px"
         allow="autoplay"

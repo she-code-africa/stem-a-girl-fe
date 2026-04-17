@@ -4,7 +4,6 @@ const VideoViewer = ({ lesson }) => {
   // const formatDrivePreviewLink = (url) => {
   //   if (!url) return "";
 
-  //   // Extract file ID from different possible formats
   //   const match = url.match(/\/d\/([^/]+)/);
 
   //   if (!match) return url; // fallback if not a drive link

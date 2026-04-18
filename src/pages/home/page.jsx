@@ -25,7 +25,7 @@ const HomePage = () => {
         className="my-3 md:my-10 bg-white pt-5 pb-2"
         id="zero-tech-skills"
       >
-        <div className="bg-white my-4 w-[90%] max-w-[1280px] mx-auto px-5">
+        <div className="bg-white my-4 w-[90%] max-w-[1280px] mx-auto xl:px-5">
           <h4 className="font-medium text-2xl md:text-3xl lg:text-5xl xl:text-[64px] leading-normal md:leading-normal lg:leading-normal text-center">
             <span className="text-[#B70569] font-semibold">
               Your STEM Journey Starts Here
@@ -50,7 +50,7 @@ const HomePage = () => {
                 })?.url || "/courses";
               return (
                 <div
-                  className="group flex flex-col border-2 border-[#B70569] p-5 rounded-2xl text-fiord flex-1 min-w-0 hover:bg-[#B70569] transition-colors duration-200"
+                  className="group flex flex-col border-2 border-[#B70569] p-4 sm:p-5 rounded-2xl text-fiord flex-1 min-w-0 hover:bg-[#B70569] transition-colors duration-200"
                   key={i}
                 >
                   <div className="w-full aspect-square overflow-hidden rounded-lg">

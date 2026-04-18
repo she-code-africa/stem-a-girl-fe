@@ -8,7 +8,7 @@ import {
 const Header = () => {
   return (
     <div className="bg-[#FFB8E0] relative">
-      <div className=" w-[90%] max-w-[1280px] flex py-6 md:py-16 container mx-auto max-md:flex-col justify-between max-xl:px-4">
+      <div className=" w-[90%] max-w-[1280px] flex py-6 md:py-16 container mx-auto max-md:flex-col justify-between xl:px-4">
         <div className="flex-1 min-w-0 max-md:w-full space-y-2 lg:pr-6">
           <img
             src={pixelatedStarIcon}

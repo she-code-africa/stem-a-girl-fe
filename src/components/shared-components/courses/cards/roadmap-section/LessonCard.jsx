@@ -62,7 +62,7 @@ const LessonCard = ({
                 <h4
                   className={`font-figtree text-lg md:text-xl font-bold  text-darkBlue`}
                 >
-                  Video: {lesson.title}
+                  {lesson.title}
                 </h4>
 
                 <p className="text-[#6A7282] text-md mt-3 md:block hidden">

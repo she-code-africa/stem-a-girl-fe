@@ -49,32 +49,31 @@ const HomePage = () => {
                   );
                 })?.url || "/courses";
               return (
-                <div
-                  className="group flex flex-col border-2 border-[#B70569] p-4 sm:p-5 rounded-2xl text-fiord flex-1 min-w-0 hover:bg-[#B70569] transition-colors duration-200"
-                  key={i}
-                >
-                  <div className="w-full aspect-square overflow-hidden rounded-lg">
-                    <img
-                      src={activity.image}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
+                <Link to={url} key={i} className="flex w-full">
+                  <div className="group flex flex-col border-2 border-[#B70569] p-4 sm:p-5 rounded-2xl text-fiord flex-1 min-w-0 hover:bg-[#B70569] transition-colors duration-200">
+                    <div className="w-full aspect-square overflow-hidden rounded-lg">
+                      <img
+                        src={activity.image}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-[#B70569] group-hover:text-white text-lg md:text-2xl my-3 font-bold transition-colors duration-200">
+                        {activity.title}
+                      </p>
+                      <p className="text-lg md:text-xl my-3 font-medium group-hover:text-white transition-colors duration-200">
+                        {activity.description}
+                      </p>
+                    </div>
+                    <Link
+                      to={url}
+                      className="flex items-center gap-2 text-[#B70569] group-hover:text-white font-medium transition-colors duration-200"
+                    >
+                      Learn more <FaArrowRight />
+                    </Link>
                   </div>
-                  <div className="flex-1">
-                    <p className="text-[#B70569] group-hover:text-white text-lg md:text-2xl my-3 font-bold transition-colors duration-200">
-                      {activity.title}
-                    </p>
-                    <p className="text-lg md:text-xl my-3 font-medium group-hover:text-white transition-colors duration-200">
-                      {activity.description}
-                    </p>
-                  </div>
-                  <Link
-                    to={url}
-                    className="flex items-center gap-2 text-[#B70569] group-hover:text-white font-medium transition-colors duration-200"
-                  >
-                    Learn more <FaArrowRight />
-                  </Link>
-                </div>
+                </Link>
               );
             })}
           </div>

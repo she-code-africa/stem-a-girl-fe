@@ -334,7 +334,7 @@ export const successStoriesSlides = [
 ];
 
 export const getInvolvedBulletPoints = [
-  "Know a girl curious about STEM, coding, or robotics? Share this platform with her.",
+  "Know a girl curious about STEM? Share this platform with her.",
   "Take a Course, it is completely free",
   "Spread the Word",
 ];

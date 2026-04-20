@@ -54,7 +54,7 @@ export const howItWorks = [
   {
     id: 3,
     title: "Test & Progress",
-    description: "Completely watch videos to unlock the next level",
+    description: "Watch each video in full before moving on to the next",
   },
 ];
 

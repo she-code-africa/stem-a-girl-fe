@@ -209,7 +209,7 @@ export const activities = [
     link: "/activities/game-development",
   },
   {
-    title: "Robotics (Arduino, Raspberry Pi)",
+    title: "Robotics (Arduino)",
     image: roboticsCardImg,
     description:
       "Step into the future by building and programming simple robots. Discover how software and hardware come together to solve real-world problems.",
@@ -334,7 +334,7 @@ export const successStoriesSlides = [
 ];
 
 export const getInvolvedBulletPoints = [
-  "Know a girl curious about tech, coding, or robotics? Share this platform with her.",
+  "Know a girl curious about STEM, coding, or robotics? Share this platform with her.",
   "Take a Course, it is completely free",
   "Spread the Word",
 ];
@@ -376,12 +376,12 @@ export const stemClubActivitiesCards = [
 
 export const stats = [
   {
-    title: "Girls reached across 8 Nigerian States",
+    title: "Girls reached across 8 Nigerian cities",
     stat: "3503+",
   },
   {
     title: "STEM clubs launched for continued learning.",
-    stat: "7",
+    stat: "5",
   },
   {
     title: "Students trained in workshops on Coding & Robotics ",

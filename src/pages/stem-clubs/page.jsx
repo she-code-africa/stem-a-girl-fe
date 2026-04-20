@@ -16,7 +16,7 @@ const StemClubs = () => {
             Empowering Young Minds: <br /> She Code Africa STEM Club
           </h1>
           <p className="text-center md:w-[90%] mx-auto text-base md:text-xl lg:text-2xl md:leading-8 text-[#FEFEFE] font-medium">
-            She Code Africa's STEM Club tackles the underrepresentation of women
+            She Code Africa's STEM Club tackles the underrepresentation of girls
             in STEM fields. By bringing engaging programs directly to schools,
             they spark curiosity and equip girls with the skills and confidence
             to thrive.

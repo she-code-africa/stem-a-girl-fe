@@ -42,7 +42,7 @@ const OutreachPage = () => {
           </h1>
           <p className="md:w-[70%] mx-auto text-base md:text-2xl md:leading-8 text-[#FEFEFE] font-medium">
             The STEM-A-Girl Initiative has successfully impacted over 3,000
-            girls across multiple states in Nigeria, introducing young African
+            girls across multiple Cities in Nigeria, introducing young African
             girls to the exciting world of STEM education.
           </p>
         </div>

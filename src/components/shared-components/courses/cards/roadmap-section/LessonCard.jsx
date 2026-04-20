@@ -35,14 +35,6 @@ const LessonCard = ({
     <>
       <section className="mt-4 w-full border border-[#E5E7EB] shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0px_rgba(0,0,0,0.1)] p-5 md:p-[26px] rounded-[14px] ">
         <div className={`w-full opacity-100 grayscale-0 `}>
-          {/* {(lesson.completed || lesson.status === "completed") && (
-            <div className="w-full flex justify-end md:hidden">
-              <span className="bg-[#E5E7EB] inline-flex w-auto rounded-full items-center justify-center py-[5px] px-2.5 text-customGrey font-semibold text-xs font-inter">
-                Watched
-              </span>
-            </div>
-          )} */}
-
           <div
             className={`w-full flex md:mt-0 mt-3 flex-col-reverse md:flex-row md:items-center  gap-5 `}
           >
@@ -78,13 +70,6 @@ const LessonCard = ({
                 </p>
               </article>
             </div>
-            {/* {(lesson.completed || lesson.status === "completed") && (
-              <div className="w-auto md:flex justify-end hidden">
-                <span className="bg-[#E5E7EB] inline-flex w-auto rounded-full items-center justify-center py-[5px] px-2.5 text-customGrey font-semibold text-xs font-inter">
-                  Watched
-                </span>
-              </div>
-            )} */}
           </div>
 
           {/* practice task */}
@@ -116,7 +101,9 @@ const LessonCard = ({
                 {lesson.resources.map((resource, i) => (
                   <li className="w-auto " key={i}>
                     <a
+                      rel="noreferrer"
                       href={resource.url}
+                      target="_blank"
                       download={resource.title}
                       className={`py-2.5 px-5 rounded-[100px] overflow-hidden border border-[#E9E1E6] flex items-center capitalize justify-center font-inter text-sm ${isDisabled && "cursor-not-allowed"}`}
                       onClick={(e) => {
@@ -134,17 +121,6 @@ const LessonCard = ({
           ) : (
             ""
           )}
-
-          {/* {(lesson.completed || lesson.status === "completed") && (
-            <div className="w-full mt-4">
-              <PrimaryButton
-                className={"py-[18px] px-8 h-[55px] rounded-lg w-auto"}
-                isLink={false}
-                handleClick={handleOpenModal}
-                title="Watch again"
-              />
-            </div>
-          )} */}
         </div>
       </section>
 

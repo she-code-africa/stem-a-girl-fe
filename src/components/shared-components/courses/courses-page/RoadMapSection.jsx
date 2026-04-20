@@ -7,16 +7,7 @@ const RoadMapSection = ({courseData}) => {
 
   const [selectedLesson, setSelectedLesson] = useState(null);
 
-  // const markCompleted = (lesson) => {
-  //   setData((prev) =>
-  //     prev.map((week) => ({
-  //       ...week,
-  //       lessons: week.lessons.map((l) =>
-  //         l === lesson ? { ...l, completed: true, status: "completed" } : l,
-  //       ),
-  //     })),
-  //   );
-  // };
+
   return (
     <section className="w-full bg-[#FEFEFE]">
       <div className="w-full py-[100px]">

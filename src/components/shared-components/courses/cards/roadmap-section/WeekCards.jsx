@@ -14,13 +14,7 @@ const WeekCards = ({
   return (
     <div className="w-full pb-6 pl-0 sm:pl-[52px] border-0 relative last:border-0 sm:border-l border-l-[#FFB8E0]">
       <span className="hidden sm:inline-block h-7 w-7 rounded-full bg-white border-4 border-[#C1106A] absolute top-0 -left-[14px]"></span>
-      {/* {roadmap.completed || roadmap.status !== "locked" ? (
-        <span className="hidden sm:inline-block h-7 w-7 rounded-full bg-white border-4 border-[#C1106A] absolute top-0 -left-[14px]"></span>
-      ) : (
-        <span className="hidden sm:inline-block bg-white  absolute top-0 -left-[14px]">
-          <LockIcon />
-        </span>
-      )} */}
+   
 
       <section
         className={`w-full border border-[#E5E7EB] shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0px_rgba(0,0,0,0.1)] p-5 sm:p-[26px] rounded-[14px] `}

@@ -2,7 +2,7 @@ import React from "react";
 
 import { ApiLoading, EmptyResponse } from "../../index";
 
-// import InfiniteScroll from "react-infinite-scroll-component";
+
 import CoursePageHero from "../../shared-components/courses/courses-page/CoursePageHero";
 import RoadMapSection from "../../shared-components/courses/courses-page/RoadMapSection";
 

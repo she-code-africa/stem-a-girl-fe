@@ -15,7 +15,13 @@ const CodingPageComponent = ({ isLoadingCourse, courseData }) => {
           isLoadingCourse ? "Loading course details..." : courseData.description
         }
         duration={isLoadingCourse ? "Loading..." : courseData.estimatedHours}
-        weeks={isLoadingCourse ? "Loading..." : courseData.totalWeeks}
+        weeks={
+          isLoadingCourse
+            ? "Loading..."
+            : courseData.title.toLowerCase().includes("robotics")
+              ? courseData.totalWeeks + 2
+              : courseData.totalWeeks
+        }
         totalCompleted={
           isLoadingCourse ? "Loading..." : courseData.totalLessons
         }

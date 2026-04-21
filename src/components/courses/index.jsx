@@ -83,7 +83,11 @@ const CoursesPage = () => {
                     customClass={course.cardGradient}
                     title={course.title}
                     description={course.description}
-                    level={levels}
+                    level={
+                      course.title.toLowerCase().includes("robotics")
+                        ? levels + 2
+                        : levels
+                    }
                     duration={duration}
                     proficiency={difficulty}
                     url={`/course/${id}`}

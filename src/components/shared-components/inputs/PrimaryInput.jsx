@@ -19,16 +19,16 @@ const PrimaryInput = ({
     inputRef.current.classList.remove("border-[rgb(233,152,203)]");
   };
   return (
-    <div className="w-full md:max-w-[455px] mb-6">
+    <div className="w-full mb-6">
       <label
         htmlFor={name}
-        className="text-base capitalize font-medium text-[rgba(46,52,79,1)] "
+        className="text-base capitalize font-normal text-[#000000] font-roboto"
       >
         {label}
       </label>
 
       <div
-        className={`w-full rounded-md border border-gains h-[50px] overflow-hidden mt-2 ${
+        className={`w-full rounded-lg border border-[#000000] h-[48px] overflow-hidden mt-2 ${
           errors && "border-primaryPink"
         }`}
         ref={inputRef}

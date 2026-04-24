@@ -1,53 +1,38 @@
-import { faqImage } from "../../assets/images";
+import { useState } from "react";
 import { faqs } from "../../utils/appData";
 import Accordion from "../accordion";
-import { Link } from "react-router-dom";
-import { FaAngleRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
+
+const PREVIEW_COUNT = 5;
 
 const FAQ = () => {
-  return (
-    <section className="bg-[#F8F8F8] py-6 my-14" id="faq">
-      <div className="py-8">
-        <div className="bg-[#F8F8F8] py-16">
-          <div className="w-[90%] max-w-[1280px] mx-auto grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-4">
-            <div className="space-y-10 xl:w-10/12">
-              <h2 className="text-[28px] leading-10 md:text-3xl lg:text-[44px] lg:leading-[68px]">
-                <span className="font-bold">
-                  {" "}
-                  Curious about our STEM Initiative?{" "}
-                </span>
-                Get informed and empowered with our FAQs
-              </h2>
-              <img
-                src={faqImage}
-                alt="girl-child"
-                className="rounded-2xl h-60 w-full md:w-[420px] object-cover"
-              />
-            </div>
-            <div className="space-y-3 lg:space-y-6">
-              {faqs.map(({ title, content, list }, i) => (
-                <Accordion
-                  title={title}
-                  content={content}
-                  key={i}
-                  list={list}
-                />
-              ))}
+  const [showAll, setShowAll] = useState(false);
+  const visibleFaqs = showAll ? faqs : faqs.slice(0, PREVIEW_COUNT);
 
-              <div className="flex justify-end">
-                <Link
-                  to="https://shecodeafrica.org/faq"
-                  className="text-white capitalize w-full max-w-[176px] h-[43px] rounded-[30px] text-sm flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-transparent hover:text-primaryPink transition-all gap-2"
-                >
-                  see more{" "}
-                  <span className="text-sm flex items-center justify-center w-[24px] h-[24px] rounded-[50%] bg-white text-primaryPink">
-                    <FaAngleRight />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
+  return (
+    <section className="w-full py-16 md:py-20 bg-[#FFB8E0]" id="faq">
+      <div className="w-[90%] max-w-[700px] mx-auto flex flex-col items-center gap-8">
+        <div className="text-center">
+          <h2 className="text-4xl md:text-6xl font-semibold text-primaryPink">FAQs</h2>
+          <p className="text-black text-base font-medium md:text-2xl mt-2">
+            Curious about our STEM Initiative? We've got answers!
+          </p>
         </div>
+
+        <div className="w-full flex flex-col gap-4">
+          {visibleFaqs.map(({ title, content, list }, i) => (
+            <Accordion title={title} content={content} key={i} list={list} />
+          ))}
+        </div>
+
+        {!showAll && (
+          <button
+            onClick={() => setShowAll(true)}
+            className="flex items-center gap-2 text-primaryPink text-base md:text-2xl font-semibold hover:opacity-80 transition-opacity"
+          >
+            View all questions <FaArrowRight />
+          </button>
+        )}
       </div>
     </section>
   );

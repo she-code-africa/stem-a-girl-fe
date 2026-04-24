@@ -7,9 +7,16 @@ import { BrowserRouter as Router } from "react-router-dom";
 import ReactGA from "react-ga4";
 
 // Initialize Google Analytics
-ReactGA.initialize(process.env.REACT_APP_G_TAG_ID);
-
-
+// ReactGA.initialize(process.env.REACT_APP_G_TAG_ID);
+const gaId = process.env.REACT_APP_G_TAG_ID;
+if (gaId) {
+  ReactGA.initialize(gaId);
+  ReactGA.send({
+    hitType: "pageview",
+    page: window.location.pathname,
+    title: "App-views",
+  });
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -25,7 +32,7 @@ root.render(
     <Router>
       <App />
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

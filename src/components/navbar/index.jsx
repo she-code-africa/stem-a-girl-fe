@@ -1,19 +1,65 @@
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
-import { useState } from "react";
-import { navigationMenu } from "../../utils/appData";
+import { useRef, useState, useEffect } from "react";
+
 import MenuLinks from "./MenuLinks";
+import { useDynamicCourseNav } from "../../utils/helper";
 
 const NavigationBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(null);
+  const { courseDropdown, isLoading } = useDynamicCourseNav();
+  const navigationMenu = [
+    {
+      pathname: "Courses",
+      path: "/courses",
+      isDropdown: true,
+      dropdownMenu: isLoading ? [] : courseDropdown,
+    },
+    {
+      pathname: "STEM Club",
+      path: "/stem-clubs",
+      isDropdown: false,
+      dropdownMenu: [],
+    },
+    {
+      pathname: "Outreach",
+      path: "/outreach",
+      isDropdown: false,
+      dropdownMenu: [],
+    },
+    {
+      pathname: "Contact us",
+      path: "/contact-us",
+      isDropdown: false,
+      dropdownMenu: [],
+    },
+  ];
+
+  const navRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setShowDropdown(null); // ✅ close dropdown
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <nav className="fixed top-0 right-0 left-0 bg-white py-5 drop-shadow-md text-sealBrown font-mulish z-[2]">
+    <nav
+      ref={navRef}
+      className="fixed top-0 right-0 left-0 bg-white py-5 text-sealBrown font-mulish z-[20] font-figtree"
+    >
       <section className="w-[90%] max-w-[1280px] mx-auto flex gap-8 items-center ">
         <div className="flex justify-between w-full lg:w-fit ">
-          <figure className="w-[70px] h-[70px]">
+          <figure className="w-[210px] h-[70px]">
             <Link to="/" className="w-full h-full logo block"></Link>
           </figure>
 
@@ -39,15 +85,16 @@ const NavigationBar = () => {
                 menuItem={menu}
                 isOpen={showDropdown === i}
                 onToggle={() => setShowDropdown(showDropdown === i ? null : i)}
+                closeDropdown={() => setShowDropdown(null)}
               />
             ))}
           </ul>
           <div className="flex w-[90%] max-w-[1280px] mx-auto  lg:max-w-[200px]">
             <Link
-              to="/contact-us"
-              className="text-white capitalize w-full max-w-[136px] h-[45px] rounded-[30px] text-sm flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-transparent hover:text-primaryPink transition-all"
+              to="/courses"
+              className="text-white capitalize w-full max-w-[165px] h-[55px] rounded-lg flex items-center justify-center bg-primaryPink border-2 border-primaryPink hover:bg-[#5C0335] hover:border-[#5C0335] transition-all font-figtree text-base"
             >
-              contact us
+              Start Learning
             </Link>
           </div>
         </div>

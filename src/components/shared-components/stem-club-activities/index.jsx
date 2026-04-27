@@ -18,6 +18,7 @@ const StemClubActivities = () => {
                   src={activity.image}
                   alt={activity.title}
                   className="w-full h-full object-cover rounded-xl"
+                  loading="lazy"
                 />
               </div>
               <div className="pt-5 flex flex-col gap-1">

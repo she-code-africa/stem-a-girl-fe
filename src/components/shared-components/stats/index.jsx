@@ -9,6 +9,7 @@ const Stats = () => {
         src={ourImpactBg}
         alt=""
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        loading="lazy"
       />
 
       <div className="relative w-[90%] max-w-[1280px] mx-auto">

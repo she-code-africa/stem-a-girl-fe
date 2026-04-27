@@ -25,6 +25,7 @@ const SuccessStories = () => {
             src={slide.image}
             alt="Success stories"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         </div>
 

@@ -79,6 +79,7 @@ const TestimonialsSlider = () => {
             src={quotes}
             alt="quotes-pic"
             className="w-full object-contain"
+            loading="lazy"
           />
         </figure>
       </div>

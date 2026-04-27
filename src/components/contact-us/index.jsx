@@ -108,6 +108,7 @@ const ContactUsComponent = () => {
                 src={contactImage}
                 alt="Contact Us"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </figure>
             <div className="w-full max-w-[613px] mx-auto xl:mx-0 xl:pt-5">

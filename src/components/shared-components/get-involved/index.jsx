@@ -44,6 +44,7 @@ const GetInvolved = () => {
                 src={getInvolvedHeroImg}
                 alt="Get involved"
                 className="w-full h-full object-cover rounded-2xl"
+                loading="lazy"
               />
             </div>
           </div>

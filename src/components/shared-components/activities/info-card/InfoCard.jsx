@@ -19,6 +19,7 @@ const InfoCard = ({
           src={cardImage}
           alt="card-pic"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </figure>
 

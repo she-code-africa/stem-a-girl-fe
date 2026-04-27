@@ -6,13 +6,14 @@ import { ourImpactBg, getInvolvedBg } from "../../assets/images";
 import { FaCalendarAlt } from "react-icons/fa";
 import { getOutreach } from "../../services/queries";
 import Calendar from "../../components/shared-components/icons/Calendar";
+import ApiLoading from "../../components/loaders/ApiLoading";
 
 const CARDS_PER_PAGE = 4;
 
 const OutreachPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const { data: outreachData } = useQuery({
+  const { data: outreachData, isLoading: isOutreachLoading } = useQuery({
     queryKey: ["outreach"],
     queryFn: getOutreach,
   });
@@ -60,6 +61,7 @@ const OutreachPage = () => {
             Our Footprints Across Multiple States
           </h2>
 
+          {isOutreachLoading && <ApiLoading variant="two-column" />}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-[960px] mx-auto place-items-center">
             {visibleStates.map((item, idx) => (
               <div

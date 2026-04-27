@@ -8,6 +8,7 @@ const ViewStemClubs = () => {
         src={ourImpactBg}
         alt=""
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        loading="lazy"
       />
       <div className="relative w-[90%] max-w-[1256px] mx-auto">
         <h2 className="text-center text-primaryPink text-3xl md:text-5xl lg:text-[64px] font-semibold mb-10 md:mb-14">

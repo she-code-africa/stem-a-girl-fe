@@ -5,7 +5,7 @@ const ActivitiesSection = () => {
   const ClubActivity = ({ title, img, description }) => {
     return (
       <div className="rounded-2xl md:max-w-[335px] w-full px-4 py-4 md:px-6 md:py-6 first:bg-[#F0F5FF] [&:nth-child(2)]:bg-[#FFF7FC] last:bg-[#F5F6F7]">
-        <img src={img} alt="" />
+        <img src={img} alt="" loading="lazy" />
         <div className="space-y-2 text-[#210D15]">
           <p className="font-medium text-lg md:text-xl md:leading-[30px]">
             {title}

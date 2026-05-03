@@ -1,5 +1,5 @@
 import {
-  homePageHeroImage,
+  // homePageHeroImage,
   pixelatedVideoGameIcon,
   pixelatedStarIcon,
   pixelatedPlayGameIcon,
@@ -9,10 +9,12 @@ const Header = () => {
   return (
     <div className="bg-[#FFB8E0] relative">
       <div className=" w-[90%] max-w-[1280px] flex py-6 md:py-16 container mx-auto max-md:flex-col justify-between xl:px-4">
-        <div className="flex-1 min-w-0 max-md:w-full space-y-2 lg:pr-6">
+        <article className="flex-1 min-w-0 max-md:w-full space-y-2 lg:pr-6">
           <img
             src={pixelatedStarIcon}
-            alt=""
+            alt="star icon"
+            fetchPriority="high"
+            loading="eager"
             className="w-[8vw] max-w-[77px] min-w-[40px]"
           />
           <div className="flex">
@@ -25,17 +27,22 @@ const Header = () => {
             Inspiring and equipping African girls to explore and pursue
             interests in STEM through hands-on learning and club activities.
           </p>
-        </div>
-        <div className="relative max-md:hidden">
+        </article>
+        <div className="relative flex justify-end items-center max-md:hidden">
           <img
             src={pixelatedVideoGameIcon}
-            alt=""
+            alt="video game icon"
+            fetchPriority="high"
+            loading="eager"
             className="absolute -top-[3.2rem] right-[4.2rem] w-[8vw] max-w-[120px] min-w-[60px]"
           />
+
           <img
-            src={homePageHeroImage}
-            alt=""
-            className="w-full max-h-[70vh] object-contain"
+            src={"/homepage-hero-image.webp"}
+            alt="hero"
+            fetchPriority="high"
+            loading="eager"
+            className=" max-h-[70vh] w-[450px] object-contain"
           />
         </div>
       </div>

@@ -138,23 +138,7 @@ export const activities = [
   },
 ];
 
-export const codingHeroSubContent = [
-  "New to coding? Our beginner's guide will help you get started",
-  "Need inspiration? Browse our STEM club creations",
-  "Stuck on a project? Ask our experts and mentors for support (Add form for enquiries)",
-];
 
-export const gameDevelopmentHeroSubContent = [
-  "New to game development? Our beginner's guide will help you get started",
-  "Need inspiration? Browse our STEM club creations",
-  "Stuck on a project? Ask our experts and mentors for support",
-];
-
-export const roboticsHeroSubContent = [
-  "New to robotics? Our beginner's guide will help you get started",
-  "Need inspiration? Browse our STEM club creations",
-  "Stuck on a project? Ask our experts and mentors for support",
-];
 
 export const faqs = [
   {

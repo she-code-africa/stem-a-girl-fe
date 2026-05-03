@@ -1,4 +1,3 @@
-
 import {
   codingBootcampImage,
   codingFromScratchCardImg,
@@ -23,9 +22,6 @@ import {
   outreachKaduna,
 } from "../assets/images";
 import { FaCode, FaGamepad, FaRobot } from "react-icons/fa6";
-
-
-
 
 export const navigationMenu = [
   {

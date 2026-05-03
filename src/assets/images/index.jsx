@@ -1,5 +1,6 @@
 // import scaLogo from "./SCA-LOGO.png";
 import scaLogo from "./new-logo/new-logo-header.png";
+// 
 import cpu from "./activities/Cpu.png";
 import codingHeroImage from "./activities/codingHeroImage.png";
 import flower from "./activities/Group.png";
@@ -18,10 +19,6 @@ import clubStudentsImage from "./club-students.png";
 import floralWhiteImage from "./floral-white.svg";
 import starImage from "./star-image.svg";
 
-import badge from "./badge.png";
-import stemClubStudents1 from "./stem-club/stem-club-students-1.jpg";
-import stemClubStudents2 from "./stem-club/stem-club-students-2.jpg";
-import stemClubStudents3 from "./stem-club/stem-club-students-3.jpg";
 import stemGirl from "./stem-club/stem-girl.jpg";
 import outreachRivers from "./outreach/outreach-rivers.png";
 import outreachOsun from "./outreach/outreach-osun.png";
@@ -34,6 +31,7 @@ import outreachKaduna from "./outreach/outreach-kaduna.png";
 import posterImage from "./posterImage.jpg";
 
 // in use
+import badge from "./badge.png";
 import getInvolvedHeroImg from "./homepage/get-involved-hero-img.jpg";
 import getInvolvedBg from "./homepage/get-involved-bg.jpg";
 // import homePageHeroImage from "./homepage-hero-image.webp";
@@ -47,6 +45,9 @@ import pixelatedStarIcon from "./pixelated-star-icon.png";
 import pixelatedPlayGameIcon from "./pixelated-play-game-icon.png";
 import successStoryImg1 from "./homepage/success-story-img-1.png";
 import successStoryImg2 from "./homepage/success-story-img-2.png";
+import stemClubStudents1 from "./stem-club/stem-club-students-1.jpg";
+import stemClubStudents2 from "./stem-club/stem-club-students-2.jpg";
+import stemClubStudents3 from "./stem-club/stem-club-students-3.jpg";
 
 export {
   scaLogo,

@@ -1,25 +1,15 @@
 import {
-  codingBootcampImage,
+
   codingFromScratchCardImg,
   gameDevCardImg,
-  girlChild,
-  interactiveWorkshopImage,
+
   roboticsCardImg,
-  stemProjectsImage,
-  upcomingEventPhoto,
   successStoryImg1,
   successStoryImg2,
   stemClubStudents1,
   stemClubStudents2,
   stemClubStudents3,
-  outreachRivers,
-  outreachOsun,
-  outreachOgun,
-  outreachLagos,
-  outreachFCT,
-  outreachDelta,
-  outreachAbia,
-  outreachKaduna,
+
 } from "../assets/images";
 import { FaCode, FaGamepad, FaRobot } from "react-icons/fa6";
 
@@ -122,72 +112,7 @@ export const communityLinks = [
   },
 ];
 
-export const upcomingEventsSlider = [
-  {
-    picture: upcomingEventPhoto,
-    cardHeading: "Stem Club workshop",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 1,
-  },
-  {
-    picture: upcomingEventPhoto,
-    cardHeading: "Stem Club workshop",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 2,
-  },
-  {
-    picture: upcomingEventPhoto,
-    cardHeading: "Stem Club workshop",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 3,
-  },
-  {
-    picture: upcomingEventPhoto,
-    cardHeading: "Stem Club workshop",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 4,
-  },
 
-  {
-    picture: upcomingEventPhoto,
-    cardHeading: "Stem Club workshop",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 5,
-  },
-
-  {
-    picture: upcomingEventPhoto,
-    cardHeading: "Stem Club workshop",
-    cardParagraph:
-      "Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.",
-    index: 6,
-  },
-];
-
-export const clubActivities = [
-  {
-    title: "Interactive Workshops",
-    description: "Learn basic programming languages and build your own robots!",
-    img: interactiveWorkshopImage,
-  },
-  {
-    title: "Routine Club Meetups",
-    description:
-      "Our STEM Club meet-ups are designed to be engaging, educational, and fun. Each meeting offers a variety of activities to spark your curiosity and deepen your understanding of STEM.",
-    img: stemProjectsImage,
-  },
-  {
-    title: "Group Discussions and Brainstorming",
-    description:
-      "Plan projects, brainstorm ideas, and solve problems with your peers.",
-    img: codingBootcampImage,
-  },
-];
 
 export const activities = [
   {
@@ -385,117 +310,7 @@ export const stats = [
   },
 ];
 
-export const impactStories = [
-  {
-    image: girlChild,
-    name: "Mary Ademola",
-    school: "FGGC Abuja",
-    story:
-      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
-  },
-  {
-    image: girlChild,
-    name: "Mary Ademola",
-    school: "FGGC Abuja",
-    story:
-      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
-  },
-  {
-    image: girlChild,
-    name: "Mary Ademola",
-    school: "FGGC Abuja",
-    story:
-      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
-  },
-  {
-    image: girlChild,
-    name: "Mary Ademola",
-    school: "FGGC Abuja",
-    story:
-      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
-  },
-  {
-    image: girlChild,
-    name: "Mary Ademola",
-    school: "FGGC Abuja",
-    story:
-      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
-  },
-  {
-    image: girlChild,
-    name: "Mary Ademola",
-    school: "FGGC Abuja",
-    story:
-      " Before joining the STEM Club, I never thought I could understand or enjoy engineering. The workshops and mentorship I received changed my perspective entirely. Now, I'm planning to pursue a degree in mechanical engineering and dream of creating innovative solutions to everyday problems.",
-  },
-];
 
-export const outreachStates = [
-  {
-    state: "Ogun State",
-    description: "Some Text here",
-    date: "August, 2025",
-    image: outreachOgun,
-    driveLink:
-      "https://drive.google.com/drive/folders/1ZU6kN-PhnXWB4cTL2VlDUSxgFYu6_UDn?usp=drive_link",
-  },
-  {
-    state: "Lagos State",
-    description: "Some Text here",
-    date: "March 2024",
-    image: outreachLagos,
-    driveLink:
-      "https://drive.google.com/drive/folders/1CKfQkfU-T1j2MKW4g5Jt8qUj4D3p2u5h?usp=sharing",
-  },
-  {
-    state: "Osun State",
-    description: "Some Text here",
-    date: "February 2023",
-    image: outreachOsun,
-    driveLink:
-      "https://drive.google.com/drive/folders/1klJJnNMBGs9PcD99bV6cUnb4dd6FFCMX?usp=sharing",
-  },
-  {
-    state: "FCT",
-    description: "Some Text here",
-    date: "15/01/2024",
-    image: outreachFCT,
-    driveLink:
-      "https://drive.google.com/drive/folders/1TjS2GWvcwwFt61Bbka0tLiJRWsx5Nzua?usp=sharing",
-  },
-  {
-    state: "Rivers State",
-    description: "Some Text here",
-    date: "February 2025",
-    image: outreachRivers,
-    driveLink:
-      "https://drive.google.com/drive/folders/1KV5y-6iTqbMyuXn8NSAbakmc4KQn_8rI?usp=sharing",
-  },
-  {
-    state: "Delta State",
-    description: "Some Text here",
-    date: "April 2025",
-    image: outreachDelta,
-    driveLink:
-      "https://drive.google.com/drive/folders/1p4PodzxctLzbSEpVwKRfdUs9RR0Ws2kY?usp=sharing",
-  },
-  {
-    state: "Abia State",
-    description: "Some Text here",
-    date: "May 2025",
-    image: outreachAbia,
-    driveLink:
-      "https://drive.google.com/drive/folders/12gBpoSJt0-VZq7MfGagJhbbqBn7c17CT?usp=sharing",
-  },
-  {
-    state: "Kaduna State",
-    description: "Some Text here",
-    date: "May 2025",
-    image: outreachKaduna,
-    driveLink:
-      "https://drive.google.com/drive/folders/1nW033SAF7oVt-xPcr1lR9Z9aUXfCTc0b",
-  },
-];
 
 export const outreachApproach = [
   {

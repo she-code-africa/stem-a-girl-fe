@@ -1,36 +1,7 @@
 // import scaLogo from "./SCA-LOGO.png";
 import scaLogo from "./new-logo/new-logo-header.png";
-// 
-import cpu from "./activities/Cpu.png";
-import codingHeroImage from "./activities/codingHeroImage.png";
-import flower from "./activities/Group.png";
-import upcomingEventPhoto from "./activities/eventsPhoto.png";
-import girlChild from "./activities/girlChild.png";
-import quotes from "./activities/Quotes.png";
-import roboticsHeroImage from "./activities/roboticHeroImage.png";
-import gameDevHeroImage from "./activities/gameDevHeroImage.png";
-import skillsVector from "./skills-vector.svg";
-import interactiveWorkshopImage from "./interactive-workshop.svg";
-import stemProjectsImage from "./stem-projects.svg";
-import codingBootcampImage from "./coding-bootcamp.svg";
-
-import studentsImage from "./students.png";
-import clubStudentsImage from "./club-students.png";
-import floralWhiteImage from "./floral-white.svg";
 import starImage from "./star-image.svg";
-
 import stemGirl from "./stem-club/stem-girl.jpg";
-import outreachRivers from "./outreach/outreach-rivers.png";
-import outreachOsun from "./outreach/outreach-osun.png";
-import outreachOgun from "./outreach/outreach-ogun.png";
-import outreachLagos from "./outreach/outreach-lagos.png";
-import outreachFCT from "./outreach/outreach-fct.png";
-import outreachDelta from "./outreach/outreach-delta.png";
-import outreachAbia from "./outreach/outreach-abia.png";
-import outreachKaduna from "./outreach/outreach-kaduna.png";
-import posterImage from "./posterImage.jpg";
-
-// in use
 import badge from "./badge.png";
 import getInvolvedHeroImg from "./homepage/get-involved-hero-img.jpg";
 import getInvolvedBg from "./homepage/get-involved-bg.jpg";
@@ -51,22 +22,7 @@ import stemClubStudents3 from "./stem-club/stem-club-students-3.jpg";
 
 export {
   scaLogo,
-  cpu,
-  codingHeroImage,
-  flower,
-  upcomingEventPhoto,
-  girlChild,
-  quotes,
-  roboticsHeroImage,
-  gameDevHeroImage,
-  skillsVector,
-  interactiveWorkshopImage,
-  stemProjectsImage,
-  codingBootcampImage,
   // homePageHeroImage,
-  studentsImage,
-  clubStudentsImage,
-  floralWhiteImage,
   starImage,
   pixelatedVideoGameIcon,
   pixelatedStarIcon,
@@ -85,13 +41,4 @@ export {
   stemClubStudents2,
   stemClubStudents3,
   stemGirl,
-  outreachAbia,
-  outreachDelta,
-  outreachFCT,
-  outreachKaduna,
-  outreachLagos,
-  outreachOgun,
-  outreachOsun,
-  outreachRivers,
-  posterImage,
 };

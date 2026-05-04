@@ -13,7 +13,7 @@ const ReadyToCode = () => {
       className="my-3 md:my-20 bg-lavender pt-5 pb-2 relative"
       id="zero-tech-skills"
     >
-      <img src={starImage} alt="" className="max-md:hidden left-28 top-16 absolute" />
+      <img src={starImage} alt="" className="max-md:hidden left-28 top-16 absolute" loading="lazy" />
       <div className="w-[90%] max-w-[1280px] mx-auto">
         <h4 className="font-medium text-2xl md:text-3xl lg:text-4xl leading-normal md:leading-normal lg:leading-normal text-center">
           <span className="text-primaryPink font-bold ">Ready to Code?</span>
@@ -37,7 +37,7 @@ const ReadyToCode = () => {
           </Link>
         </div>
       </div>
-      <img src={starImage} alt="" className="max-md:hidden right-64 bottom-16 absolute" />
+      <img src={starImage} alt="" className="max-md:hidden right-64 bottom-16 absolute" loading="lazy" />
 
     </section>
   );

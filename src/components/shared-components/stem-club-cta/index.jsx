@@ -34,6 +34,7 @@ const StemClubCTA = () => {
               src={stemGirl}
               alt="Students at a STEM Club"
               className="w-full h-full object-cover rounded-3xl"
+              loading="lazy"
             />
           </div>
         </div>

@@ -36,7 +36,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#FEFEFE] w-full font-figtree">
       <div className="w-[90%] mx-auto max-w-[1280px] lg:flex lg:items-start lg:justify-between pt-10 pb-8 md:pt-16 space-y-10 lg:space-y-0">
-        <figure className="w-full max-w-[130px] h-[162px]">
+        <figure className=" w-[130px] h-[162px]">
           <img
             src={scaLogo}
             alt="SCA-LOGO"
@@ -200,7 +200,7 @@ const Footer = () => {
           </figure>
         </section>
         {/*  */}
-        <figure className="max-w-[141px] w-full h-[141px] hidden md:block">
+        <figure className="w-[141px] h-[141px] hidden md:block">
           <img src={badge} alt="Badge" />
         </figure>
       </div>

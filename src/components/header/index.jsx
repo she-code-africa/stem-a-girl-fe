@@ -19,7 +19,7 @@ const Header = () => {
           />
           <div className="flex">
             <h1 className="text-[#B70569] text-[40px] leading-[50px] md:text-[48px] md:leading-[50px] lg:text-[78px] lg:leading-[70px] xl:text-[120px] xl:leading-[109px] font-semibold">
-              Empowering Girls to <br />
+              Equipping Girls to <br />
               Shape Tomorrow’s <br /> STEM Innovations
             </h1>
           </div>

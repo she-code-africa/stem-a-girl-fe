@@ -6,8 +6,8 @@ import {
   StemClubs,
   ContactUsPage,
   CodePlaygroundPage,
-   Courses,
-  CoursePage
+  Courses,
+  CoursePage,
 } from "./pages";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
@@ -17,6 +17,7 @@ import { useEffect } from "react";
 import { Suspense } from "react";
 import PageLoader from "./components/loaders/PageLoader";
 import CreateAccount from "./pages/create-account";
+import VerifyEmail from "./pages/verify-email";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="/outreach" element={<OutreachPage />} />
           <Route path="/course/:id" element={<CoursePage />} />
           <Route path="/register" element={<CreateAccount />} />
+          <Route path="/verify-email" element={<VerifyEmail />} />
 
           <Route path="/courses" element={<Courses />} />
           <Route path="/stem-clubs" element={<StemClubs />} />

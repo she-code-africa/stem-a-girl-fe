@@ -2,10 +2,12 @@ import { useState } from "react";
 import ArrowLeft from "../../../shared-components/icons/ArrowLeft";
 import CustomInput from "../../../shared-components/inputs/CustomInput";
 import CustomPasswordInput from "../../../shared-components/inputs/CustomPassword";
+import { useNavigate } from "react-router-dom";
 
 const MIN_PASSWORD_LENGTH = 8;
 
 const AdultOnboarding = ({ formValues, setFormValues, goBack, onNext }) => {
+  const navigate = useNavigate();
   const [userPassword, setUserPassword] = useState(false);
 
   const handleChange = (field) => (e) => {
@@ -39,6 +41,11 @@ const AdultOnboarding = ({ formValues, setFormValues, goBack, onNext }) => {
     else goBack();
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/verify-email");
+  };
+
   return (
     <div className="w-full">
       <button
@@ -60,7 +67,7 @@ const AdultOnboarding = ({ formValues, setFormValues, goBack, onNext }) => {
           : "Sign up to begin your journey."}
       </p>
 
-      <form className="mt-12 w-full" onSubmit={(e) => e.preventDefault()}>
+      <form className="mt-12 w-full" onSubmit={handleSubmit}>
         {userPassword ? (
           <>
             <div className="w-full space-y-3">
@@ -95,7 +102,7 @@ const AdultOnboarding = ({ formValues, setFormValues, goBack, onNext }) => {
 
             <div className="mt-10 w-full space-y-4">
               <button
-                className="cursor-pointer w-full bg-primaryPink hover:bg-primaryBtnHover duration-300 transition-colors rounded-[30px] h-[55px] disabled:opacity-50 disabled:cursor-not-allowed text-base text-white font-figtree flex items-center justify-center"
+                className="cursor-pointer w-full bg-primaryPink hover:bg-primaryBtnHover duration-300 transition-colors rounded-[30px] h-[55px] disabled:bg-[#FDC0E3] disabled:text-[#434343] disabled:cursor-not-allowed text-base text-white font-figtree flex items-center justify-center"
                 type="button"
                 disabled={isPasswordDisabled}
                 onClick={onNext}

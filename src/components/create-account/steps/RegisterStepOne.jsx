@@ -108,7 +108,7 @@ const RegisterStepOne = ({
                     </section>
                   </div>
                   <button
-                    className="cursor-pointer mt-10 w-full bg-primaryPink hover:bg-primaryBtnHover duration-300 transition-colors rounded-[30px] h-[55px] disabled:opacity-50 disabled:cursor-not-allowed text-base text-white font-figtree flex items-center justify-center"
+                    className="cursor-pointer mt-10 w-full bg-primaryPink hover:bg-primaryBtnHover duration-300 transition-colors rounded-[30px] h-[55px] disabled:bg-[#FDC0E3] disabled:text-[#434343] disabled:cursor-not-allowed text-base text-white font-figtree flex items-center justify-center"
                     type="button"
                     disabled={isDisabled}
                     onClick={next}

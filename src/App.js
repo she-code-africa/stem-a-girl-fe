@@ -18,6 +18,7 @@ import { Suspense } from "react";
 import PageLoader from "./components/loaders/PageLoader";
 import CreateAccount from "./pages/create-account";
 import VerifyEmail from "./pages/verify-email";
+import ConsentPageComponent from "./pages/consent-page";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ function App() {
           <Route path="/course/:id" element={<CoursePage />} />
           <Route path="/register" element={<CreateAccount />} />
           <Route path="/verify-email" element={<VerifyEmail />} />
+          <Route path="/consent" element={<ConsentPageComponent />} />
 
           <Route path="/courses" element={<Courses />} />
           <Route path="/stem-clubs" element={<StemClubs />} />

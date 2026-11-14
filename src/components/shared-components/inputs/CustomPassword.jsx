@@ -21,7 +21,7 @@ const CustomPasswordInput = ({
       )}
 
       <div
-        className={`w-full h-[52px] mt-2 rounded-lg border bg-white flex items-center duration-200 transition-colors ${
+        className={`w-full h-[52px] overflow-hidden mt-2 rounded-lg border bg-white flex items-center duration-200 transition-colors ${
           errors
             ? "border-primaryPink"
             : "border-[#DDE6F0] focus-within:border-[rgb(233,152,203)]"

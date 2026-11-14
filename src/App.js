@@ -19,6 +19,7 @@ import PageLoader from "./components/loaders/PageLoader";
 import CreateAccount from "./pages/create-account";
 import VerifyEmail from "./pages/verify-email";
 import ConsentPageComponent from "./pages/consent-page";
+import SignInPage from "./pages/sign-in";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ function App() {
           <Route path="/outreach" element={<OutreachPage />} />
           <Route path="/course/:id" element={<CoursePage />} />
           <Route path="/register" element={<CreateAccount />} />
+          <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/verify-email" element={<VerifyEmail />} />
           <Route path="/consent" element={<ConsentPageComponent />} />
 

@@ -119,7 +119,7 @@ const RegisterStepOne = ({
 
                 <p className="mt-4 w-full text-center font-semibold text-base font-figtree text-[#333333]">
                   Already have an account?{" "}
-                  <a href="/" className="text-primaryPink">
+                  <a href="/sign-in" className="text-primaryPink">
                     Sign in
                   </a>
                 </p>

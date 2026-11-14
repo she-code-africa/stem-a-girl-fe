@@ -7,6 +7,7 @@ import RegisterStepOne from "./steps/RegisterStepOne";
 const CreateAccountPage = () => {
   const location = useLocation();
   const [continueToSignUp, setContinueToSignUp] = useState(false);
+  const [steps, setSteps] = useState(0);
 
   const courseName =
     location.state?.courseName ||

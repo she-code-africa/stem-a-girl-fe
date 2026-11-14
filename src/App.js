@@ -16,6 +16,7 @@ import { useEffect } from "react";
 
 import { Suspense } from "react";
 import PageLoader from "./components/loaders/PageLoader";
+import CreateAccount from "./pages/create-account";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/outreach" element={<OutreachPage />} />
           <Route path="/course/:id" element={<CoursePage />} />
+          <Route path="/register" element={<CreateAccount />} />
 
           <Route path="/courses" element={<Courses />} />
           <Route path="/stem-clubs" element={<StemClubs />} />

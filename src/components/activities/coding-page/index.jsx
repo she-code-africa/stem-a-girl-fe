@@ -2,7 +2,6 @@ import React from "react";
 
 import { ApiLoading, EmptyResponse } from "../../index";
 
-
 import CoursePageHero from "../../shared-components/courses/courses-page/CoursePageHero";
 import RoadMapSection from "../../shared-components/courses/courses-page/RoadMapSection";
 
@@ -31,7 +30,10 @@ const CodingPageComponent = ({ isLoadingCourse, courseData }) => {
       {isLoadingCourse ? (
         <ApiLoading />
       ) : Object.keys(courseData).length > 0 ? (
-        <RoadMapSection courseData={courseData.modules} />
+        <RoadMapSection
+          courseData={courseData.modules}
+          courseName={courseData.title}
+        />
       ) : (
         <EmptyResponse text="lesson" />
       )}

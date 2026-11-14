@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import GlobalLayout from "../layouts/GlobalLayout";
 import { Link, useLocation } from "react-router-dom";
 import ArrowLeft from "../shared-components/icons/ArrowLeft";
@@ -8,6 +8,17 @@ const CreateAccountPage = () => {
   const location = useLocation();
   const [continueToSignUp, setContinueToSignUp] = useState(false);
   const [steps, setSteps] = useState(0);
+  const [formValues, setFormValues] = useState({
+    country: "",
+    month: "",
+    year: "",
+    fullName: "",
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const [isAdult, setIsAdult] = useState(false);
 
   const courseName =
     location.state?.courseName ||
@@ -18,11 +29,32 @@ const CreateAccountPage = () => {
         return null;
       }
     })();
+
+  // CHECKS IF THE NEXT SCREEN TO SHOW IS ADULT OF UNDER 18
+  const handleShowNextScreen = () => {
+    const currentYear = new Date().getFullYear();
+    if (currentYear - formValues.year > 17) {
+      setIsAdult(true);
+    } else {
+      setIsAdult(false);
+    }
+
+    setSteps(2);
+  };
+
   return (
     <>
       <GlobalLayout>
         {continueToSignUp ? (
-          <RegisterStepOne setContinueToSignUp={setContinueToSignUp} />
+          <RegisterStepOne
+            setContinueToSignUp={setContinueToSignUp}
+            formValues={formValues}
+            setFormValues={setFormValues}
+            setSteps={setSteps}
+            next={handleShowNextScreen}
+            steps={steps}
+            isAdult={isAdult}
+          />
         ) : (
           <div className="w-full min-h-screen bg-[#FDF2F8] py-20 flex items-center justify-center">
             <div className="w-[90%] xl:w-full max-w-[650px] mx-auto bg-white rounded-[23.94px] px-6 py-[27px] sm:py-[54px] lg:py-[108px] sm:px-[35px] ">
@@ -43,7 +75,10 @@ const CreateAccountPage = () => {
               <div className="mt-[25px] w-full max-w-[448px] mx-auto space-y-4">
                 <button
                   className="cursor-pointer w-full bg-primaryPink hover:bg-primaryBtnHover duration-300 transition-colors rounded-[30px] h-[55px] text-base text-white font-figtree flex items-center justify-center"
-                  onClick={() => setContinueToSignUp(true)}
+                  onClick={() => {
+                    setContinueToSignUp(true);
+                    setSteps(1);
+                  }}
                 >
                   Continue
                 </button>

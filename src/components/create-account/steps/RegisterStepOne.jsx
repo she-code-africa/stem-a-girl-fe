@@ -137,8 +137,12 @@ const RegisterStepOne = ({
             )}
 
             {steps === 2 && !isAdult && (
-              <div className="w-[90%] sm:w-full max-w-[448px] mx-auto">
-                <UnderAgeOnboarding />
+              <div className="w-[90%] sm:w-full max-w-[455px] mx-auto">
+                <UnderAgeOnboarding
+                  formValues={formValues}
+                  setFormValues={setFormValues}
+                  goBack={() => setSteps(1)}
+                />
               </div>
             )}
           </section>

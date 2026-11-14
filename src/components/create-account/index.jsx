@@ -17,6 +17,7 @@ const CreateAccountPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    parentEmail: "",
   });
   const [isAdult, setIsAdult] = useState(false);
 

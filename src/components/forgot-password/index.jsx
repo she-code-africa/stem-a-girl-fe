@@ -18,8 +18,6 @@ const ForgotPassword = () => {
     setError("");
 
     try {
-      // TODO: replace with your real request, for example:
-      // await requestPasswordReset({ email: email.trim() });
       console.log("Sending reset link to:", email.trim());
 
       setLinkSent(true);
@@ -50,7 +48,7 @@ const ForgotPassword = () => {
               </h4>
 
               <p
-                className={`text-center mt-1 w-full ${!linkSent ? "max-w-[385px]" : "mt-3"} mx-auto text-lg sm:text-xl font-medium font-figtree`}
+                className={`text-center mt-3 w-full ${!linkSent ? "max-w-[385px]" : "mt-3"} mx-auto text-lg sm:text-xl font-medium font-figtree`}
               >
                 {linkSent
                   ? `We sent a reset link to ${email.trim()}`
@@ -92,7 +90,7 @@ const ForgotPassword = () => {
                     )}
 
                     <button
-                      className="cursor-pointer mt-10 w-full bg-primaryPink hover:bg-primaryBtnHover duration-300 transition-colors rounded-[30px] h-[55px] disabled:bg-[#FDC0E3] disabled:text-[#434343] disabled:cursor-not-allowed text-base text-white font-figtree flex items-center justify-center"
+                      className="cursor-pointer mt-10 w-full mx-auto max-w-[448px] bg-primaryPink hover:bg-primaryBtnHover duration-300 transition-colors rounded-[30px] h-[55px] disabled:bg-[#FDC0E3] disabled:text-[#434343] disabled:cursor-not-allowed text-base text-white font-figtree flex items-center justify-center"
                       type="submit"
                       disabled={isDisabled}
                     >

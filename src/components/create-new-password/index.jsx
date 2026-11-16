@@ -51,9 +51,9 @@ const CreateNewPassword = () => {
     <>
       <GlobalLayout>
         <div className="w-full min-h-screen bg-[#FDF2F8] py-20 flex items-center justify-center">
-          <div className="w-[90%] xl:w-full max-w-[650px] mx-auto bg-white rounded-[23.94px] px-6 py-[27px] sm:py-[54px] lg:py-[67.03px] sm:px-[57.45px]">
+          <div className="w-[90%] xl:w-full max-w-[650px] mx-auto bg-white rounded-[23.94px] px-6 py-[27px] sm:py-[54px] lg:py-[67.03px]">
             {isSuccess ? (
-              <>
+              <div className="w-full max-w-[536.2px] mx-auto">
                 <h4 className="font-extrabold font-figtree text-2xl sm:text-[32px] md:text-[40px] text-black text-center">
                   Password reset successful!
                 </h4>
@@ -70,9 +70,9 @@ const CreateNewPassword = () => {
                     Proceed to log in
                   </Link>
                 </div>
-              </>
+              </div>
             ) : (
-              <>
+              <div className="w-full max-w-[536.2px] mx-auto ">
                 <h4 className="font-extrabold font-figtree text-2xl sm:text-[32px] md:text-[40px] text-black text-center">
                   Create new password
                 </h4>
@@ -82,7 +82,7 @@ const CreateNewPassword = () => {
                 </p>
 
                 <form
-                  className="mt-[38.3px] mx-auto w-full max-w-[448px]"
+                  className="mt-[38.3px] mx-auto w-full "
                   onSubmit={handleSubmit}
                 >
                   <div className="w-full space-y-6">
@@ -130,7 +130,7 @@ const CreateNewPassword = () => {
                   )}
 
                   <button
-                    className="cursor-pointer mt-10 w-full bg-primaryPink hover:bg-primaryBtnHover duration-300 transition-colors rounded-[30px] h-[55px] disabled:bg-[#FDC0E3] disabled:text-[#434343] disabled:cursor-not-allowed text-base text-white font-figtree flex items-center justify-center"
+                    className="cursor-pointer mt-10 w-full mx-auto max-w-[448px] bg-primaryPink hover:bg-primaryBtnHover duration-300 transition-colors rounded-[30px] h-[55px] disabled:bg-[#FDC0E3] disabled:text-[#434343] disabled:cursor-not-allowed text-base text-white font-figtree flex items-center justify-center"
                     type="submit"
                     disabled={isDisabled}
                   >
@@ -145,7 +145,7 @@ const CreateNewPassword = () => {
                     Back to log in
                   </Link>
                 </form>
-              </>
+              </div>
             )}
           </div>
         </div>

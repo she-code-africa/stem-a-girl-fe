@@ -48,8 +48,6 @@ const ChangePassword = () => {
     setError("");
 
     try {
-      // TODO: replace with your real request to check the current password, e.g.
-      // await verifyOldPassword({ oldPassword });
       console.log("Verifying old password");
 
       setStep(2);
@@ -72,8 +70,6 @@ const ChangePassword = () => {
     setError("");
 
     try {
-      // TODO: replace with your real request, e.g.
-      // await changePassword({ oldPassword, newPassword });
       console.log("Changing password");
 
       setStep(3);
@@ -97,20 +93,20 @@ const ChangePassword = () => {
     <>
       <GlobalLayout>
         <div className="w-full min-h-screen bg-[#FDF2F8] py-20 flex items-center justify-center">
-          <div className="w-[90%] xl:w-full max-w-[650px] mx-auto bg-white rounded-[23.94px] px-6 py-[27px] sm:py-[54px] lg:py-[67.03px] sm:px-[57.45px]">
+          <div className="w-[90%] xl:w-full max-w-[650px] mx-auto bg-white rounded-[23.94px] px-6 py-[27px] sm:py-[54px] lg:py-[67.03px] ">
             {/* STEP 1: OLD PASSWORD */}
             {step === 1 && (
-              <>
+              <div className="w-full max-w-[536.2px] mx-auto">
                 <h4 className="font-extrabold font-figtree text-2xl sm:text-[32px] md:text-[40px] text-black text-center">
                   Change Your password
                 </h4>
 
-                <p className="text-center mt-2 w-full max-w-[385px] mx-auto text-lg sm:text-xl font-medium font-figtree text-[#333333]">
+                <p className="text-center mt-3 w-full max-w-[385px] mx-auto text-lg sm:text-xl font-medium font-figtree text-[#333333]">
                   Enter your current password to continue
                 </p>
 
                 <form
-                  className="mt-[38.3px] mx-auto w-full max-w-[448px]"
+                  className="mt-[38.3px] mx-auto w-full "
                   onSubmit={handleVerifyOld}
                 >
                   <CustomPasswordInput
@@ -132,7 +128,7 @@ const ChangePassword = () => {
                   )}
 
                   <button
-                    className={`${primaryBtnClass} mt-10`}
+                    className={`${primaryBtnClass} mt-10 max-w-[448px] mx-auto`}
                     type="submit"
                     disabled={isOldDisabled}
                   >
@@ -148,12 +144,12 @@ const ChangePassword = () => {
                     Back
                   </button>
                 </form>
-              </>
+              </div>
             )}
 
             {/* STEP 2: NEW PASSWORD */}
             {step === 2 && (
-              <>
+              <div className="w-full max-w-[536.2px] mx-auto">
                 <h4 className="font-extrabold font-figtree text-2xl sm:text-[32px] md:text-[40px] text-black text-center">
                   Change Your password
                 </h4>
@@ -163,7 +159,7 @@ const ChangePassword = () => {
                 </p>
 
                 <form
-                  className="mt-[38.3px] mx-auto w-full max-w-[448px]"
+                  className="mt-[38.3px] mx-auto w-full "
                   onSubmit={handleChangePassword}
                 >
                   <div className="w-full space-y-6">
@@ -216,7 +212,7 @@ const ChangePassword = () => {
                   )}
 
                   <button
-                    className={`${primaryBtnClass} mt-10`}
+                    className={`${primaryBtnClass} mt-10 max-w-[448px] mx-auto`}
                     type="submit"
                     disabled={isNewDisabled}
                   >
@@ -235,13 +231,13 @@ const ChangePassword = () => {
                     Back
                   </button>
                 </form>
-              </>
+              </div>
             )}
 
             {/* STEP 3: SUCCESS */}
             {step === 3 && (
-              <>
-                <h4 className="font-extrabold font-figtree text-2xl sm:text-[32px] md:text-[40px] text-black text-center">
+              <div className="w-full max-w-[536.2px] mx-auto">
+                <h4 className="font-extrabold font-figtree text-2xl sm:text-[32px] md:text-[40px] text-black text-center leading-[54px]">
                   Password changed successfully!
                 </h4>
 
@@ -254,7 +250,7 @@ const ChangePassword = () => {
                     Proceed to log in
                   </Link>
                 </div>
-              </>
+              </div>
             )}
           </div>
         </div>

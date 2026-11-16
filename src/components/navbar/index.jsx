@@ -55,7 +55,8 @@ const NavigationBar = () => {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 right-0 left-0 bg-white py-5 text-sealBrown font-mulish z-[20] font-figtree"
+      className="sticky top-0 bg-white py-5 text-sealBrown font-mulish z-[20] font-figtree"
+      // className="fixed top-0 right-0 left-0 bg-white py-5 text-sealBrown font-mulish z-[20] font-figtree"
     >
       <section className="w-[90%] max-w-[1280px] mx-auto flex gap-8 items-center ">
         <div className="flex justify-between w-full lg:w-fit ">

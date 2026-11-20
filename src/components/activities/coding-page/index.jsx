@@ -37,6 +37,8 @@ const CodingPageComponent = ({ isLoadingCourse, courseData }) => {
       ) : (
         <EmptyResponse text="lesson" />
       )}
+
+     
     </>
   );
 };

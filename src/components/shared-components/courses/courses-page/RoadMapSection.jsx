@@ -3,6 +3,7 @@ import HeadingThree from "../../typography/HeadingThree";
 import WeekCards from "../cards/roadmap-section/WeekCards";
 import { EmptyResponse } from "../../..";
 import { Link } from "react-router-dom";
+import Exclamation from "../../icons/Exclamation";
 
 const RoadMapSection = ({ courseData, courseName }) => {
   const [selectedLesson, setSelectedLesson] = useState(null);
@@ -24,7 +25,7 @@ const RoadMapSection = ({ courseData, courseName }) => {
             textColor="text-primaryPink text-center"
           />
 
-          <section className="py-7 sm:px-8 w-full">
+          <section className="py-7 sm:px-8 w-full relative">
             {courseData.length > 0 ? (
               courseData.map((roadmap, idx) => (
                 <WeekCards
@@ -39,6 +40,32 @@ const RoadMapSection = ({ courseData, courseName }) => {
               <EmptyResponse text="lesson" />
             )}
             {}
+
+            <section className="w-[90%] sm:w-full max-w-[430.73px]  rounded-[8.16px] drop-shadow-md shadow-md shadow-black/25 bg-[#FEFEFE] fixed bottom-[15%] right-[4%]">
+              <div className="w-full py-[18.83px] px-5 sm:px-[38.83px] flex flex-col gap-[18.83px] sm:items-center sm:flex-row relative">
+                <article className="w-full space-y-[6.28px] ">
+                  <p className="text-primaryPink font-bold text-base sm:text-lg md:text-xl font-figtree">
+                    7 days to deactivation
+                  </p>
+
+                  <p className="font-medium text-xs sm:text-[12.55px]">
+                    Contact your parent/guardian to give their consent for your
+                    account.
+                  </p>
+                </article>
+
+                <Link
+                  to="#"
+                  className="w-full h-[34.59px] flex items-center justify-center max-w-[111.17px] rounded-[5.02px] bg-primaryPink hover:bg-primaryBtnHover text-white duration-300 transition-colors font-figtree text-[10.04px]"
+                >
+                  Send mail again
+                </Link>
+
+                <div className="absolute -right-5 -top-5 w-10 flex items-center justify-center h-10 rounded-full shadow-black/25 shadow-md bg-[#FEFEFE]">
+                  <Exclamation />
+                </div>
+              </div>
+            </section>
           </section>
 
           {/* CTA to create account */}

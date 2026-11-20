@@ -24,6 +24,7 @@ import ForgotPasswordPage from "./pages/forgot-password";
 import NewPasswordPage from "./pages/create-new-password";
 import ChangePasswordPage from "./pages/change-password";
 import AccountDeactivatedPage from "./pages/account-deactivated";
+import Certificates from "./pages/certificates";
 
 const queryClient = new QueryClient();
 
@@ -61,6 +62,10 @@ function App() {
           <Route
             path="/account-deactivated"
             element={<AccountDeactivatedPage />}
+          />
+          <Route
+            path="/certificates"
+            element={<Certificates />}
           />
 
           <Route path="/courses" element={<Courses />} />

@@ -7,6 +7,7 @@ import Exclamation from "../../icons/Exclamation";
 
 const RoadMapSection = ({ courseData, courseName }) => {
   const [selectedLesson, setSelectedLesson] = useState(null);
+  const [accountCreated, setAccountCreated] = useState(false);
 
   const saveCourseName = () => {
     try {
@@ -69,24 +70,42 @@ const RoadMapSection = ({ courseData, courseName }) => {
           </section>
 
           {/* CTA to create account */}
+
           <section className="w-full mt-[45px]">
-            <article className="w-full max-w-[450px] mx-auto">
-              <h4 className="w-full text-center text-scaGrape text-[36px] sm:text-[40px] font-semibold">
-                Having fun learning already?
+            <article className="w-full max-w-[448px] mx-auto">
+              <h4
+                className={`w-full text-center ${accountCreated && "leading-[100%]"}  text-scaGrape text-[36px] sm:text-[40px] font-semibold`}
+              >
+                {accountCreated
+                  ? "Congratulations on completing Coding from Scratch!"
+                  : "Having fun learning already?"}
               </h4>
 
-              <p className="text-center text-lg font-figtree sm:text-xl md:text-2xl text-scaGrape font-medium">
-                Create an account to access all content
-              </p>
+              {!accountCreated && (
+                <p className="text-center text-lg font-figtree sm:text-xl md:text-2xl text-scaGrape font-medium">
+                  Create an account to access all content
+                </p>
+              )}
 
-              <Link
-                to="/register"
-                state={{ courseName }}
-                onClick={saveCourseName}
-                className="w-full mt-[18px] flex items-center font-figtree text-base justify-center rounded-[30px] h-[55px] bg-primaryPink text-white duration-300 transition-colors hover:bg-primaryBtnHover"
-              >
-                Create Account
-              </Link>
+              {accountCreated ? (
+                <Link
+                  to="/certificates"
+                  state={{ courseName }}
+                  onClick={saveCourseName}
+                  className="w-full mt-[18px] flex items-center font-figtree text-base justify-center rounded-[30px] h-[55px] bg-primaryPink text-white duration-300 transition-colors hover:bg-primaryBtnHover"
+                >
+                  View your certificate
+                </Link>
+              ) : (
+                <Link
+                  to="/register"
+                  state={{ courseName }}
+                  onClick={saveCourseName}
+                  className="w-full mt-[18px] flex items-center font-figtree text-base justify-center rounded-[30px] h-[55px] bg-primaryPink text-white duration-300 transition-colors hover:bg-primaryBtnHover"
+                >
+                  Create Account
+                </Link>
+              )}
             </article>
           </section>
         </div>

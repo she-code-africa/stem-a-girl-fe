@@ -23,6 +23,7 @@ import SignInPage from "./pages/sign-in";
 import ForgotPasswordPage from "./pages/forgot-password";
 import NewPasswordPage from "./pages/create-new-password";
 import ChangePasswordPage from "./pages/change-password";
+import AccountDeactivatedPage from "./pages/account-deactivated";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,10 @@ function App() {
           <Route path="/consent" element={<ConsentPageComponent />} />
           <Route path="/new-password" element={<NewPasswordPage />} />
           <Route path="/change-password" element={<ChangePasswordPage />} />
+          <Route
+            path="/account-deactivated"
+            element={<AccountDeactivatedPage />}
+          />
 
           <Route path="/courses" element={<Courses />} />
           <Route path="/stem-clubs" element={<StemClubs />} />
